@@ -1,0 +1,83 @@
+label {
+    // font-size: .875rem;
+
+    span {}
+
+    small {
+        font-weight: normal;
+    }
+
+    >input[type=password],
+    >input[type=number],
+    >input[type=text],
+    >input[type=file],
+    >select,
+    >textarea {
+        margin-top: $ap-input-label-gutter;
+    }
+}
+
+input[type=number] {
+    text-align: right;
+    &::-webkit-outer-spin-button,
+    &::-webkit-inner-spin-button {
+        -webkit-appearance: none!important;
+    }
+}
+
+input[type=text] {
+    &.-digit {
+        text-align: right;
+    }
+}
+
+select {
+    // font-size: 1rem;
+    min-width: 4.75rem;
+}
+
+textarea {
+    min-height: 6.25rem;
+    resize: none;
+}
+
+fieldset {
+    margin: 0 0 $form-spacing + .5rem;
+
+    >legend {
+        color: $form-label-color;
+        // font-size: .875rem;
+        font-weight: $form-label-font-weight;
+        margin-bottom: 0;
+        line-height: $form-label-line-height;
+    }
+}
+
+input[type=date],
+input[type=email],
+input[type=month],
+input[type=number],
+input[type=password],
+input[type=search],
+input[type=tel],
+input[type=text],
+input[type=time],
+input[type=url],
+input[type=week],
+textarea {
+    &:not(:disabled):read-only {
+        background-color: $ap-inputmimic-bg-color;
+        border: 0;
+        cursor: default;
+        pointer-events: none;
+    }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    font-feature-settings: "palt";
+}
+

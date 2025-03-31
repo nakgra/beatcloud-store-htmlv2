@@ -1,0 +1,9 @@
+{
+    "apibaseurl": "http://localhost:3000/",
+    "actions": {
+      "checkoutUpdate": "checkout/update.html"
+    },
+    "paygent": {
+      "getToken": "https://sandbox.paygent.co.jp/js/PaygentToken.js"
+    }
+}

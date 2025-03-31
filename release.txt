@@ -1,0 +1,17 @@
+
+# AWS production
+
+rsync -avcn -e "ssh -i hookup-web.pem" --exclude '.DS_Store' --exclude '.gitignore' --delete /Users/nak/Sites/project/hookup/beatcloud/src/html-store/dist/assets/fonts/ ec2-user@18.177.59.6:/data/apps/store/public/assets/fonts/
+rsync -avcn -e "ssh -i hookup-web.pem" --exclude '.DS_Store' --exclude '.gitignore' --delete /Users/nak/Sites/project/hookup/beatcloud/src/html-store/dist/assets/img/ ec2-user@18.177.59.6:/data/apps/store/public/assets/img/
+rsync -avcn -e "ssh -i hookup-web.pem" --exclude '.DS_Store' --exclude '.gitignore' /Users/nak/Sites/project/hookup/beatcloud/src/html-store/dist/assets/css/ ec2-user@18.177.59.6:/data/apps/store/public/assets/css/
+rsync -avcn -e "ssh -i hookup-web.pem" --exclude '.DS_Store' --exclude '.gitignore' /Users/nak/Sites/project/hookup/beatcloud/src/html-store/dist/assets/js/ ec2-user@18.177.59.6:/data/apps/store/public/assets/js/
+
+
+
+# AWS staging
+
+rsync -avcn -e "ssh -i hookup-web.pem" --exclude '.DS_Store' --exclude '.gitignore' --delete /Users/nak/Sites/project/hookup/beatcloud/src/html-store/dist/assets/fonts/ ec2-user@18.177.59.6:/data/apps/store_staging/public/assets/fonts/
+rsync -avcn -e "ssh -i hookup-web.pem" --exclude '.DS_Store' --exclude '.gitignore' --delete /Users/nak/Sites/project/hookup/beatcloud/src/html-store/dist/assets/img/ ec2-user@18.177.59.6:/data/apps/store_staging/public/assets/img/
+rsync -avcn -e "ssh -i hookup-web.pem" --exclude '.DS_Store' --exclude '.gitignore' /Users/nak/Sites/project/hookup/beatcloud/src/html-store/dist/assets/css/ ec2-user@18.177.59.6:/data/apps/store_staging/public/assets/css/
+rsync -avcn -e "ssh -i hookup-web.pem" --exclude '.DS_Store' --exclude '.gitignore' /Users/nak/Sites/project/hookup/beatcloud/src/html-store/dist/assets/js/ ec2-user@18.177.59.6:/data/apps/store_staging/public/assets/js/
+

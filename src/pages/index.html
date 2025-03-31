@@ -1,0 +1,17 @@
+<div class="ap-carousel" data-carousel>
+    {{#each heroes}}
+    <div class="ap-carousel__item"><a href="{{root}}{{path}}"><img src="{{root}}{{ img }}" alt="{{ title }}"></a></div>
+    {{/each}}
+</div>
+
+<div class="ap-grid">
+    {{#each topics}}
+    <div class="ap-grid-item">
+        <a class="ap-grid-item__pic" href="{{root}}{{path}}"><img src="{{root}}{{img}}" alt=""></a>
+        <h2 class="ap-grid-item__title"><a href="{{root}}{{path}}">{{ title }}</a></h2>
+        <p class="ap-grid-item__description">
+            {{description}}
+        </p>
+    </div>
+    {{/each}}
+</div>

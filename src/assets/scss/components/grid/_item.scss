@@ -1,0 +1,39 @@
+.ap-grid-item {
+    padding: 1.25rem;
+    background-color: $white;
+    border: 1px solid $light-gray;
+
+    &__pic {
+        display: block;
+        margin: 0 0 1.25rem 0;
+        border-bottom: 3px solid $black;
+
+        >img {
+            display: block;
+            aspect-ratio: 16 / 9;
+            width: 100%;
+            object-fit: cover;
+        }
+    }
+
+    &__title {
+        margin: 0 0 .5rem 0;
+        line-height: 1.4;
+        font-size: 1.25rem;
+        font-weight: 700;
+        font-feature-settings: "palt";
+
+        >a {
+            color: $body-font-color;
+
+            &:hover {
+                color: $anchor-color-hover;
+            }
+        }
+    }
+
+    &__description {
+        margin: 0;
+        line-height: 1.5;
+    }
+}

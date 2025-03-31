@@ -1,0 +1,38 @@
+[
+    {
+        "title": "Softube",
+        "path": "",
+        "img": "/assets/upload/topics/001.jpg",
+        "description": "SSL、Summit AudioやTUBE-TECH等アナログ特有のサウンドを忠実に再現。世界中のクリエイターから愛されている人気、実力ともに最高のメーカー"
+    },
+    {
+        "title": "Universal Audio",
+        "path": "",
+        "img": "/assets/upload/topics/002.jpg",
+        "description": "50年にわたるイノベーション、比類のない品質、最新技術への情熱すべてが備わったプラグイン"
+    },
+    {
+        "title": "Celemony Melodyne 5",
+        "path": "",
+        "img": "/assets/upload/topics/003.jpg",
+        "description": "世界のトップが認めた唯一無二のツール 高度に分析されたスケール、キー、コード、タイミング、テンポ、音色を自在にコントロール"
+    },
+    {
+        "title": "Image Line",
+        "path": "",
+        "img": "/assets/upload/topics/004.jpg",
+        "description": "GUIの日本語化もされ、ますます世界の流行を牽引するDAW FL Studio V21"
+    },
+    {
+        "title": "IK Multimedia MODO",
+        "path": "",
+        "img": "/assets/upload/topics/005.jpg",
+        "description": "特価中！ポイントも10倍！音源からエフェクト、ギターのギアまで、最も人気なシリーズを展開"
+    },
+    {
+        "title": "UVI",
+        "path": "",
+        "img": "/assets/upload/topics/006.jpg",
+        "description": "音楽、映画、ゲームまで、 幅広い業界で評価され続ける表現力に富んだツールが魅力のブランド"
+    }
+]

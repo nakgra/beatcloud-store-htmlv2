@@ -1,0 +1,228 @@
+.ap-topbar-menu {
+
+    // position: relative;
+
+    @include breakpoint(medium down) {
+        >ul {
+            display: none;
+            margin: 0;
+            padding: 0;
+            list-style-type: none;
+            background-color: $white;
+            box-shadow: 0 3px 2px $light-gray;
+
+            &.-open {
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                z-index: 100;
+
+                display: block;
+            }
+
+            >li {
+                border-top: 1px solid #eeeeee;
+
+                >a {
+                    display: block;
+                    margin: 0;
+                    color: $body-font-color;
+                    text-align: center;
+                }
+
+                &:last-child {
+                    // border-bottom: none;
+                }
+            }
+        }
+    }
+
+    @include breakpoint(small only) {
+        order: 3;
+        margin: 0 0 0 1.5rem;
+        padding: 1rem 0 1rem 1.5rem;
+        // border-right: 1px solid #eee;
+        border-left: 1px solid #eee;
+
+        .-active & {
+            padding-top: .875rem;
+            padding-bottom: .875rem;
+            transition: padding-top .2s ease-out, padding-bottom .2s ease-out;
+        }
+
+        >ul {
+            >li {
+                >a {
+                    padding: .875rem .75rem;
+                }
+            }
+        }
+    }
+
+    @include breakpoint(medium only) {
+        margin: 0 1.5rem;
+        padding: 1.25rem 1.5rem;
+        border-right: 1px solid #eee;
+        border-left: 1px solid #eee;
+
+        .-active & {
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+            transition: padding-top .2s ease-out, padding-bottom .2s ease-out;
+        }
+
+        >ul {
+            >li {
+                >a {
+                    padding: 1rem .75rem;
+                }
+            }
+        }
+    }
+
+    @include breakpoint(large) {
+        margin: 0;
+
+        >ul {
+            display: flex;
+            align-items: center;
+            margin: 0;
+            padding: 0;
+            list-style-type: none;
+            border-right: 1px solid #eeeeee;
+            // font-size: 1.0625rem;
+            // font-feature-settings: "palt";
+
+            >li {
+                border-left: 1px solid #eeeeee;
+
+                >a {
+                    display: block;
+                    padding: 1.35rem 2.25rem;
+                    color: $body-font-color;
+                    font-weight: 500;
+
+                    .-active & {
+                        font-size: .9375rem;
+                        padding-top: 1rem;
+                        padding-bottom: 1rem;
+                        transition: padding-top .2s ease-out, padding-bottom .2s ease-out;
+                    }
+                }
+            }
+        }
+    }
+
+    &__button {
+        position: relative;
+        line-height: 1;
+        display: none;
+        margin: 0 auto;
+        padding: 0;
+
+        cursor: pointer;
+
+        &:not(.-open) {
+            &:before {
+                content: "";
+                display: block;
+                margin: 0 auto 0 auto;
+            }
+        }
+
+        &.-open {
+            content: "";
+            overflow: hidden;
+
+            &::before,
+            &::after {
+                content: '';
+                position: absolute;
+                height: 2px;
+                width: 100%;
+                top: 50%;
+                left: 0;
+                margin: auto;
+                background: $black;
+            }
+
+            &::before {
+                transform: rotate(45deg);
+            }
+
+            &::after {
+                transform: rotate(-45deg);
+            }
+        }
+
+        @include breakpoint(small only) {
+            display: block;
+
+            &:not(.-open) {
+                &:before {
+                    width: 24px;
+                    height: 18px;
+                    background: linear-gradient($black 2px, transparent 2px, transparent 8px, $black 8px, $black 10px, transparent 10px, transparent 16px, $black 16px);
+                }
+            }
+
+            &.-open {
+                margin: 0 3px;
+                width: 18px;
+                height: 18px;
+            }
+
+            .-active & {
+                &:not(.-open) {
+                    &:before {
+                        width: 18px;
+                        height: 16px;
+                        background: linear-gradient($black 2px, transparent 2px, transparent 7px, $black 7px, $black 9px, transparent 9px, transparent 14px, $black 14px);
+                    }
+                }
+
+                &.-open {
+                    margin: 0 1px;
+                    width: 18px;
+                    height: 16px;
+                }
+            }
+        }
+
+        @include breakpoint(medium only) {
+            display: block;
+
+            &:not(.-open) {
+                &:before {
+                    width: 28px;
+                    height: 18px;
+                    background: linear-gradient($black 2px, transparent 2px, transparent 8px, $black 8px, $black 10px, transparent 10px, transparent 16px, $black 16px);
+                }
+            }
+
+            &.-open {
+                margin: 0 5px;
+                width: 18px;
+                height: 18px;
+            }
+
+            .-active & {
+                &:not(.-open) {
+                    &:before {
+                        width: 24px;
+                        height: 18px;
+                        background: linear-gradient($black 2px, transparent 2px, transparent 8px, $black 8px, $black 10px, transparent 10px, transparent 16px, $black 16px);
+                    }
+                }
+
+                &.-open {
+                    margin: 0 3px;
+                    width: 24px;
+                    height: 18px;
+                }
+            }
+        }
+    }
+
+}

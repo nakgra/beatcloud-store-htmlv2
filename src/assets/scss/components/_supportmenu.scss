@@ -1,0 +1,22 @@
+.ap-supportmenu {
+    @include xy-grid-container;
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    // margin: 0;
+    // padding: 0;
+    margin-bottom: 0;
+    padding-top: .5rem;
+    padding-bottom: .5rem;
+    list-style-type: none;
+    width: 100%;
+    font-size: .875rem;
+
+    >li {
+        > a {
+            color: $body-font-color;
+        }
+    }
+}

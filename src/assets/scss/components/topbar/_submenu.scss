@@ -1,0 +1,121 @@
+.ap-topbar-submenu {
+    align-self: center;
+
+    flex-basis: 0;
+    margin: 0;
+
+    @include breakpoint(small only) {
+        // flex-grow: 1;
+    }
+
+    @include breakpoint(medium only) {
+        flex-grow: 1;
+    }
+
+    @include breakpoint(large) {
+        flex-grow: 1;
+    }
+
+    >ul {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+
+        @include breakpoint(small only) {
+            column-gap: 1.5rem;
+        }
+
+        @include breakpoint(medium only) {
+            column-gap: 2rem;
+        }
+
+        @include breakpoint(large) {
+            column-gap: 2rem;
+        }
+
+        >li {
+            >a {
+                display: block;
+
+                white-space: nowrap;
+                overflow: hidden;
+                text-indent: 100%;
+
+                &.-bookmarks {
+                    width: 15px;
+                    height: 22px;
+                    background: transparent url(../img/icon-bookmark.svg) no-repeat center 0 / contain;
+                }
+
+                &.-search {
+                    width: 22px;
+                    height: 22px;
+                    background: transparent url(../img/icon-search.svg) no-repeat center 0 / contain;
+                }
+
+                &.-cart {
+                    width: 22px;
+                    height: 22px;
+                    background: transparent url(../img/icon-cart.svg) no-repeat center 0 / contain;
+                }
+
+                @include breakpoint(small only) {
+                    &.-bookmarks {
+                        width: 14px;
+                        height: 20px;
+                    }
+
+                    &.-search {
+                        width: 20px;
+                        height: 20px;
+                    }
+
+                    &.-cart {
+                        width: 20px;
+                        height: 20px;
+                    }
+                }
+
+                .-active & {
+                    &.-bookmarks {
+                        width: 13px;
+                        height: 19px;
+                    }
+
+                    &.-search {
+                        width: 19px;
+                        height: 19px;
+                    }
+
+                    &.-cart {
+                        width: 19px;
+                        height: 19px;
+                    }
+
+                    @include breakpoint(small only) {
+                        &.-bookmarks {
+                            width: 13px;
+                            height: 18px;
+                        }
+
+                        &.-search {
+                            width: 18px;
+                            height: 18px;
+                        }
+
+                        &.-cart {
+                            width: 18px;
+                            height: 18px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    @include breakpoint(large) {}
+}

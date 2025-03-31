@@ -1,0 +1,44 @@
+.ap-carousel {
+    width: 100%;
+
+    img {
+        aspect-ratio: 16 / 9;
+        width: 100%;
+        object-fit: cover;
+    }
+
+    @include breakpoint(medium down) {
+        img {
+            // height: 350px;
+        }
+    }
+
+    @include breakpoint(large) {
+        margin: 0 0 7rem 0;
+    }
+
+    &__item {
+        display: block;
+
+
+        >a {
+            display: block;
+            width: 100%;
+        }
+
+        @include breakpoint(small only) {
+            padding: 0;
+            width: 90vw!important;
+        }
+
+        @include breakpoint(medium only) {
+            padding: 0 1rem;
+            width: 70vw!important;
+        }
+
+        @include breakpoint(large) {
+            padding: 0 1rem;
+            width: 70vw!important;
+        }
+    }
+}
