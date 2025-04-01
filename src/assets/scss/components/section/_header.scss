@@ -1,0 +1,59 @@
+.ap-section-header {
+    @include xy-grid-container;
+
+    @include breakpoint(small only) {
+        margin: 2.75rem 0 2.5rem 0;
+    }
+
+    @include breakpoint(medium only) {
+        // margin: 3.75rem 0 3.5rem 0;
+    }
+
+    @include breakpoint(medium) {
+        margin: 3.75rem 0 3.5rem 0;
+    }
+
+    @include breakpoint(xlarge) {
+        margin: 4.75rem 0 4.5rem 0;
+    }
+
+    &__title {
+        display: flex;
+        align-items: center;
+
+        &:before,
+        &:after {
+            // position: absolute;
+            // top: 0;
+            // bottom: 0;
+            // left: 0;
+            // right: 0;
+
+            flex-grow: 1;
+
+            content: '';
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 1px;
+            background-color: #e3e3e3;//$ap-border-color;//$white;
+            filter: drop-shadow($white 0 1px);
+        }
+
+        >span {
+            flex: 0 0 auto;
+            margin: 0 1rem;
+            line-height: 1.2;
+            // filter: drop-shadow($white 0 1px);
+        }
+
+        @include breakpoint(large) {
+            font-size: 1.5rem;
+            font-weight: 400;
+        }
+
+        @include breakpoint(xlarge) {
+            font-size: 1.65rem;
+        }
+    }
+}

@@ -7,10 +7,12 @@
         object-fit: cover;
     }
 
-    @include breakpoint(medium down) {
-        img {
-            // height: 350px;
-        }
+    @include breakpoint(small only) {
+        margin: 0 0 3rem 0;
+    }
+
+    @include breakpoint(medium only) {
+        margin: 0 0 4rem 0;
     }
 
     @include breakpoint(large) {
@@ -20,15 +22,15 @@
     &__item {
         display: block;
 
-
         >a {
             display: block;
             width: 100%;
+            border: 1px solid $ap-border-color;
         }
 
         @include breakpoint(small only) {
             padding: 0;
-            width: 90vw!important;
+            width: 100vw!important;
         }
 
         @include breakpoint(medium only) {

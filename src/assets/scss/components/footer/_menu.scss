@@ -1,0 +1,46 @@
+.ap-footer-menu {
+
+    @include breakpoint(small only) {
+        margin-bottom: 2rem;
+    }
+
+    @include breakpoint(medium only) {
+        // width: 33.33vw;
+    }
+
+    @include breakpoint(large) {
+        width: 20vw;
+    }
+
+    @include breakpoint(xlarge) {
+        width: 15vw;
+    }
+
+    &__title {
+        margin: 0 0 1.5rem 0;
+        font-size: 1.0625rem;
+        color: $dark-gray;
+
+        @include breakpoint(medium only) {
+            margin-bottom: 2rem;
+            // border-bottom: 1px solid #333;
+        }
+    }
+
+    >ul {
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+        line-height: 1.4;
+        border-top: 1px solid #222222;
+
+        >li {
+            padding: .65rem 0;
+            border-bottom: 1px solid #222222;
+        }
+    }
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+}

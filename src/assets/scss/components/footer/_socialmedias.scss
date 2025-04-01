@@ -1,0 +1,29 @@
+.ap-footer-socialmedias {
+    display: flex;
+    column-gap: 2rem;
+    align-items: center;
+
+    @include breakpoint(medium down) {
+        justify-content: center;
+    }
+
+    @include breakpoint(large) {
+        justify-content: flex-end;
+    }
+
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    list-style-type: none;
+
+    >li {
+        min-width: 32px;
+        //
+
+        >a {
+            >img {
+                height: 32px;
+            }
+        }
+    }
+}

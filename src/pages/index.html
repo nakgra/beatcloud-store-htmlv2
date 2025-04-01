@@ -15,3 +15,36 @@
     </div>
     {{/each}}
 </div>
+
+<div class="ap-section-header">
+    <h2 class="ap-section-header__title"><span>実施中のセール</span></h2>
+</div>
+<div class="ap-grid">
+    {{#each bargains}}
+    <div class="ap-grid-item">
+        <a class="ap-grid-item__pic" href="{{root}}{{path}}"><img src="{{root}}{{img}}" alt=""></a>
+        <h3 class="ap-grid-item__title -medium"><a href="{{root}}{{path}}">{{ title }}</a></h3>
+        <b class="ap-grid-item__badge">
+            {{ discount }}<small>OFF</small>
+        </b>
+        <span class="ap-grid-item__footnote -alert">{{ end }}</span>
+    </div>
+    {{/each}}
+</div>
+<div class="ap-section-header">
+    <h2 class="ap-section-header__title"><span>人気商品</span></h2>
+</div>
+<div class="ap-grid">
+    {{#each popular}}
+    <div class="ap-grid-item">
+        <a href="{{root}}{{path}}">
+            <div class="ap-grid-item__pic"><img src="{{root}}{{img}}" alt=""></div>
+            <h3 class="ap-grid-item__title -medium">
+                <span class="__divide">{{ brand }}</span>{{ name }}
+            </h3>
+            <p class="ap-grid-item__footnote -alert">&yen;{{ price }} <del>&yen;{{ original_price }}</del></p>
+        </a>
+
+    </div>
+    {{/each}}
+</div>

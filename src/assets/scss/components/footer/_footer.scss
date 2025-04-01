@@ -1,0 +1,89 @@
+.ap-footer {
+    background-color: #1a1a1a;
+    color: $medium-gray;
+
+    @include breakpoint(small only) {
+        margin: 4rem 0 0 0;
+    }
+
+    @include breakpoint(medium only) {
+        margin: 5rem 0 0 0;
+    }
+
+    @include breakpoint(large) {
+        margin: 6rem 0 0 0;
+    }
+
+    @include breakpoint(xlarge) {}
+
+    a {
+        color: $light-gray;
+
+        &:hover {
+            color: $white;
+            text-decoration: underline;
+        }
+    }
+
+    &__frame {
+        @include xy-grid-container;
+
+        @include breakpoint(small only) {
+            padding-top: 4rem;
+            padding-bottom: 3rem;
+        }
+
+        @include breakpoint(medium only) {
+            padding-top: 4.5rem;
+            padding-bottom: 2.5rem;
+        }
+
+        @include breakpoint(large) {
+            display: flex;
+            padding-top: 5.5rem;
+            padding-bottom: 5.5rem;
+        }
+    }
+
+    &__nav {
+        @include breakpoint(medium) {
+            display: grid;
+            column-gap: 2rem;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+        }
+
+        @include breakpoint(large) {
+            column-gap: 2.5rem;
+        }
+
+        @include breakpoint(xlarge) {
+            column-gap: 3rem;
+        }
+    }
+
+    &__external {
+        @include breakpoint(small only) {
+            margin: 3rem 0 0 0;
+        }
+
+        @include breakpoint(medium only) {
+            margin: 4rem 0 0 0;
+        }
+
+        @include breakpoint(large) {
+            margin: 0 0 0 auto;
+        }
+    }
+
+    &__bottom {
+        @include xy-grid-container;
+
+        padding-bottom: 2rem;
+
+        @include breakpoint(small only) {
+
+        }
+
+        @include breakpoint(large) {}
+    }
+}

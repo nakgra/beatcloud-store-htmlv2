@@ -1,12 +1,39 @@
 .ap-grid-item {
-    padding: 1.25rem;
+    $parent: &;
+
+    position: relative;
+    display: flex;
+    flex-direction: column;
+
     background-color: $white;
-    border: 1px solid $light-gray;
+    border: 1px solid $ap-border-color;
+
+    @include breakpoint(small only) {
+        margin-bottom: 1.5rem;
+        padding: 1rem;
+        // border-color: #efefef;
+    }
+
+    @include breakpoint(medium) {
+        padding: 1.25rem;
+    }
+
+    @include breakpoint(large) {}
+
+    >a {
+        color: inherit;
+
+        &:hover {
+            #{$parent}__title {
+                color: $anchor-color-hover;
+            }
+        }
+    }
 
     &__pic {
         display: block;
         margin: 0 0 1.25rem 0;
-        border-bottom: 3px solid $black;
+        // border-bottom: 3px solid $black;
 
         >img {
             display: block;
@@ -18,10 +45,19 @@
 
     &__title {
         margin: 0 0 .5rem 0;
-        line-height: 1.4;
+        line-height: 1.3;
         font-size: 1.25rem;
         font-weight: 700;
         font-feature-settings: "palt";
+
+        &.-medium {
+            font-size: 1.125rem;
+            font-weight: 500;
+        }
+
+        >.__divide {
+            display: block;
+        }
 
         >a {
             color: $body-font-color;
@@ -30,10 +66,55 @@
                 color: $anchor-color-hover;
             }
         }
+
+        @include breakpoint(small only) {
+            font-size: 1.125rem;
+        }
     }
 
     &__description {
         margin: 0;
         line-height: 1.5;
+
+        @include breakpoint(small only) {
+            font-size: 0.935rem;
+            line-height: 1.4;
+        }
+    }
+
+    &__badge {
+        position: absolute;
+        top: .75rem;
+        right: -.5rem;
+
+        margin: 0;
+        padding: .5rem .65rem;
+        line-height: 1;
+        font-size: 1.125rem;
+        font-weight: 700;
+        color: $white;
+        background-color: $alert-color;
+
+        >small {
+            margin: 0 0 0 0.125rem;
+            font-size: 0.875rem;
+            // font-size: 1.125rem;
+            // font-weight: 700;
+        }
+    }
+
+    &__footnote {
+        // flex-grow: 1;
+        margin: auto 0 0 0;
+
+        &.-alert {
+            color: $alert-color;
+        }
+
+        >del {
+            display: inline-block;
+            margin: 0 0 0 .5rem;
+            color: $dark-gray;
+        }
     }
 }
