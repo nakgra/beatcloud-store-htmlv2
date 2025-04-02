@@ -17,7 +17,11 @@
 </div>
 
 <div class="ap-section-header">
-    <h2 class="ap-section-header__title"><span>実施中のセール</span></h2>
+    <hgroup class="ap-section-title">
+        <div class="ap-section-title__frame">
+            <h2 class="ap-section-title__main">実施中のおすすめセール</h2><small class="ap-section-title__sub"><a href="">99件すべて見る</a></small>
+        </div>
+    </hgroup>
 </div>
 <div class="ap-grid">
     {{#each bargains}}
@@ -31,8 +35,17 @@
     </div>
     {{/each}}
 </div>
+<div class="ap-section-footer">
+    <div class="ap-section-footer__action">
+        <a class="ap-action" href="">99件のセールが実施中です</a>
+    </div>
+</div>
 <div class="ap-section-header">
-    <h2 class="ap-section-header__title"><span>人気商品</span></h2>
+    <hgroup class="ap-section-title">
+        <div class="ap-section-title__frame">
+            <h2 class="ap-section-title__main">人気商品</h2>
+        </div>
+    </hgroup>
 </div>
 <div class="ap-grid">
     {{#each popular}}

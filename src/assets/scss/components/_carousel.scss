@@ -8,15 +8,15 @@
     }
 
     @include breakpoint(small only) {
-        margin: 0 0 3rem 0;
+        margin: 0 0 4.5rem 0;
     }
 
     @include breakpoint(medium only) {
-        margin: 0 0 4rem 0;
+        margin: 0 0 6rem 0;
     }
 
     @include breakpoint(large) {
-        margin: 0 0 7rem 0;
+        margin: 0 0 7.5rem 0;
     }
 
     &__item {

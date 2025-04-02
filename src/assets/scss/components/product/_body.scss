@@ -1,0 +1,62 @@
+.ap-product-body {
+    margin: 6rem 0;
+    padding: 6rem 0;
+    background: transparent url(../img/bg-2.jpg) repeat 0 0 / 75px;
+
+    &__content {
+        @include xy-grid-container($width: $ap-product-body-width);
+
+        h2 {
+            margin: 2.5rem 0 1.5rem 0;
+            padding: 0 0 0 1.25rem;
+            line-height: 1.25;
+            font-size: 1.75rem;
+            font-weight: 500;
+            border-left: 7px solid $body-font-color;
+        }
+
+        h3 {
+            margin: 1.25rem 0 1rem 0;
+            line-height: 1.4;
+            font-size: 1.5rem;
+            font-weight: 500;
+        }
+
+        h4 {
+            margin: 1rem 0 .5rem 0;
+            line-height: 1.4;
+            font-size: 1.125rem;
+            font-weight: 700;
+        }
+
+        figure {
+            margin: 0 0 1.125rem 0;
+        }
+
+        img {
+            display: block;
+            margin: 0 auto;
+            max-width: 100%;
+        }
+
+        hr {
+            margin: 2rem 0;
+            max-width: 5rem;
+            border-color: $body-font-color;
+        }
+
+        p {
+            @include breakpoint(xlarge) {
+                font-size: 1.0625rem;
+            }
+        }
+
+        >:first-child {
+            margin-top: 0;
+        }
+
+        >:last-child {
+            margin-bottom: 0;
+        }
+    }
+}

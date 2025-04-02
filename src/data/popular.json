@@ -2,7 +2,7 @@
     {
         "brand": "IK Multimedia",
         "name": "Total Studio 4 MAX",
-        "path": "",
+        "path": "products/show.html",
         "img": "/assets/upload/popular/001.jpg",
         "description": "",
         "price": "21,440",
@@ -11,7 +11,7 @@
     {
         "brand": "IK Multimedia",
         "name": "MODO MAX",
-        "path": "",
+        "path": "products/show.html",
         "img": "/assets/upload/popular/002.jpg",
         "description": "",
         "price": "16,490",
@@ -20,7 +20,7 @@
     {
         "brand": "IK Multimedia",
         "name": "TONEX MAX",
-        "path": "",
+        "path": "products/show.html",
         "img": "/assets/upload/popular/003.jpg",
         "description": "",
         "price": "16,490",
@@ -29,7 +29,7 @@
     {
         "brand": "IK Multimedia",
         "name": "AmpliTube 5 MAX V2",
-        "path": "",
+        "path": "products/show.html",
         "img": "/assets/upload/popular/004.jpg",
         "description": "",
         "price": "16,490",
@@ -38,7 +38,7 @@
     {
         "brand": "IK Multimedia",
         "name": "Pianoverse Max",
-        "path": "",
+        "path": "products/show.html",
         "img": "/assets/upload/popular/005.jpg",
         "description": "",
         "price": "16,490",
@@ -47,7 +47,7 @@
     {
         "brand": "Image-Line",
         "name": "FL STUDIO 21 Signature クロスグレード",
-        "path": "",
+        "path": "products/show.html",
         "img": "/assets/upload/popular/006.jpg",
         "description": "",
         "price": "20,900",

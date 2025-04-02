@@ -7,11 +7,11 @@
     }
 
     @include breakpoint(medium only) {
-        margin: 5rem 0 0 0;
+        margin: 6rem 0 0 0;
     }
 
     @include breakpoint(large) {
-        margin: 6rem 0 0 0;
+        margin: 7rem 0 0 0;
     }
 
     @include breakpoint(xlarge) {}

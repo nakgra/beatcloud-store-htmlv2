@@ -1,0 +1,16 @@
+.ap-product {
+    margin: 4rem 0 0 0;
+
+    &__lead {
+        font-size: 1.25rem;
+    }
+
+    &__image {
+        display: block;
+        // margin: 0 0 .5rem 0;
+        width: 100%;
+        aspect-ratio: 16 / 9;
+        object-fit: cover;
+        border: 1px solid $ap-border-color;
+    }
+}

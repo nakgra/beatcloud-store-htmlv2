@@ -1,0 +1,112 @@
+.ap-product-actions {
+    display: flex;
+    column-gap: 1.5rem;
+    align-items: flex-end;
+
+    margin: 3rem 0 0 0;
+
+    >* {
+        flex: 0 0 auto;
+    }
+
+    &__cart {
+        $tmp-margin: $button-margin;
+        $tmp-padding: $button-padding;
+        $tmp-button-color: $button-color;
+        $tmp-button-color-alt: $button-color-alt;
+
+        $button-margin: 0!global;
+        $button-padding: 1.25rem 1.25rem !global;
+
+        @include button;
+
+        $button-margin: $tmp-margin !global;
+        $button-padding: $tmp-padding !global;
+
+        @include breakpoint(small only) {
+            padding: 1.0625rem 1.25rem 1rem 1.25rem;
+            font-size: 1.0625rem !important;
+        }
+
+        @include breakpoint(medium only) {
+            padding: 1.25rem 1.25rem;
+        }
+
+        & {
+            // color: $black;
+            background-color: $primary-color;
+            font-size: 1.0625rem;
+            font-weight: 500;
+        }
+    }
+
+    &__wishlist {
+        $tmp-margin: $button-margin;
+        $tmp-padding: $button-padding;
+        $tmp-button-color: $button-color;
+        $tmp-button-color-alt: $button-color-alt;
+
+        $button-margin: 0!global;
+        $button-padding: 0.75rem 0.875rem 0.75rem 2rem !global;
+
+        @include button;
+
+        $button-margin: $tmp-margin !global;
+        $button-padding: $tmp-padding !global;
+
+        @include breakpoint(small only) {
+            // padding: 1.0625rem 1.25rem 1rem 1.25rem;
+            // font-size: 1rem !important;
+        }
+
+        @include breakpoint(medium only) {
+            // padding: 1.25rem 1.25rem;
+        }
+
+        & {
+            color: $black;
+            background-color: rgba(90, 90, 90, 0.1);
+            background-image: url(../img/icon-bookmark.svg);
+            background-repeat: no-repeat;
+            background-position: 0.875rem center;
+            background-size: 12px 18px;
+
+            &:hover {
+                background-color: $black;
+            }
+        }
+    }
+
+    &__bargain {
+        $tmp-margin: $button-margin;
+        $tmp-padding: $button-padding;
+        $tmp-button-color: $button-color;
+        $tmp-button-color-alt: $button-color-alt;
+
+        $button-margin: 0!global;
+        $button-padding: 0.75rem 0.875rem 0.75rem 2.4rem !global;
+
+        @include button;
+
+        $button-margin: $tmp-margin !global;
+        $button-padding: $tmp-padding !global;
+
+        @include breakpoint(small only) {
+            padding: 1.0625rem 1.25rem 1rem 1.25rem;
+            font-size: 1rem !important;
+        }
+
+        @include breakpoint(medium only) {
+            padding: 1.25rem 1.25rem;
+        }
+
+        & {
+            color: $black;
+            background-color: rgba(90, 90, 90, 0.1);
+            background-image: url(../img/icon-info.svg);
+            background-repeat: no-repeat;
+            background-position: 0.875rem center;
+            background-size: 18px 18px;
+        }
+    }
+}

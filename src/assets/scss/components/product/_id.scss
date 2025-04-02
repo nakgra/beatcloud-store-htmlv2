@@ -1,0 +1,12 @@
+.ap-product-id {
+    @include xy-grid-container($width: $ap-product-header-width);
+
+    &__brand {
+        font-size: 1.5rem;
+    }
+
+    &__name {
+        font-size: 3rem;
+        font-weight: 900;
+    }
+}

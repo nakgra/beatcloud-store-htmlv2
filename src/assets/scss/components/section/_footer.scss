@@ -1,20 +1,22 @@
-.ap-section-header {
+.ap-section-footer {
     @include xy-grid-container;
 
     @include breakpoint(small only) {
-        margin: 3.75rem 0 3.5rem 0;
+        margin: 2rem 0 0 0;
     }
 
     @include breakpoint(medium only) {
-        // margin: 3.75rem 0 3.5rem 0;
     }
 
     @include breakpoint(medium) {
-        margin: 4.75rem 0 4.5rem 0;
+        margin: 2.5rem 0 0 0;
     }
 
     @include breakpoint(xlarge) {
-        margin: 5.75rem 0 5.5rem 0;
+        margin: 3rem 0 0 0;
     }
 
+    &__action {
+        text-align: center;
+    }
 }
