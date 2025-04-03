@@ -1,0 +1,33 @@
+.ap-browse {
+    flex: 1 0 auto;
+    display: flex;
+    flex-direction: column;
+
+    @include xy-grid-container;
+    width: 100%;
+
+    @include breakpoint(small only) {}
+
+    @include breakpoint(medium only) {}
+
+    @include breakpoint(large) {}
+
+    &__header {
+        @include breakpoint(medium) {
+            display: flex;
+            align-items: flex-end;
+        }
+
+        @include breakpoint(large) {
+            margin-bottom: 4rem;
+        }
+    }
+
+    &__main {
+        flex: 1 0 auto;
+
+        @include breakpoint(large) {
+            display: flex;
+        }
+    }
+}

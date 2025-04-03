@@ -1,32 +1,107 @@
 .ap-product-body {
-    margin: 6rem 0;
-    padding: 6rem 0;
     background: transparent url(../img/bg-2.jpg) repeat 0 0 / 75px;
+
+    @include breakpoint(small only) {
+        margin: 3rem 0;
+        padding: 3rem 0;
+    }
+
+    @include breakpoint(medium only) {
+        margin: 4rem 0;
+        padding: 4rem 0;
+    }
+
+    @include breakpoint(large) {
+        margin: 6rem 0;
+        padding: 6rem 0;
+    }
 
     &__content {
         @include xy-grid-container($width: $ap-product-body-width);
+        border-top: 1px dashed $ap-border-color-nega;
+
+        @include breakpoint(small only) {
+            margin-top: 2rem;
+            padding-top: 2rem;
+        }
+
+        @include breakpoint(medium only) {
+            margin-top: 2.5rem;
+            padding-top: 2.5rem;
+        }
+
+        @include breakpoint(large) {
+            margin-top: 3rem;
+            padding-top: 3rem;
+        }
+
+        @include breakpoint(xlarge) {}
 
         h2 {
-            margin: 2.5rem 0 1.5rem 0;
-            padding: 0 0 0 1.25rem;
             line-height: 1.25;
-            font-size: 1.75rem;
             font-weight: 500;
-            border-left: 7px solid $body-font-color;
+
+
+            @include breakpoint(small only) {
+                margin: 2rem 0 1.25rem 0;
+                padding: 0 0 0 1rem;
+                font-size: 1.5rem;
+                border-left: 4px solid $body-font-color;
+            }
+
+            @include breakpoint(medium only) {
+                margin: 2.25rem 0 1.25rem 0;
+                padding: 0 0 0 1.125rem;
+                font-size: 1.6rem;
+                border-left: 5px solid $body-font-color;
+            }
+
+            @include breakpoint(large) {
+                margin: 2.5rem 0 1.5rem 0;
+                padding: 0 0 0 1.25rem;
+                font-size: 1.75rem;
+                border-left: 7px solid $body-font-color;
+            }
         }
 
         h3 {
-            margin: 1.25rem 0 1rem 0;
             line-height: 1.4;
-            font-size: 1.5rem;
             font-weight: 500;
+
+            @include breakpoint(small only) {
+                margin: 1.25rem 0 1rem 0;
+                font-size: 1.25rem;
+            }
+
+            @include breakpoint(medium only) {
+                margin: 1.25rem 0 1rem 0;
+                font-size: 1.4rem;
+            }
+
+            @include breakpoint(large) {
+                margin: 1.25rem 0 1rem 0;
+                font-size: 1.5rem;
+            }
         }
 
         h4 {
-            margin: 1rem 0 .5rem 0;
             line-height: 1.4;
-            font-size: 1.125rem;
             font-weight: 700;
+
+            @include breakpoint(small only) {
+                margin: 1rem 0 .5rem 0;
+                font-size: 1.125rem;
+            }
+
+            @include breakpoint(medium only) {
+                margin: 1rem 0 .5rem 0;
+                font-size: 1.125rem;
+            }
+
+            @include breakpoint(large) {
+                margin: 1rem 0 .5rem 0;
+                font-size: 1.125rem;
+            }
         }
 
         figure {
@@ -51,12 +126,20 @@
             }
         }
 
+        &:first-child {
+            margin-top: 0;
+            padding-top: 0;
+            border-top: 0;
+        }
+
         >:first-child {
             margin-top: 0;
+            padding-top: 0;
         }
 
         >:last-child {
             margin-bottom: 0;
+            padding-bottom: 0;
         }
     }
 }

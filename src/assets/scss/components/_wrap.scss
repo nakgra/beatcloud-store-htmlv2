@@ -1,4 +1,9 @@
 .ap-wrap {
     flex: 1 0 auto;
+
+    &.-browse {
+        display: flex;
+        flex-direction: column;
+    }
     // margin: 0 0 auto 0;
 }

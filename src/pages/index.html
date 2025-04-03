@@ -1,13 +1,17 @@
+---
+meta-title: ""
+wrapperclass:  ""
+---
 <div class="ap-carousel" data-carousel>
     {{#each heroes}}
-    <div class="ap-carousel__item"><a href="{{root}}{{path}}"><img src="{{root}}{{ img }}" alt="{{ title }}"></a></div>
+    <div class="ap-carousel__item"><a href="{{root}}{{path}}"><img src="{{root}}assets/upload{{ img }}" alt="{{ title }}"></a></div>
     {{/each}}
 </div>
 
 <div class="ap-grid">
     {{#each topics}}
     <div class="ap-grid-item">
-        <a class="ap-grid-item__pic" href="{{root}}{{path}}"><img src="{{root}}{{img}}" alt=""></a>
+        <a class="ap-grid-item__pic" href="{{root}}{{path}}"><img src="{{root}}assets/upload{{img}}" alt=""></a>
         <h2 class="ap-grid-item__title"><a href="{{root}}{{path}}">{{ title }}</a></h2>
         <p class="ap-grid-item__description">
             {{description}}
@@ -26,7 +30,7 @@
 <div class="ap-grid">
     {{#each bargains}}
     <div class="ap-grid-item">
-        <a class="ap-grid-item__pic" href="{{root}}{{path}}"><img src="{{root}}{{img}}" alt=""></a>
+        <a class="ap-grid-item__pic" href="{{root}}{{path}}"><img src="{{root}}assets/upload{{img}}" alt=""></a>
         <h3 class="ap-grid-item__title -medium"><a href="{{root}}{{path}}">{{ title }}</a></h3>
         <b class="ap-grid-item__badge">
             {{ discount }}<small>OFF</small>
@@ -51,7 +55,7 @@
     {{#each popular}}
     <div class="ap-grid-item">
         <a href="{{root}}{{path}}">
-            <div class="ap-grid-item__pic"><img src="{{root}}{{img}}" alt=""></div>
+            <div class="ap-grid-item__pic"><img src="{{root}}assets/upload{{img}}" alt=""></div>
             <h3 class="ap-grid-item__title -medium">
                 <span class="__divide">{{ brand }}</span>{{ name }}
             </h3>

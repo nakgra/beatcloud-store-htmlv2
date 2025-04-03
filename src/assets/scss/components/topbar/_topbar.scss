@@ -5,14 +5,28 @@
     background: rgba(255, 255, 255, 1.0);
 
     @include breakpoint(small only) {
-        margin-bottom: 2rem;
+        margin-bottom: 2.5rem;
+
+        .-home & {
+            margin-bottom: 2rem;
+        }
     }
 
-    @include breakpoint(medium) {
-        margin-bottom: 2rem;
+    @include breakpoint(medium only) {
+        margin-bottom: 3rem;
+
+        .-home & {
+            margin-bottom: 2rem;
+        }
     }
 
-    @include breakpoint(xlarge) {}
+    @include breakpoint(xlarge) {
+        margin-bottom: 4rem;
+
+        .-home & {
+            margin-bottom: 2rem;
+        }
+    }
 
     &__frame {
         @include xy-grid-container;

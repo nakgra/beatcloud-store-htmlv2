@@ -8,17 +8,16 @@
             <p class="ap-product__lead">PSPを代表するPSP VintageWarmer2や、beatcloudで最も人気なPSP TripleMeter等、厳選された人気商品ばかりを集めた25製品が96%オフの超特価！</p>
             <div class="ap-product-price">
                 <div class="ap-product-price__board">
-                    <span class="ap-product-price__discount"><b>90%</b>OFF</span>
-                    <span class="ap-product-price__current"><b>37,750</b>円 税込</span>
+                    <span class="ap-product-price__current"><span class="ap-product-price__discount"><b>90%</b>OFF</span><b>37,750</b>円 税込</span>
                     <span class="ap-product-price__point">獲得予定ポイント:377</span>
                 </div>
                 <span class="ap-product-price__original">通常販売価格 <del>370,960円</del></span>
                 <span class="ap-product-price__code">JAN: 4530027145669</span>
             </div>
             <div class="ap-product-actions">
-                <span class="ap-product-actions__cart">カートに入れる</span>
-                <span class="ap-product-actions__wishlist">あとで買う</span>
-                <a class="ap-product-actions__bargain" href="">同じセールの商品12点を見る</a>
+                <span class="ap-product-actions__cart"><span>カートに入れる</span></span>
+                <span class="ap-product-actions__wishlist"><span>あとで買う</span></span>
+                <a class="ap-product-actions__bargain" href=""><span>同じセールの商品12点を見る</span></a>
             </div>
         </div>
         <div class="ap-product-header__sub">
@@ -26,6 +25,14 @@
         </div>
     </div>
     <div class="ap-product-body">
+        <div class="ap-product-body__content">
+            <h2>見出し2 Heading 2</h2>
+            <p>彼らは元来すなわちその存在家って事のために接しますた。あたかも前から関係院はいったいある相違たですなりがありていたがは沙汰眺めますなて、どうには云わあっましでで。</p>
+            <h3>見出し3 Heading 3</h3>
+            <p>家来をはおりなくのはとうてい元来にかくだたくった。もちろん久原さんが仕事状態もともと講演へしで坊ちゃんその骨君か建設がってご話でしなくたませて、こういう将来は私か秋刀魚作物に書いて、嘉納さんの事が男のあなたとたとい実仮定と解らてよそ席をお逡巡でつけ加えようにとうてい同存在に出ましうから、もう現に病気に云うでしがおきですものを送らなけれだ。</p>
+            <h4>見出し4 Heading 4</h4>
+            <p>Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Donec id elit non mi porta gravida at eget metus. Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et.</p>
+        </div>
         <div class="ap-product-body__content">
             <h2>有名エンジニアのお気に入りPSP Audiowareプラグイン</h2>
             <h3>Alan Silverman</h3>
@@ -133,6 +140,8 @@
             <p>私が慣れ親しんでいる他のどんなものとも違う、太く共鳴するリバーブです。10代の時、グランドピアノの中にラジカセを置いた時のことを思い出します。</p>
             <h4>・PSP TripleMeter</h4>
             <p>オールドスクールに機能する、リアルなアナログメーターです。作業中にRMSレベルを知ることは、ミキシングとマスタリングにとって不可欠です。これなしで作業することは絶対に不可能です! 私はアナログ時代から作業しているので、実際のVUを見られるのは喜びです。</p>
+        </div>
+        <div class="ap-product-body__content">
             <h2>PSP25周年を記念した、96%オフの超特価バンドル</h2>
             <p>PSPを代表するPSP VintageWarmer2や、beatcloudで最も人気なPSP TripleMeter等、厳選された人気商品ばかりを集めた25製品が超特価です！全製品合計通常価格約37万円の商品が、たった3万円台で購入いただけちゃうチャンスです！</p>
             <p>下記がラインナップになります。各製品の製品名の箇所に各製品販売ページとなります。動作環境は、そちらをご参照ください。</p>
@@ -167,5 +176,45 @@
             </ul>
             <p>※日本語マニュアルは各製品ありますが、TwinLのみ、日本語マニュアルがありません。またPSP ConsoleQはV1のものが付属します。</p>
         </div>
+    </div>
+    <div class="ap-section-header">
+        <hgroup class="ap-section-title">
+            <div class="ap-section-title__frame">
+                <h2 class="ap-section-title__main">関連商品</h2>
+            </div>
+        </hgroup>
+    </div>
+    <div class="ap-grid">
+        {{#each popular}}
+        <div class="ap-grid-item">
+            <a href="{{../root}}{{path}}">
+                <div class="ap-grid-item__pic"><img src="{{../root}}assets/upload{{img}}" alt=""></div>
+                <h3 class="ap-grid-item__title -medium">
+                    <span class="__divide">{{ brand }}</span>{{ name }}
+                </h3>
+                <p class="ap-grid-item__footnote -alert">&yen;{{ price }} <del>&yen;{{ original_price }}</del></p>
+            </a>
+        </div>
+        {{/each}}
+    </div>
+    <div class="ap-section-header">
+        <hgroup class="ap-section-title">
+            <div class="ap-section-title__frame">
+                <h2 class="ap-section-title__main">最近チェックした商品</h2>
+            </div>
+        </hgroup>
+    </div>
+    <div class="ap-grid">
+        {{#each popular}}
+        <div class="ap-grid-item">
+            <a href="{{../root}}{{path}}">
+                <div class="ap-grid-item__pic"><img src="{{../root}}assets/upload{{img}}" alt=""></div>
+                <h3 class="ap-grid-item__title -medium">
+                    <span class="__divide">{{ brand }}</span>{{ name }}
+                </h3>
+                <p class="ap-grid-item__footnote -alert">&yen;{{ price }} <del>&yen;{{ original_price }}</del></p>
+            </a>
+        </div>
+        {{/each}}
     </div>
 </article>

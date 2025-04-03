@@ -1,16 +1,29 @@
 .ap-product {
-    margin: 4rem 0 0 0;
+
+    @include breakpoint(small only) {}
+
+    @include breakpoint(medium only) {}
+
+    @include breakpoint(large) {}
 
     &__lead {
+        margin: 0;
         font-size: 1.25rem;
+
+        @include breakpoint(small only) {
+            font-size: 1.125rem;
+        }
     }
 
     &__image {
         display: block;
         // margin: 0 0 .5rem 0;
         width: 100%;
-        aspect-ratio: 16 / 9;
+        max-height: 100%;
+
         object-fit: cover;
         border: 1px solid $ap-border-color;
+
+        @include aspect-ratio;
     }
 }

@@ -1,0 +1,16 @@
+.ap-browse-title {
+
+    @include breakpoint(large) {
+    }
+
+    &__main {
+        margin: 0;
+        font-weight: 500;
+
+        @include breakpoint(medium) {
+            font-size: 1.25rem;
+        }
+
+        @include breakpoint(large) {}
+    }
+}

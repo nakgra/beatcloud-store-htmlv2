@@ -1,0 +1,68 @@
+---
+meta-title: ""
+wrapperclass: "-browse"
+---
+<article class="ap-browse">
+    <header class="ap-browse__header">
+        <hgroup class="ap-browse-title">
+            <h1 class="ap-browse-title__main">商品を探す</h1>
+        </hgroup>
+        <nav class="ap-browse-order">
+            <span class="ap-browse-order__title">並び替え:新着</span>
+            <ul class="ap-browse-order__items">
+                <li><a href="">新着</a></li>
+                <li><a href="">価格の安い順</a></li>
+                <li><a href="">価格の高い順</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="ap-browse__main">
+        <nav class="ap-browse-sidebar">
+            <div class="ap-browse-sidebar__frame">
+                <div class="ap-browse-filter">
+                    <h2 class="ap-browse-filter__title">カテゴリ</h2>
+                    <ul class="ap-browse-filter__item">
+                        <li><a href="">大カテゴリ 01</a></li>
+                        <li><a href="">大カテゴリ 02</a></li>
+                        <li><a href="">大カテゴリ 03</a></li>
+                        <li><a href="">大カテゴリ 04</a></li>
+                        <li><a href="">大カテゴリ 05</a></li>
+                    </ul>
+                </div>
+                <div class="ap-browse-filter">
+                    <h2 class="ap-browse-filter__title">ブランド</h2>
+                    <ul class="ap-browse-filter__item">
+                        {{#repeat 20}}
+                        <li><a href="">ブランド {{@index}}</a></li>
+                        {{/repeat}}
+                    </ul>
+                </div>
+                <div class="ap-browse-filter">
+                    <h2 class="ap-browse-filter__title">価格</h2>
+                    <ul class="ap-browse-filter__item">
+                        <li><a href="">価格 01</a></li>
+                        <li><a href="">価格 02</a></li>
+                        <li><a href="">価格 03</a></li>
+                        <li><a href="">価格 04</a></li>
+                        <li><a href="">価格 05</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div class="ap-browse-result">
+            <div class="ap-grid">
+                {{#each popular}}
+                <div class="ap-grid-item">
+                    <a href="{{../root}}{{path}}">
+                        <div class="ap-grid-item__pic"><img src="{{../root}}assets/upload{{img}}" alt=""></div>
+                        <h3 class="ap-grid-item__title -small">
+                            <span class="__divide">{{ brand }}</span>{{ name }}
+                        </h3>
+                        <p class="ap-grid-item__footnote -alert">&yen;{{ price }} <del>&yen;{{ original_price }}</del></p>
+                    </a>
+                </div>
+                {{/each}}
+            </div>
+        </div>
+    </div>
+</article>

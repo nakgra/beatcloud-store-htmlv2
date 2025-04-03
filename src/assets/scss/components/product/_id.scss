@@ -1,11 +1,30 @@
 .ap-product-id {
     @include xy-grid-container($width: $ap-product-header-width);
 
+    @include breakpoint(small only) {
+        margin-bottom: 2rem;
+    }
+
+    @include breakpoint(medium only) {
+        margin-bottom: 1.5rem;
+    }
+
+    @include breakpoint(large) {
+        margin-bottom: 2.5rem;
+    }
+
+    & {
+
+    }
+
     &__brand {
+        margin: 0;
         font-size: 1.5rem;
     }
 
     &__name {
+        margin: .25rem 0 0 0;
+        line-height: 1;
         font-size: 3rem;
         font-weight: 900;
     }

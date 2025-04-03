@@ -1,12 +1,36 @@
 .ap-product-actions {
-    display: flex;
-    column-gap: 1.5rem;
-    align-items: flex-end;
+    flex: 1 0 auto;
 
-    margin: 3rem 0 0 0;
+    @include breakpoint(small only) {
+        display: flex;
+        flex-direction: column;
+        // align-items: center;
+        justify-content: center;
+        margin: 2.5rem 0 0 0;
+    }
+
+    @include breakpoint(medium) {
+        display: flex;
+        column-gap: 1.5rem;
+        align-items: flex-end;
+    }
+
+    @include breakpoint(medium only) {
+        margin: 2.5rem 0 0 0;
+    }
+
+    @include breakpoint(large) {
+        margin: 3.5rem 0 0 0;
+    }
 
     >* {
-        flex: 0 0 auto;
+        @include breakpoint(small only) {
+
+        }
+
+        @include breakpoint(medium) {
+            flex: 0 0 auto;
+        }
     }
 
     &__cart {
@@ -24,6 +48,7 @@
         $button-padding: $tmp-padding !global;
 
         @include breakpoint(small only) {
+            margin-bottom: 1rem;
             padding: 1.0625rem 1.25rem 1rem 1.25rem;
             font-size: 1.0625rem !important;
         }
@@ -47,7 +72,7 @@
         $tmp-button-color-alt: $button-color-alt;
 
         $button-margin: 0!global;
-        $button-padding: 0.75rem 0.875rem 0.75rem 2rem !global;
+        $button-padding: 0.75rem 0.875rem!global;
 
         @include button;
 
@@ -55,24 +80,37 @@
         $button-padding: $tmp-padding !global;
 
         @include breakpoint(small only) {
-            // padding: 1.0625rem 1.25rem 1rem 1.25rem;
-            // font-size: 1rem !important;
+            margin-bottom: 1rem;
         }
 
         @include breakpoint(medium only) {
-            // padding: 1.25rem 1.25rem;
         }
 
         & {
             color: $black;
             background-color: rgba(90, 90, 90, 0.1);
-            background-image: url(../img/icon-bookmark.svg);
-            background-repeat: no-repeat;
-            background-position: 0.875rem center;
-            background-size: 12px 18px;
+            line-height: 1;
+
+            >span {
+                position: relative;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                &:before {
+                    content: '';
+                    margin: 0 .5rem 0 0;
+                    width: 12px;
+                    height: 18px;
+                    background-image: url(../img/icon-bookmark.svg);
+                    background-repeat: no-repeat;
+                    background-position: left center;
+                    background-size: contain;
+                }
+            }
 
             &:hover {
-                background-color: $black;
+                // background-color: $black;
             }
         }
     }
@@ -84,7 +122,7 @@
         $tmp-button-color-alt: $button-color-alt;
 
         $button-margin: 0!global;
-        $button-padding: 0.75rem 0.875rem 0.75rem 2.4rem !global;
+        $button-padding: 0.75rem 0.875rem !global;
 
         @include button;
 
@@ -92,21 +130,33 @@
         $button-padding: $tmp-padding !global;
 
         @include breakpoint(small only) {
-            padding: 1.0625rem 1.25rem 1rem 1.25rem;
-            font-size: 1rem !important;
         }
 
         @include breakpoint(medium only) {
-            padding: 1.25rem 1.25rem;
         }
 
         & {
             color: $black;
             background-color: rgba(90, 90, 90, 0.1);
-            background-image: url(../img/icon-info.svg);
-            background-repeat: no-repeat;
-            background-position: 0.875rem center;
-            background-size: 18px 18px;
+            line-height: 1;
+
+            >span {
+                position: relative;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                &:before {
+                    content: '';
+                    margin: 0 .5rem 0 0;
+                    width: 18px;
+                    height: 18px;
+                    background-image: url(../img/icon-info.svg);
+                    background-repeat: no-repeat;
+                    background-position: left center;
+                    background-size: contain;
+                }
+            }
         }
     }
 }

@@ -1,12 +1,27 @@
 .ap-product-header {
     @include xy-grid-container($width: $ap-product-header-width);
 
+    @include breakpoint(small only) {}
+
+    @include breakpoint(medium only) {}
+
     @include breakpoint(large) {
         display: flex;
     }
 
     &__main {
+        @include breakpoint(small only) {
+            margin-bottom: 2rem;
+        }
+
+        @include breakpoint(medium only) {
+            margin-bottom: 3rem;
+        }
+
         @include breakpoint(large) {
+            display: flex;
+            flex-direction: column;
+
             margin: 0;
             padding: 0 4rem 0 0;
             width: 60%;
