@@ -7,17 +7,22 @@ wrapperclass: "-browse"
         <hgroup class="ap-browse-title">
             <h1 class="ap-browse-title__main">商品を探す</h1>
         </hgroup>
-        <nav class="ap-browse-order">
-            <span class="ap-browse-order__title">並び替え:新着</span>
-            <ul class="ap-browse-order__items">
-                <li><a href="">新着</a></li>
-                <li><a href="">価格の安い順</a></li>
-                <li><a href="">価格の高い順</a></li>
-            </ul>
-        </nav>
+        <div class="ap-browse-controls">
+            <span class="ap-browse-controls__filter" data-filter-button>
+                絞り込み条件
+            </span>
+            <nav class="ap-browse-order">
+                <span class="ap-browse-order__title">並び替え:新着</span>
+                <ul class="ap-browse-order__items">
+                    <li><a href="">新着</a></li>
+                    <li><a href="">価格の安い順</a></li>
+                    <li><a href="">価格の高い順</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
     <div class="ap-browse__main">
-        <nav class="ap-browse-sidebar">
+        <nav class="ap-browse-sidebar" data-filter>
             <div class="ap-browse-sidebar__frame">
                 <div class="ap-browse-filter">
                     <h2 class="ap-browse-filter__title">カテゴリ</h2>

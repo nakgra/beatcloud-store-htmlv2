@@ -1,10 +1,19 @@
 .ap-browse-filter {
     // border-top: 1px solid $ap-border-color-nega;
+
     background: transparent url(../img/bg-2.jpg) repeat 0 0 / 75px;
+
+    .-active & {
+        // background: transparent url(../img/bg.jpg) repeat 0 0 / 75px;
+    }
 
     @include breakpoint(large) {
         margin: 0 0 .5rem 0;
         padding: 1.35rem 1.25rem;
+    }
+
+    &:last-child {
+        margin-bottom: 0;
     }
 
     &__title {

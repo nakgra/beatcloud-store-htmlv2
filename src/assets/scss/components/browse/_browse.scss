@@ -13,9 +13,14 @@
     @include breakpoint(large) {}
 
     &__header {
+        @include breakpoint(small only) {
+            margin-bottom: 2rem;
+        }
+
         @include breakpoint(medium) {
             display: flex;
             align-items: flex-end;
+            margin-bottom: 2rem;
         }
 
         @include breakpoint(large) {

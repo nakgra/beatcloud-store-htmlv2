@@ -1,10 +1,15 @@
 .ap-browse-order {
-    @include breakpoint(medium) {
+    @include breakpoint(small only) {
         margin: 0 0 0 auto;
     }
 
-    &__title {
+    @include breakpoint(medium only) {
+        margin: 0 0 0 2rem;
+    }
 
+    &__title {
+        margin: 0;
+        cursor: pointer;
     }
 
     &__items {

@@ -10,15 +10,26 @@
 
     @include breakpoint(small only) {
         margin-bottom: 1.5rem;
-        padding: 1rem;
+        padding: .875rem;
         // border-color: #efefef;
     }
 
     @include breakpoint(medium) {
+        padding: .875rem;
+    }
+
+    @include breakpoint(large) {
+        padding: .875rem;
+    }
+
+    @include breakpoint(xlarge) {
+        padding: 1rem;
+    }
+
+    @include breakpoint(xxlarge) {
         padding: 1.25rem;
     }
 
-    @include breakpoint(large) {}
 
     >a {
         color: inherit;

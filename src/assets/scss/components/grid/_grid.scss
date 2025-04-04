@@ -1,5 +1,5 @@
 .ap-grid {
-    @include xy-grid-container;
+    // @include xy-grid-container;
 
     & {
         @include breakpoint(small only) {

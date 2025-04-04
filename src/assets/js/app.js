@@ -18,14 +18,15 @@ $(document).foundation();
 
 
 import * as func from './helpers/functions';
+import Carousel from './lib/carousel';
 import CheckoutForm from './lib/checkoutForm';
 import CheckPassword from './lib/checkPassword';
 import Confirm from './lib/confirm';
-import Jumplink from './lib/jumplink';
-import Textarea from './lib/textarea';
+import Filter from './lib/filter';
 import Header from './lib/header';
+import Jumplink from './lib/jumplink';
 import Nav from './lib/nav';
-import Carousel from './lib/carousel';
+import Textarea from './lib/textarea';
 
 (function(window, document) {
     CheckoutForm.setup();
@@ -36,4 +37,5 @@ import Carousel from './lib/carousel';
     Header.setup();
     Nav.setup();
     Carousel.setup();
+    Filter.setup();
 })(window, window.document);

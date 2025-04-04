@@ -20,11 +20,11 @@ class Header {
     init() {
         let obj = this;
 
-        // let headerContainer = document.querySelector('[' + obj.getMyAttrName('-container') + ']');
-        //高さ取得
-        // let headerheight = obj.element.offsetHeight;
-        //取得した高さを代入
-        // obj.element.style.height = obj.elementheight + 'px';
+        let headerContainer = document.querySelector('[' + obj.getMyAttrName('-holder') + ']');
+        // 高さ取得
+        let headerheight = obj.element.offsetHeight;
+        // 取得した高さを代入
+        headerContainer.style.height = headerheight + 'px';
 
         let position, offsetToShow;
         position = func.getElementPostion(obj.element);

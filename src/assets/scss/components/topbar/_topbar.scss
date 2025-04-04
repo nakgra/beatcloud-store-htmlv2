@@ -1,8 +1,5 @@
 .ap-topbar {
     $parent: &;
-    position: relative;
-
-    background: rgba(255, 255, 255, 1.0);
 
     @include breakpoint(small only) {
         margin-bottom: 2.5rem;
@@ -25,6 +22,33 @@
 
         .-home & {
             margin-bottom: 2rem;
+        }
+    }
+
+    &__content {
+        position: relative;
+        background: rgba(255, 255, 255, 1.0);
+
+        &.-active {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 999;
+            // background: rgba(255, 255, 255, .9);
+
+            transition: background 1s ease-in;
+            box-shadow: 0 0 3px $medium-gray;
+
+            #{$parent}__name {
+                img {
+                    width: 150px;
+
+                    @include breakpoint(small only) {
+                        width: 130px;
+                    }
+                }
+            }
         }
     }
 
@@ -55,28 +79,6 @@
                 @include breakpoint(small only) {
                     width: 130px;
 
-                }
-            }
-        }
-    }
-
-    &.-active {
-        position: fixed;
-        top: 0;
-        left: 0;
-        right: 0;
-        z-index: 999;
-        // background: rgba(255, 255, 255, .9);
-
-        transition: background 1s ease-in;
-        box-shadow: 0 0 3px $medium-gray;
-
-        #{$parent}__name {
-            img {
-                width: 150px;
-
-                @include breakpoint(small only) {
-                    width: 130px;
                 }
             }
         }

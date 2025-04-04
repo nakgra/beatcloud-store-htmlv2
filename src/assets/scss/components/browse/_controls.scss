@@ -1,0 +1,21 @@
+.ap-browse-controls {
+    display: flex;
+    align-items: flex-end;
+
+    @include breakpoint(small only) {
+        margin: 0;
+    }
+
+    @include breakpoint(medium) {
+        margin: 0 0 0 auto;
+    }
+
+    &__filter {
+        margin: 0;
+        cursor: pointer;
+
+        @include breakpoint(large) {
+            display: none;
+        }
+    }
+}
