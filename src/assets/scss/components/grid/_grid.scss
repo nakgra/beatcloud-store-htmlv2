@@ -3,7 +3,9 @@
 
     & {
         @include breakpoint(small only) {
-            // max-width: ;
+            display: grid;
+            gap: .5rem;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
         }
 
         @include breakpoint(medium) {

@@ -15,6 +15,10 @@
     font-size: .875rem;
 
     >li {
+        margin: 0 0 0 1rem;
+        padding: 0 0 0 1rem;
+        border-left: 1px solid $medium-gray;
+
         > a {
             color: $body-font-color;
         }

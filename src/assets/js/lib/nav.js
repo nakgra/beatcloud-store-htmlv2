@@ -35,11 +35,13 @@ class Nav {
         }
 
         obj.trigger.addEventListener('click', function(e) {
-            e.cancelBubble = true;
+            e.stopPropagation();
+
+            obj.closeOthers();
             obj.toggle();
         });
         // obj.trigger.addEventListener('touchend', function(e) {
-        //     e.cancelBubble = true;
+        //     e.stopPropagation();
         //     // obj.toggle();
         // });
 
@@ -49,11 +51,15 @@ class Nav {
         // document.body.addEventListener('touchend', obj.close.bind(obj));
 
         // サブメニューはクリックイベントの伝播を抑止して、メニューを閉じてしまわないようにする
-        obj.menu.addEventListener('click', (e) => {e.cancelBubble = true;});
-        // obj.menu.addEventListener('touchend', (e) => {e.cancelBubble = true;});
+        obj.menu.addEventListener('click', (e) => {e.stopPropagation();});
+        // obj.menu.addEventListener('touchend', (e) => {e.stopPropagation();});
 
         $(window).on('changed.zf.mediaquery', function(event, newSize, oldSize) {
             // newSize is the name of the now-current breakpoint, oldSize is the previous breakpoint
+            obj.close();
+        });
+
+        obj.menu.addEventListener('closeRequested', function(e) {
             obj.close();
         });
     }
@@ -63,13 +69,12 @@ class Nav {
      **/
     toggle() {
         let obj = this;
-        func.toggleClass(document.documentElement, '-overlay');
 
-        if (func.hasClass(obj.menu, '-open')) {
+        if (obj.menu.hasAttribute('data-opened')) {
             obj.close();
         } else {
-            func.addClass(obj.menu, '-open');
-            func.addClass(obj.trigger, '-open');
+            obj.menu.setAttribute('data-opened', '');
+            obj.trigger.setAttribute('data-opened', '');
         }
     }
 
@@ -78,9 +83,23 @@ class Nav {
      **/
     close() {
         let obj = this;
-        func.removeClass(obj.trigger, '-open');
-        func.removeClass(document.documentElement, '-overlay');
-        func.removeClass(obj.menu, '-open');
+
+        obj.trigger.removeAttribute('data-opened');
+        obj.menu.removeAttribute('data-opened');
+    }
+
+    /**
+     *
+     **/
+    closeOthers() {
+        let obj = this;
+        let event = new Event('closeRequested')
+        let others = document.querySelectorAll('[data-opened]');
+        Array.prototype.forEach.call(others, function(other) {
+            if (other != obj.menu) {
+                other.dispatchEvent(event);
+            }
+        });
     }
 
     /**

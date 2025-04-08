@@ -4,6 +4,9 @@
         <h1 class="ap-product-id__name">PSP 25th Anniversary Bundle</h1>
     </hgroup>
     <div class="ap-product-header">
+        <div class="ap-product-header__sub">
+            <img class="ap-product__image" src="{{root}}assets/upload/product/001.jpg" alt="">
+        </div>
         <div class="ap-product-header__main">
             <p class="ap-product__lead">PSPを代表するPSP VintageWarmer2や、beatcloudで最も人気なPSP TripleMeter等、厳選された人気商品ばかりを集めた25製品が96%オフの超特価！</p>
             <div class="ap-product-price">
@@ -19,9 +22,6 @@
                 <span class="ap-product-actions__wishlist"><span>あとで買う</span></span>
                 <a class="ap-product-actions__bargain" href=""><span>同じセールの商品12点を見る</span></a>
             </div>
-        </div>
-        <div class="ap-product-header__sub">
-            <img class="ap-product__image" src="{{root}}assets/upload/product/001.jpg" alt="">
         </div>
     </div>
     <div class="ap-product-body">
@@ -177,44 +177,48 @@
             <p>※日本語マニュアルは各製品ありますが、TwinLのみ、日本語マニュアルがありません。またPSP ConsoleQはV1のものが付属します。</p>
         </div>
     </div>
-    <div class="ap-section-header">
-        <hgroup class="ap-section-title">
-            <div class="ap-section-title__frame">
-                <h2 class="ap-section-title__main">関連商品</h2>
-            </div>
-        </hgroup>
-    </div>
-    <div class="ap-grid">
-        {{#each popular}}
-        <div class="ap-grid-item">
-            <a href="{{../root}}{{path}}">
-                <div class="ap-grid-item__pic"><img src="{{../root}}assets/upload{{img}}" alt=""></div>
-                <h3 class="ap-grid-item__title -medium">
-                    <span class="__divide">{{ brand }}</span>{{ name }}
-                </h3>
-                <p class="ap-grid-item__footnote -alert">&yen;{{ price }} <del>&yen;{{ original_price }}</del></p>
-            </a>
+    <div class="ap-section">
+        <div class="ap-section-header">
+            <hgroup class="ap-section-title">
+                <div class="ap-section-title__frame">
+                    <h2 class="ap-section-title__main">関連商品</h2>
+                </div>
+            </hgroup>
         </div>
-        {{/each}}
-    </div>
-    <div class="ap-section-header">
-        <hgroup class="ap-section-title">
-            <div class="ap-section-title__frame">
-                <h2 class="ap-section-title__main">最近チェックした商品</h2>
+        <div class="ap-grid">
+            {{#each popular}}
+            <div class="ap-grid-item">
+                <a href="{{../root}}{{path}}">
+                    <div class="ap-grid-item__pic"><img src="{{../root}}assets/upload{{img}}" alt=""></div>
+                    <h3 class="ap-grid-item__title -medium">
+                        <span class="__divide">{{ brand }}</span>{{ name }}
+                    </h3>
+                    <p class="ap-grid-item__footnote -alert">&yen;{{ price }} <del>&yen;{{ original_price }}</del></p>
+                </a>
             </div>
-        </hgroup>
-    </div>
-    <div class="ap-grid">
-        {{#each popular}}
-        <div class="ap-grid-item">
-            <a href="{{../root}}{{path}}">
-                <div class="ap-grid-item__pic"><img src="{{../root}}assets/upload{{img}}" alt=""></div>
-                <h3 class="ap-grid-item__title -medium">
-                    <span class="__divide">{{ brand }}</span>{{ name }}
-                </h3>
-                <p class="ap-grid-item__footnote -alert">&yen;{{ price }} <del>&yen;{{ original_price }}</del></p>
-            </a>
+            {{/each}}
         </div>
-        {{/each}}
+    </div>
+    <div class="ap-section">
+        <div class="ap-section-header">
+            <hgroup class="ap-section-title">
+                <div class="ap-section-title__frame">
+                    <h2 class="ap-section-title__main">最近チェックした商品</h2>
+                </div>
+            </hgroup>
+        </div>
+        <div class="ap-grid">
+            {{#each popular}}
+            <div class="ap-grid-item">
+                <a href="{{../root}}{{path}}">
+                    <div class="ap-grid-item__pic"><img src="{{../root}}assets/upload{{img}}" alt=""></div>
+                    <h3 class="ap-grid-item__title -medium">
+                        <span class="__divide">{{ brand }}</span>{{ name }}
+                    </h3>
+                    <p class="ap-grid-item__footnote -alert">&yen;{{ price }} <del>&yen;{{ original_price }}</del></p>
+                </a>
+            </div>
+            {{/each}}
+        </div>
     </div>
 </article>

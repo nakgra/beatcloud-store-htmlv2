@@ -26,6 +26,7 @@ import Filter from './lib/filter';
 import Header from './lib/header';
 import Jumplink from './lib/jumplink';
 import Nav from './lib/nav';
+import Search from './lib/Search';
 import Textarea from './lib/textarea';
 
 (function(window, document) {
@@ -38,4 +39,5 @@ import Textarea from './lib/textarea';
     Nav.setup();
     Carousel.setup();
     Filter.setup();
+    Search.setup();
 })(window, window.document);

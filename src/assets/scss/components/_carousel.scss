@@ -35,12 +35,12 @@
 
         @include breakpoint(medium only) {
             padding: 0 1rem;
-            width: 70vw!important;
+            width: 60vw!important;
         }
 
         @include breakpoint(large) {
             padding: 0 1rem;
-            width: 70vw!important;
+            width: 55vw!important;
         }
     }
 }

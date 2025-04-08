@@ -22,7 +22,7 @@ wrapperclass: "-browse"
         </div>
     </header>
     <div class="ap-browse__main">
-        <nav class="ap-browse-sidebar" data-filter>
+        <form class="ap-browse-sidebar" action="" method="GET" data-filter>
             <div class="ap-browse-sidebar__frame">
                 <div class="ap-browse-filter">
                     <h2 class="ap-browse-filter__title">カテゴリ</h2>
@@ -53,7 +53,11 @@ wrapperclass: "-browse"
                     </ul>
                 </div>
             </div>
-        </nav>
+            <div class="ap-browse-sidebar__footer">
+                <input type="submit" class="button" value="絞り込む">
+                <div class="ap-browse-sidebar__close">キャンセル</div>
+            </div>
+        </form>
         <div class="ap-browse-result">
             <div class="ap-grid">
                 {{#each popular}}

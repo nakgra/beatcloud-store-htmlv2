@@ -1,15 +1,22 @@
 .ap-browse-filter {
-    // border-top: 1px solid $ap-border-color-nega;
-
-    background: transparent url(../img/bg-2.jpg) repeat 0 0 / 75px;
+    border-top: 1px solid $ap-border-color-nega;
 
     .-active & {
         // background: transparent url(../img/bg.jpg) repeat 0 0 / 75px;
     }
 
+    @include breakpoint(medium down) {
+        padding: 1.5rem 1.5rem;
+        border-color: $ap-border-color;
+
+        &:first-child {
+            border-top: 0;
+        }
+    }
+
     @include breakpoint(large) {
         margin: 0 0 .5rem 0;
-        padding: 1.35rem 1.25rem;
+        padding: 1.35rem 1.25rem 1.35rem 0;
     }
 
     &:last-child {
@@ -17,10 +24,17 @@
     }
 
     &__title {
-        margin: 0 0 1rem 0;
         line-height: 1;
         font-size: 1.0625rem;
         font-weight: 500;
+
+        @include breakpoint(medium down) {
+            margin: 0 0 1.5rem 0;
+        }
+
+        @include breakpoint(large) {
+            margin: 0 0 1rem 0;
+        }
     }
 
     &__item {
@@ -29,13 +43,28 @@
         list-style-type: none;
 
         >li {
-            padding: .125rem 0;
+            @include breakpoint(medium down) {
+                padding: .5rem 0;
+            }
+
+            @include breakpoint(large) {
+                padding: .125rem 0;
+            }
+
+            &:first-child {
+                padding-top: 0;
+            }
+
+            &:last-child {
+                padding-bottom: 0;
+            }
 
             >a {
                 color: $body-font-color;
 
                 &:hover {
                     color: $anchor-color-hover;
+                    text-decoration: underline;
                 }
             }
         }

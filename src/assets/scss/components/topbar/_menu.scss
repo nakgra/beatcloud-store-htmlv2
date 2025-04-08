@@ -11,7 +11,7 @@
             background-color: $white;
             box-shadow: 0 3px 2px $light-gray;
 
-            &.-open {
+            &[data-opened] {
                 position: absolute;
                 top: 100%;
                 left: 0;
@@ -41,7 +41,7 @@
     @include breakpoint(small only) {
         order: 3;
         margin: 0 0 0 1.5rem;
-        padding: 1rem 0 1rem 1.5rem;
+        padding: 1rem 0 1rem 1rem;
         // border-right: 1px solid #eee;
         border-left: 1px solid #eee;
 
@@ -99,7 +99,7 @@
 
                 >a {
                     display: block;
-                    padding: 1.35rem 2.25rem;
+                    padding: 1.25rem 1.5rem;
                     color: $body-font-color;
                     font-weight: 500;
 
@@ -114,6 +114,14 @@
         }
     }
 
+    @include breakpoint(xlarge) {
+        >li {
+            >a {
+                padding: 1.35rem 2.25rem;
+            }
+        }
+    }
+
     &__button {
         position: relative;
         line-height: 1;
@@ -123,7 +131,7 @@
 
         cursor: pointer;
 
-        &:not(.-open) {
+        &:not([data-opened]) {
             &:before {
                 content: "";
                 display: block;
@@ -131,7 +139,7 @@
             }
         }
 
-        &.-open {
+        &[data-opened] {
             content: "";
             overflow: hidden;
 
@@ -159,7 +167,7 @@
         @include breakpoint(small only) {
             display: block;
 
-            &:not(.-open) {
+            &:not([data-opened]) {
                 &:before {
                     width: 24px;
                     height: 18px;
@@ -167,23 +175,23 @@
                 }
             }
 
-            &.-open {
+            &[data-opened] {
                 margin: 0 3px;
                 width: 18px;
                 height: 18px;
             }
 
             .-active & {
-                &:not(.-open) {
+                &:not([data-opened]) {
                     &:before {
-                        width: 18px;
+                        width: 24px;
                         height: 16px;
                         background: linear-gradient($black 2px, transparent 2px, transparent 7px, $black 7px, $black 9px, transparent 9px, transparent 14px, $black 14px);
                     }
                 }
 
-                &.-open {
-                    margin: 0 1px;
+                &[data-opened] {
+                    margin: 0 4px;
                     width: 16px;
                     height: 16px;
                 }
@@ -193,7 +201,7 @@
         @include breakpoint(medium only) {
             display: block;
 
-            &:not(.-open) {
+            &:not([data-opened]) {
                 &:before {
                     width: 28px;
                     height: 18px;
@@ -201,14 +209,14 @@
                 }
             }
 
-            &.-open {
+            &[data-opened] {
                 margin: 0 5px;
                 width: 18px;
                 height: 18px;
             }
 
             .-active & {
-                &:not(.-open) {
+                &:not([data-opened]) {
                     &:before {
                         width: 24px;
                         height: 18px;
@@ -216,7 +224,7 @@
                     }
                 }
 
-                &.-open {
+                &[data-opened] {
                     margin: 0 3px;
                     width: 24px;
                     height: 18px;

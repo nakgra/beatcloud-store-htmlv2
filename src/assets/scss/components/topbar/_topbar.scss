@@ -17,6 +17,14 @@
         }
     }
 
+    @include breakpoint(large only) {
+        margin-bottom: 3rem;
+
+        .-home & {
+            margin-bottom: 2rem;
+        }
+    }
+
     @include breakpoint(xlarge) {
         margin-bottom: 4rem;
 
@@ -64,22 +72,24 @@
     &__name {
         flex-grow: 1;
         flex-basis: 0;
-        display: flex;
-        flex-direction: column;
+        // display: flex;
+        // flex-direction: column;
         // justify-content: center;
 
         margin: 0;
         padding: 0;
 
         >a {
+            display: block;
+            width: 170px;
+
+            @include breakpoint(small only) {
+                width: 130px;
+
+            }
+
             img {
                 display: block;
-                width: 170px;
-
-                @include breakpoint(small only) {
-                    width: 130px;
-
-                }
             }
         }
     }

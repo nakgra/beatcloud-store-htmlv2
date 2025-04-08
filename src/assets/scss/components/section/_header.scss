@@ -1,5 +1,5 @@
 .ap-section-header {
-    @include xy-grid-container;
+    // @include xy-grid-container;
 
     @include breakpoint(small only) {
         margin: 3.75rem 0 3.5rem 0;

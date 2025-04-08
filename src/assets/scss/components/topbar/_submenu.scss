@@ -1,7 +1,10 @@
 .ap-topbar-submenu {
     align-self: center;
-
     flex-basis: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
     margin: 0;
 
     @include breakpoint(small only) {
@@ -38,12 +41,14 @@
         }
 
         >li {
+            >span,
             >a {
                 display: block;
 
                 white-space: nowrap;
                 overflow: hidden;
                 text-indent: 100%;
+                cursor: pointer;
 
                 &.-bookmarks {
                     width: 15px;
@@ -118,4 +123,21 @@
     }
 
     @include breakpoint(large) {}
+
+    &__account {
+        color: $body-font-color;
+        font-size: 0.875rem;
+
+        @include breakpoint(small only) {
+            margin-left: 1.25rem;
+        }
+
+        @include breakpoint(medium only) {
+            margin-left: 1.875rem;
+        }
+
+        @include breakpoint(large) {
+            margin-left: 1.875rem;
+        }
+    }
 }
