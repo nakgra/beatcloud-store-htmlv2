@@ -41,6 +41,7 @@
         }
 
         >li {
+
             >span,
             >a {
                 display: block;
@@ -51,20 +52,20 @@
                 cursor: pointer;
 
                 &.-bookmarks {
-                    width: 15px;
-                    height: 22px;
+                    width: 14px;
+                    height: 20px;
                     background: transparent url(../img/icon-bookmark.svg) no-repeat center 0 / contain;
                 }
 
                 &.-search {
-                    width: 22px;
-                    height: 22px;
+                    width: 20px;
+                    height: 20px;
                     background: transparent url(../img/icon-search.svg) no-repeat center 0 / contain;
                 }
 
                 &.-cart {
-                    width: 22px;
-                    height: 22px;
+                    width: 20px;
+                    height: 20px;
                     background: transparent url(../img/icon-cart.svg) no-repeat center 0 / contain;
                 }
 
@@ -125,11 +126,30 @@
     @include breakpoint(large) {}
 
     &__account {
+        flex: 0 0 auto;
         color: $body-font-color;
         font-size: 0.875rem;
 
         @include breakpoint(small only) {
             margin-left: 1.25rem;
+            white-space: nowrap;
+            overflow: hidden;
+            text-indent: 100%;
+            cursor: pointer;
+
+            width: 20px;
+            height: 20px;
+            background: transparent url(../img/icon-account.svg) no-repeat center 0 / contain;
+
+            .-active & {
+                width: 19px;
+                height: 19px;
+
+                @include breakpoint(small only) {
+                    width: 18px;
+                    height: 18px;
+                }
+            }
         }
 
         @include breakpoint(medium only) {

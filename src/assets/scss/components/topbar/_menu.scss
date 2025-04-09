@@ -42,7 +42,6 @@
         order: 3;
         margin: 0 0 0 1.5rem;
         padding: 1rem 0 1rem 1rem;
-        // border-right: 1px solid #eee;
         border-left: 1px solid #eee;
 
         .-active & {
@@ -61,9 +60,9 @@
     }
 
     @include breakpoint(medium only) {
-        margin: 0 1.5rem;
-        padding: 1.25rem 1.5rem;
-        border-right: 1px solid #eee;
+        order: 3;
+        margin: 0 0 0 1.5rem;
+        padding: 1.25rem 0 1.25rem 1.5rem;
         border-left: 1px solid #eee;
 
         .-active & {
@@ -101,7 +100,7 @@
                     display: block;
                     padding: 1.25rem 1.5rem;
                     color: $body-font-color;
-                    font-weight: 500;
+                    font-size: .9375rem;
 
                     .-active & {
                         font-size: .9375rem;
@@ -115,9 +114,27 @@
     }
 
     @include breakpoint(xlarge) {
-        >li {
-            >a {
-                padding: 1.35rem 2.25rem;
+        >ul {
+            >li {
+                font-size: 1rem;
+
+                >a {
+                    padding: 1.35rem 1.75rem;
+                    font-weight: 500;
+                }
+            }
+        }
+    }
+
+    @include breakpoint(xxlarge) {
+        >ul {
+            >li {
+                font-size: 1rem;
+
+                >a {
+                    padding: 1.35rem 2rem;
+                    font-weight: 500;
+                }
             }
         }
     }
