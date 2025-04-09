@@ -117,7 +117,9 @@ class Nav {
 
         attrName = Nav.targetAttrName;
         element = document.querySelector('[' + attrName + ']');
-        new Nav(element);
+        if (element) {
+            new Nav(element);
+        }
     }
 }
 
