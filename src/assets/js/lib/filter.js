@@ -6,6 +6,7 @@ class Filter {
 
     #element;
     #menu;
+    #closebutton;
     #trigger;
     #myAttrName;
 
@@ -37,13 +38,30 @@ class Filter {
         });
 
 
+        obj.closebutton  = document.querySelector('[' + obj.getMyAttrName('-close') + ']');
+        if (obj.closebutton) {
+            obj.closebutton.addEventListener('click', function(e) {
+                e.preventDefault();
+                // e.stopPropagation();
+                obj.close();
+            });
+        }
+
+
         //空クリック時に閉じる
-        document.body.addEventListener('click', obj.close.bind(obj));
+        // document.body.addEventListener('click', obj.close.bind(obj));
         // document.body.addEventListener('touchend', obj.close.bind(obj));
 
         // メニューはクリックイベントの伝播を抑止して、メニューを閉じてしまわないようにする
         // obj.element.addEventListener('click', (e) => {e.stopPropagation();});
         // obj.element.addEventListener('touchend', (e) => {e.stopPropagation();});
+
+        //esc
+        document.body.addEventListener('keydown', function(e) {
+            if (e.keyCode == 27 && obj.isOpen()) {
+                obj.close();
+            }
+        });
 
         $(window).on('changed.zf.mediaquery', function(event, newSize, oldSize) {
             // newSize is the name of the now-current breakpoint, oldSize is the previous breakpoint

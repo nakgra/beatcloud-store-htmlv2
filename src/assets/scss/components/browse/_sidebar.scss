@@ -16,13 +16,13 @@
         &[data-opened] {
             display: flex;
             flex-direction: column;
-            background-color: $white;//zrgba(30, 30, 30, 0.5);
+            background-color: $white;//rgba(30, 30, 30, 0.5);
         }
     }
 
     @include breakpoint(large) {
         flex: 0 0 auto;
-        width: 24%;
+        width: 25%;
     }
 
     @include breakpoint(xlarge) {
@@ -48,7 +48,8 @@
             bottom: 0;
             left: 0;
             right: 0;
-            padding-right: .5rem;
+            padding-right: 1rem;
+            padding-bottom: 2rem;
         }
 
         &::-webkit-scrollbar {
@@ -90,6 +91,47 @@
         @include breakpoint(large) {
             display: none;
         }
+
+        >input[type="submit"] {
+            $tmp-margin: $button-margin;
+            // $tmp-padding: $button-padding;
+            $tmp-button-color: $button-color;
+            $tmp-button-color-alt: $button-color-alt;
+
+            $button-margin: 0 auto!global;
+            // $button-padding: 1rem 1.5rem !global;
+
+            @include button;
+
+            $button-margin: $tmp-margin !global;
+            // $button-padding: $tmp-padding !global;
+
+            @include breakpoint(small only) {
+                // padding: 1.0625rem 1.25rem 1rem 1.25rem;
+                // font-size: 1.0625rem !important;
+            }
+
+            @include breakpoint(medium only) {
+                // padding: 1.125rem 1.25rem;
+            }
+
+            & {
+                display: block;
+                width: 90%;
+                font-size: 1.0625rem;
+                font-weight: 500;
+                border-radius: 1.5rem;
+
+                @include breakpoint(medium only) {
+                    width: 60%;
+                }
+            }
+
+            &:hover,
+            &:focus {
+                // color: $body-font-color !important;
+            }
+        }
     }
 
     &__close {
@@ -97,21 +139,26 @@
         top: 1.125rem;
         right: 1.125rem;
         // z-index: 100;
-        width: 22px;
-        height: 22px;
+        width: 32px;
+        height: 32px;
         overflow: hidden;
         white-space: nowrap;
         text-indent: 100%;
         cursor: pointer;
+        background-color: rgba(255, 255, 255, 0.8);
+        border-radius: 16px;
+        border: 1px solid $ap-border-color;
 
         &::before,
         &::after {
             content: '';
             position: absolute;
             height: 2px;
-            width: 100%;
-            top: 50%;
+            width: 60%;
+            top: 0;
+            bottom: 0;
             left: 0;
+            right: 0;
             margin: auto;
             background: $black;
         }

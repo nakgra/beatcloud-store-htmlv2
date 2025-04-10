@@ -33,17 +33,17 @@
 
         @include breakpoint(large) {
             display: flex;
-            column-gap: 1.875rem;
+            column-gap: 1.5rem;
         }
 
         @include breakpoint(xlarge) {
             display: flex;
-            column-gap: 2rem;
+            column-gap: 1.5rem;
         }
 
         @include breakpoint(xxlarge) {
             display: flex;
-            column-gap: 3rem;
+            column-gap: 2.25rem;
         }
     }
 }
