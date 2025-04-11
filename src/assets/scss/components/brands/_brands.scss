@@ -1,0 +1,26 @@
+.ap-brands {
+    // @include xy-grid-container;
+
+    & {
+        @include breakpoint(small only) {
+            display: grid;
+            gap: 1rem .5rem;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+
+        @include breakpoint(medium) {
+            display: grid;
+            gap: 1.5rem 1.25rem;
+            grid-template-columns: repeat(4, minmax(0, 1fr));
+        }
+
+        @include breakpoint(large) {
+            gap: 2rem 1.5rem;
+            grid-template-columns: repeat(4, minmax(0, 1fr));
+        }
+    }
+
+    &__item {
+
+    }
+}

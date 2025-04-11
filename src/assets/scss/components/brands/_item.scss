@@ -1,0 +1,101 @@
+.ap-brands-item {
+    $parent: &;
+    position: relative;
+
+    @include breakpoint(small only) {
+    }
+
+    @include breakpoint(medium) {
+    }
+
+    @include breakpoint(large) {
+    }
+
+    @include breakpoint(xlarge) {
+    }
+
+    @include breakpoint(xxlarge) {}
+
+
+    >a {
+        color: inherit;
+
+        &:hover {
+            #{$parent}__title {
+                color: $anchor-color-hover;
+            }
+        }
+    }
+
+    &__pic {
+        display: block;
+        border: 1px solid $ap-border-color;
+        background-color: $white;
+
+        @include breakpoint(small only) {
+            margin: 0 0 .5rem 0;
+            padding: .25rem;
+        }
+
+        @include breakpoint(medium only) {
+            margin: 0 0 .75rem 0;
+            padding: .5rem;
+        }
+
+        @include breakpoint(large) {
+            margin: 0 0 .75rem 0;
+            padding: .5rem;
+        }
+
+        // border-bottom: 3px solid $black;
+
+        >img {
+            display: block;
+            aspect-ratio: 16 / 9;
+            width: 100%;
+            object-fit: cover;
+        }
+    }
+
+    &__title {
+        margin: 0 0 .5rem 0;
+        line-height: 1.3;
+        font-size: 1.25rem;
+        font-weight: 700;
+        font-feature-settings: "palt";
+
+
+        &.-small {
+            font-size: 1rem;
+            font-weight: 400;
+        }
+
+        &.-medium {
+            @include breakpoint(small only) {
+                font-size: 1rem;
+                font-weight: 400;
+            }
+
+            @include breakpoint(medium) {
+                font-size: 1.125rem;
+                font-weight: 500;
+            }
+        }
+
+        >.__divide {
+            display: block;
+        }
+
+        >a {
+            color: $body-font-color;
+
+            &:hover {
+                color: $anchor-color-hover;
+            }
+        }
+
+        @include breakpoint(small only) {
+            font-size: 1.125rem;
+        }
+    }
+}

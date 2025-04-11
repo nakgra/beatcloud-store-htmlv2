@@ -1,0 +1,22 @@
+[
+    {
+        "title": "Celemony",
+        "path": "products/index.html",
+        "img": "/brands/004.png"
+    },
+    {
+        "title": "IK Multimedia",
+        "path": "products/index.html",
+        "img": "/brands/001.jpg"
+    },
+    {
+        "title": "IMAGE LINE",
+        "path": "products/index.html",
+        "img": "/brands/002.jpg"
+    },
+    {
+        "title": "UNIVERSAL AUDIO",
+        "path": "products/index.html",
+        "img": "/brands/003.png"
+    }
+]

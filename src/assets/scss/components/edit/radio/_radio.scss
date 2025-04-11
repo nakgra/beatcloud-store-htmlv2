@@ -1,0 +1,100 @@
+.ap-edit-radio {
+    $parent: &;
+
+    display: block;
+    position: relative;
+    // margin: 0 auto;
+    padding: 0;
+    width: 19px;
+    height: 19px;
+    cursor: pointer;
+    user-select: none;
+
+    >input[type=radio] {
+        position: absolute;
+        width: 0;
+        height: 0;
+        opacity: 0;
+        cursor: pointer;
+        margin: 0;
+        padding: 0;
+
+        &:checked~#{$parent}__mark {
+            background-color: $anchor-color;
+            border-color: $anchor-color;
+
+            &:after {
+                display: block;
+            }
+        }
+
+        &:disabled {
+            &~#{$parent}__mark {
+                background-color: $light-gray;
+                border: $input-border;
+                cursor: not-allowed;
+            }
+
+            &:checked~#{$parent}__mark {}
+
+            &:not(:checked)~#{$parent}__mark {
+                &:hover {
+                    &:after {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+
+    &__mark {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        content: "";
+
+        margin: auto;
+        padding: 0;
+        border: 1px solid $medium-gray;
+        border-radius: 10px;
+        background-color: $white;
+
+        &:hover {
+            background-color: adjust-color($primary-color, $alpha: -.7);
+        }
+
+        &:after {
+            display: none;
+            content: "";
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: auto;
+            width: 7px;
+            height: 7px;
+            // border: solid white;
+            background-color: $white;
+            border-radius: 4px;
+        }
+    }
+
+    &:hover input~#{$parent}__mark {
+        border-color: $anchor-color;
+    }
+
+    &.-s {
+        width: 16px;
+        height: 16px;
+
+        #{$parent}__mark {
+            &:after {
+                width: 6px;
+                height: 6px;
+            }
+        }
+    }
+}

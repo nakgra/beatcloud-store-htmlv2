@@ -1,0 +1,15 @@
+.ap-edit-radio-vlist {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+
+    >li {
+        margin: .5rem 0 0 0;
+    }
+
+    &:first-child {
+        >li:first-child {
+            margin-top: 0;
+        }
+    }
+}

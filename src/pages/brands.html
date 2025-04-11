@@ -1,0 +1,27 @@
+---
+meta-title: ""
+wrapperclass: "-browse"
+---
+<article class="ap-browse">
+    <header class="ap-browse__header">
+        <hgroup class="ap-browse-title">
+            <h1 class="ap-browse-title__main">ブランド</h1>
+        </hgroup>
+    </header>
+    <div class="ap-browse__main">
+        <div class="ap-browse-result">
+            <div class="ap-brands">
+                {{#repeat 5}}
+                {{#each brands}}
+                <div class="ap-brands-item">
+                    <a href="{{../root}}{{path}}">
+                        <div class="ap-brands-item__pic"><img src="{{../root}}assets/upload{{img}}" alt=""></div>
+                        <span class="ap-brands-item__title -small">{{ title }}</span>
+                    </a>
+                </div>
+                {{/each}}
+                {{/repeat}}
+            </div>
+        </div>
+    </div>
+</article>
