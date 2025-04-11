@@ -41,6 +41,14 @@
         @include breakpoint(large) {
             padding: 0 1rem;
             width: 55vw!important;
+            // width: 565px!important;
+        }
+
+        @include breakpoint(xxlarge) {
+            padding: 0 1rem;
+            // width: 55vw!important;
+            // width: 900px!important;
+            width: calc(729px + (100vw - 1440px) * 0.01)!important;
         }
     }
 }

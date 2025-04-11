@@ -33,7 +33,7 @@ class Carousel {
             pauseOnFocus: false,
             pauseOnHover: false,
             slidesToScroll: 1,
-            slidesToShow: 1,
+            slidesToShow: 3,
             speed: 200,
             variableWidth: true
         });

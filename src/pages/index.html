@@ -3,9 +3,11 @@ meta-title: ""
 wrapperclass: "-home"
 ---
 <div class="ap-carousel" data-carousel>
+    {{#repeat 2}}
     {{#each heroes}}
     <div class="ap-carousel__item"><a href="{{root}}{{path}}"><img src="{{root}}assets/upload{{ img }}" alt="{{ title }}"></a></div>
     {{/each}}
+    {{/repeat}}
 </div>
 <div class="ap-section">
 <div class="ap-grid">
