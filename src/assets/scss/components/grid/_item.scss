@@ -120,7 +120,7 @@
     &__badge {
         position: absolute;
         top: 0;
-        right: 0;
+        left: 0;
 
         margin: 0;
         line-height: 1;
@@ -129,14 +129,23 @@
         background-color: $alert-color;
 
         aspect-ratio: 1;
-        clip-path: polygon(0 100%, 50% 50%, 100% 100%);
-        transform: rotate(45deg);
+
+        @include breakpoint(small only) {
+            clip-path: polygon(0 100%, 0 80%, 100% 80%, 100% 100%);
+        }
+
+        @include breakpoint(large) {
+            // clip-path: polygon(0 100%, 0 75%, 100% 75%, 100% 100%);
+            clip-path: polygon(0 100%, 50% 50%, 100% 100%);
+        }
+
+        transform: rotate(-45deg);
 
         >span {
             position: absolute;
             left: 0;
             right: 0;
-            bottom: .35rem;
+            bottom: .4rem;
             display: block;
             width: 100%;
             display: block;
@@ -150,20 +159,24 @@
         }
 
         @include breakpoint(small only) {
-            top: -4rem;
-            right: -4rem;
-            width: 8rem;
-            font-size: .875rem;
+            top: -3.75rem;
+            left: -3.75rem;
+            width: 7.5rem;
 
-            >small {
-                margin: 0 0 0 0.125rem;
-                font-size: 0.75rem;
+            >span {
+                bottom: .325rem;
+                font-size: .875rem;
+
+                >small {
+                    margin: 0 0 0 0.125rem;
+                    font-size: 0.75rem;
+                }
             }
         }
 
         @include breakpoint(medium only) {
             top: -4.5rem;
-            right: -4.5rem;
+            left: -4.5rem;
 
             width: 9rem;
 
@@ -174,7 +187,7 @@
 
         @include breakpoint(large) {
             top: -4.25rem;
-            right: -4.25rem;
+            left: -4.25rem;
 
             width: 8.5rem;
 
@@ -189,7 +202,7 @@
 
         @include breakpoint(xlarge) {
             top: -4.75rem;
-            right: -4.75rem;
+            left: -4.75rem;
 
             width: 9.5rem;
 
