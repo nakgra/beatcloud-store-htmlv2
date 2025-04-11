@@ -16,8 +16,86 @@
         padding: 6rem 0 0 0;
     }
 
+    @include breakpoint(xlarge) {
+        @include xy-grid-container;
+        display: flex;
+    }
+
+    &__nav {
+        @include breakpoint(xlarge) {
+            // height: 100%;
+        }
+
+        ul {
+            margin: 0;
+            padding: 0;
+            list-style-type: none;
+
+            @include breakpoint(xlarge) {
+                position: sticky !important;
+                top: 5rem;
+                margin-left: auto;
+            }
+
+            >li {
+                margin: 0 0 .75rem 0;
+
+                >a {
+                    display: block;
+                    margin: 0;
+                    padding: .5rem 1rem .5rem .75rem;
+                    line-height: 1.4;
+                    color: $body-font-color;
+                    // background: transparent url(../img/bg-2.jpg) repeat 0 0 / 75px;
+                    background-color: rgba(180, 180, 180, .1);
+                    border-left: 4px solid $medium-gray; //$body-font-color;
+
+                    &:hover {
+                        color: $anchor-color-hover;
+                    }
+                }
+            }
+        }
+
+        @include breakpoint(xlarge) {
+            flex: 0 0 auto;
+            padding: 0 1.5rem 0 0;
+            width: 20%;
+        }
+
+        @include breakpoint(xxlarge) {
+            display: flex;
+            flex-direction: column;
+            // justify-content: flex-end;
+            padding-right: 3%;
+            width: 25%;
+        }
+    }
+
+    &__main {
+        @include breakpoint(large down) {
+            @include xy-grid-container($width: $ap-product-body-width);
+        }
+
+        @include breakpoint(xlarge) {
+            width: 60%;
+        }
+
+        @include breakpoint(xxlarge) {
+            width: 50%;
+        }
+
+        .ap-anchor {
+            top: 0;
+
+            &:first-child {
+                top: -6rem;
+            }
+        }
+    }
+
     &__content {
-        @include xy-grid-container($width: $ap-product-body-width);
+
         border-top: 1px dashed $ap-border-color-nega;
 
         @include breakpoint(small only) {
@@ -126,7 +204,8 @@
             }
         }
 
-        &:first-child {
+        &:first-child,
+        .ap-anchor:first-child+& {
             margin-top: 0;
             padding-top: 0;
             border-top: 0;
@@ -165,16 +244,14 @@
             padding: 0;
             list-style-type: none;
 
-            @include breakpoint(small only) {
-            }
+            @include breakpoint(small only) {}
 
             @include breakpoint(medium) {
                 display: flex;
                 column-gap: 3px;
             }
 
-            @include breakpoint(large) {
-            }
+            @include breakpoint(large) {}
 
             li {
                 background-color: rgba(180, 180, 180, .15);
