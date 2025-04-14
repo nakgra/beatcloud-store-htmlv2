@@ -1,0 +1,82 @@
+.ap-product-jumpmenu {
+
+    @include breakpoint(small only) {
+        margin-bottom: 2rem;
+    }
+
+    @include breakpoint(medium only) {
+        margin-bottom: 2.5rem;
+    }
+
+    @include breakpoint(large only) {
+        margin-top: -1.5rem;
+        margin-bottom: 3.5rem;
+    }
+
+    @include breakpoint(large down) {
+        @include xy-grid-container($width: $ap-product-body-width);
+    }
+
+    @include breakpoint(xlarge) {
+        position: sticky !important;
+        top: 5rem;
+        margin-left: auto;
+        background-color: rgba(180, 180, 180, .1);
+    }
+
+    &__title {
+        display: block;
+        margin: 0;
+        padding: .75rem 1.5rem;
+        color: $dark-gray;
+        font-weight: 500;
+
+        @include breakpoint(large down) {
+            padding: 0 .75rem .75rem;
+            border-bottom: 1px dashed $medium-gray;
+        }
+    }
+
+    >ul {
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+
+        >li {
+            margin: 0;
+
+            @include breakpoint(large down) {
+                border-bottom: 1px dashed $medium-gray;
+            }
+
+            @include breakpoint(xlarge) {
+                border-top: 1px solid #f1f1f1; //$medium-gray;
+            }
+
+            >a {
+                display: block;
+                margin: 0;
+
+                line-height: 1.4;
+                color: $body-font-color;
+
+                @include breakpoint(large down) {
+                    padding: .75rem .75rem;
+
+                    &:hover {
+                        color: $anchor-color-hover;
+                    }
+                }
+
+                @include breakpoint(xlarge) {
+                    padding: .75rem 1.5rem; //1.5rem;
+
+                    &:hover {
+                        background-color: rgba(180, 180, 180, .2);
+                        color: $anchor-color;
+                    }
+                }
+            }
+        }
+    }
+}

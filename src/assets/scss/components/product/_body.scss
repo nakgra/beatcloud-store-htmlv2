@@ -3,17 +3,17 @@
 
     @include breakpoint(small only) {
         margin: 3rem 0 0 0;
-        padding: 3rem 0 0 0;
+        padding: 3rem 0;
     }
 
     @include breakpoint(medium only) {
         margin: 4rem 0 0 0;
-        padding: 4rem 0 0 0;
+        padding: 4rem 0;
     }
 
     @include breakpoint(large) {
         margin: 6rem 0 0 0;
-        padding: 6rem 0 0 0;
+        padding: 6rem 0;
     }
 
     @include breakpoint(xlarge) {
@@ -22,50 +22,18 @@
     }
 
     &__nav {
-        @include breakpoint(xlarge) {
-            // height: 100%;
-        }
-
-        ul {
-            margin: 0;
-            padding: 0;
-            list-style-type: none;
-
-            @include breakpoint(xlarge) {
-                position: sticky !important;
-                top: 5rem;
-                margin-left: auto;
-            }
-
-            >li {
-                margin: 0 0 .75rem 0;
-
-                >a {
-                    display: block;
-                    margin: 0;
-                    padding: .5rem 1rem .5rem .75rem;
-                    line-height: 1.4;
-                    color: $body-font-color;
-                    // background: transparent url(../img/bg-2.jpg) repeat 0 0 / 75px;
-                    background-color: rgba(180, 180, 180, .1);
-                    border-left: 4px solid $medium-gray; //$body-font-color;
-
-                    &:hover {
-                        color: $anchor-color-hover;
-                    }
-                }
-            }
-        }
+        @include breakpoint(xlarge) {}
 
         @include breakpoint(xlarge) {
             flex: 0 0 auto;
-            padding: 0 1.5rem 0 0;
-            width: 20%;
+            padding: 0 3rem 0 0;
+            width: 30%;
         }
 
         @include breakpoint(xxlarge) {
-            display: flex;
-            flex-direction: column;
+            // flex-grow: 1;
+            // display: flex;
+            // flex-direction: column;
             // justify-content: flex-end;
             padding-right: 3%;
             width: 25%;
