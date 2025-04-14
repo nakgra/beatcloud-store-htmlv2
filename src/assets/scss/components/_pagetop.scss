@@ -1,0 +1,64 @@
+.ap-pagetop {
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity .5s ease-in-out;
+
+    position: fixed;
+    right: 1rem;
+    bottom: 1rem;
+    z-index: 999;
+
+    margin: 0;
+    padding: 0;
+    width: 50px;
+    height: 50px;
+
+    >a {
+        position: relative;
+        display: block;
+        margin: 0;
+        padding: 0;
+
+        width: 40px;
+        height: 40px;
+
+        background-color: $anchor-color;
+        opacity: .8;
+
+        text-indent: 100%;
+        overflow: hidden;
+        white-space: nowrap;
+
+
+        &:after {
+            content: "";
+            position: absolute;
+            top: 0px;
+            bottom: 0px;
+            right: 0;
+            left: 0;
+            // display: block;
+            margin: auto;
+            padding: 0;
+            width: 15px;
+            height: 15px;
+
+            border-right: 2px solid $white; //$primary-color;
+            border-bottom: 2px solid $white; //$primary-color;
+
+            transform-origin: center center;
+            transform: rotate(-135deg) translate(-3px, -3px);
+
+            @include breakpoint(small only) {}
+
+            @include breakpoint(medium only) {}
+
+            @include breakpoint(large) {}
+        }
+    }
+
+    &.-active {
+        opacity: 1;
+        pointer-events: auto;
+    }
+}

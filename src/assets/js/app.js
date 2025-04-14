@@ -28,6 +28,7 @@ import Jumplink from './lib/jumplink';
 import Nav from './lib/nav';
 import Search from './lib/Search';
 import Textarea from './lib/textarea';
+import PageTop from './lib/pageTop';
 
 (function(window, document) {
     CheckoutForm.setup();
@@ -40,4 +41,5 @@ import Textarea from './lib/textarea';
     Carousel.setup();
     Filter.setup();
     Search.setup();
+    PageTop.setup();
 })(window, window.document);
