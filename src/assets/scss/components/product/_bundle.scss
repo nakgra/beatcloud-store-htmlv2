@@ -1,0 +1,57 @@
+.ap-product-bundle {
+    @include xy-grid-container($width: $ap-product-header-width);
+
+    @include breakpoint(small only) {
+        margin-top: 2rem;
+        // padding: 3rem 0;
+    }
+
+    @include breakpoint(medium only) {
+        margin-top: 3rem;
+        // padding: 4rem 0;
+    }
+
+    @include breakpoint(large) {
+        margin-top: 4rem;
+        // padding: 6rem 0;
+    }
+
+    &__title {
+        margin: 0 0 1rem 0;
+        font-size: 1.125rem;
+        font-weight: 500;
+    }
+
+    &__list {
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+        line-height: 1.4;
+
+        @include breakpoint(small only) {
+
+        }
+
+        @include breakpoint(medium) {
+            display: grid;
+            gap: .875rem 1rem;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+
+        >li {
+            @include breakpoint(small only) {
+                margin: 0 0 .75rem 0;
+            }
+
+            >a {
+                display: block;
+                padding: .125rem .25rem;
+                color: $body-font-color;
+                background-color: rgba(180, 180, 180, .1);
+                &:hover {
+                    color: $anchor-color;
+                }
+            }
+        }
+    }
+}

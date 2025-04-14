@@ -1,0 +1,55 @@
+.ap-product-footer {
+    @include breakpoint(small only) {
+        padding-top: 3rem;
+    }
+
+    @include breakpoint(medium only) {
+        padding-top: 4rem;
+    }
+
+    @include breakpoint(large down) {
+    }
+
+    @include breakpoint(large) {
+        @include xy-grid-container;
+        padding-top: 5.5rem;
+    }
+
+    &__frame {
+        @include breakpoint(large down) {
+            @include xy-grid-container($width: $ap-product-body-width);
+        }
+
+        @include breakpoint(xlarge) {
+            margin: 0 0 0 30%;
+            width: 60%;
+        }
+
+        @include breakpoint(xxlarge) {
+            margin: 0 auto;
+            width: 50%;
+        }
+    }
+
+    &__copy {
+        margin: 0 0 1.5rem 0;
+        padding: 0 0 .5rem 0;
+        border-bottom: 5px solid rgba(180, 180, 180, .3);
+
+        @include breakpoint(small only) {
+            font-size: 1.125rem;
+        }
+
+        @include breakpoint(medium only) {
+            font-size: 1.25rem;
+        }
+
+        @include breakpoint(large) {
+            font-size: 1.25rem;
+        }
+
+        >*:last-child {
+            margin-bottom: 0;
+        }
+    }
+}
