@@ -1,11 +1,11 @@
 .ap-section-title {
     display: flex;
     align-items: center;
-    justify-content: center;
+    // justify-content: center;
     margin: 0;
     padding: 0;
 
-    &:before,
+    // &:before,
     &:after {
         // position: absolute;
         // top: 0;
@@ -28,13 +28,13 @@
         }
 
         @include breakpoint(medium) {
-            height: 3rem;
+            height: .875rem;
             // background: transparent url(../img/bg-2.jpg) repeat 0 0 / 75px;
             background-color: rgba(180, 180, 180, .2);
         }
 
         @include breakpoint(large) {
-            height: 3.5rem;
+            // height: .875rem;
         }
     }
 
@@ -54,7 +54,7 @@
         }
 
         @include breakpoint(large) {
-            margin: 0 1.5rem;
+            margin: 0 1.5rem 0 .5rem;
         }
     }
 
