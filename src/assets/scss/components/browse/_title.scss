@@ -20,4 +20,46 @@
 
         @include breakpoint(large) {}
     }
+
+    &__breadcrumbs {
+        margin: 0 0 .25rem 0;
+        padding: 0;
+        list-style-type: none;
+        color: #afafaf;
+        font-size: 0.9375rem;
+
+        display: flex;
+        align-items: center;
+        column-gap: .875rem;
+
+        >li {
+            position: relative;
+            display: flex;
+            align-items: center;
+
+            &:after {
+                content: '';
+                margin: 0 0 0 .8rem;
+                padding:0;
+                width: 1px;
+                height: .875rem;
+                background-color: #afafaf;
+                rotate: 20deg;
+            }
+
+            &:last-child {
+                &:after {
+                    display: none;
+                }
+            }
+
+            >a {
+                color: $dark-gray;
+
+                &:hover {
+                    color: $anchor-color-hover;
+                }
+            }
+        }
+    }
 }
