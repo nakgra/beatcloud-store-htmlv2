@@ -29,6 +29,7 @@ import Nav from './lib/nav';
 import Search from './lib/Search';
 import Textarea from './lib/textarea';
 import PageTop from './lib/pageTop';
+import Browse from './lib/browse';
 
 (function(window, document) {
     CheckoutForm.setup();
@@ -42,4 +43,5 @@ import PageTop from './lib/pageTop';
     Filter.setup();
     Search.setup();
     PageTop.setup();
+    Browse.setup();
 })(window, window.document);

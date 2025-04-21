@@ -81,5 +81,22 @@
                 }
             }
         }
+
+        .ap-edit-radio-set,
+        .ap-edit-checkboxset {
+            cursor: pointer;
+
+            @include breakpoint(large) {
+                .ap-edit-radio {
+                    visibility: hidden;
+                    margin: 0 !important;
+                    width: 0;
+                }
+
+                &:hover {
+                    color: $anchor-color;
+                }
+            }
+        }
     }
 }

@@ -1,7 +1,8 @@
 .ap-edit-checkboxset {
-    display: flex !important;
+    display: inline-flex;
     align-items: center;
     // line-height: 1;
+    vertical-align:top;
     font-size: $form-label-font-size;
 
     &.-alignMiddle {

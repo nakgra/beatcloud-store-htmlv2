@@ -1,0 +1,17 @@
+[
+    {
+        "title": "新着",
+        "path": "products/index.html",
+        "value": "1"
+    },
+    {
+        "title": "価格の安い順",
+        "path": "products/index.html",
+        "value": "2"
+    },
+    {
+        "title": "価格の高い順",
+        "path": "products/index.html",
+        "value": "3"
+    }
+]

@@ -1,4 +1,7 @@
 .ap-browse-order {
+    $parent: &;
+    position: relative;
+
     @include breakpoint(small only) {
         margin: 0 0 0 auto;
     }
@@ -7,12 +10,129 @@
         margin: 0 0 0 2rem;
     }
 
+    @include breakpoint(large) {
+        // margin: 0 0 0 2rem;
+    }
+
     &__title {
         margin: 0;
         cursor: pointer;
+        font-size: 1rem;
+        font-weight: 400;
     }
 
     &__items {
-        display: none;
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+
+        @include breakpoint(large) {
+            display: none;
+            position: absolute;
+            top: 100%;
+            right: .5rem;
+            z-index: 1;
+
+            margin: 1rem 0 0 0;
+            min-width: 10rem;
+            border: 1px solid $light-gray;//;$ap-border-color;
+            background-color: $white;
+            // background: transparent url(../img/bg-2.jpg) repeat 0 0 / 75px;
+            @include border-radius;
+
+            >li {
+                padding: .75rem 1rem;
+                line-height: 1.2;
+                border-bottom: 1px solid $light-gray;//$ap-border-color;
+            }
+
+            &.-open {
+                display: block;
+            }
+
+            .ap-edit-radio-set,
+            .ap-edit-checkboxset {
+                display: flex!important;
+                cursor: pointer;
+                font-size: 0.9375rem;
+                white-space: nowrap;
+                line-height: 1.2;
+
+                .ap-edit-radio {
+                    visibility: hidden;
+                    margin: 0 !important;
+                    width: 0;
+                }
+
+                &:hover {
+                    color: $anchor-color;
+                }
+            }
+        }
+    }
+
+    &.-filter {
+        margin: 0 0 1.5rem 0;
+        // padding: 1.5rem 1.5rem;
+        // border-color: $ap-border-color;
+        border: 0;
+
+        &:first-child {
+            margin-top: 0;
+            border-top: 0;
+        }
+
+        &:last-child {}
+
+        #{$parent}__title {
+            @include breakpoint(medium down) {
+                display: block;
+                margin: 0 0 1.5rem 0;
+                padding: 0.75rem 1.5rem;
+                background: transparent url(../img/bg.jpg) repeat 0 0 / 75px;
+                line-height: 1;
+                font-size: 1.0625rem;
+                font-weight: 500;
+            }
+
+        }
+
+        #{$parent}__items {
+            @include breakpoint(medium down) {
+                display: block;
+
+                >li {
+                    >label {
+                        font-size: 1rem;
+                    }
+
+                    @include breakpoint(medium down) {
+                        // padding: 1.5rem 1.5rem;
+                        padding: .5rem 1.5rem;
+                    }
+
+                    @include breakpoint(large) {
+                        padding: .25rem 0;
+                    }
+
+                    &:first-child {
+                        padding-top: 0;
+                    }
+
+                    &:last-child {
+                        padding-bottom: 0;
+                    }
+
+                    >a {
+                        color: $body-font-color;
+
+                        &:hover {
+                            color: $anchor-color-hover;
+                            text-decoration: underline;
+                        }
+                    }
+                }
+            }
+        }
     }
 }
