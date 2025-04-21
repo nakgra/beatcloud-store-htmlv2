@@ -36,7 +36,16 @@ wrapperclass: "-browse"
                     <h2 class="ap-browse-filter__title">ブランド</h2>
                     <ul class="ap-browse-filter__item">
                         {{#repeat 20}}
-                        <li><a href="">ブランド {{@index}}</a></li>
+                        <li>
+                            <label class="ap-edit-checkboxset">
+                                <span class="ap-edit-checkbox">
+                                    <input type="hidden" name="brand_{{@index}}" value="0">
+                                    <input type="checkbox" name="" value="1" >
+                                    <span class="ap-edit-checkbox__mark"></span>
+                                </span>
+                                ブランド {{@index}}
+                            </label>
+                        </li>
                         {{/repeat}}
                     </ul>
                 </div>
