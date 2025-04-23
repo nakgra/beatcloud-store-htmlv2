@@ -1,18 +1,35 @@
 .ap-browse-controls {
     display: flex;
     align-items: flex-end;
+    margin: 0 0 0 auto;
 
     @include breakpoint(small only) {
-        margin: 0;
-    }
-
-    @include breakpoint(medium) {
-        margin: 0 0 0 auto;
+        // margin: 0 auto;
     }
 
     &__filter {
-        margin: 0;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        margin: 1.5rem auto 0 auto;
+        padding: 0.5rem 0.75rem;
+        font-size: 0.9375rem;
         cursor: pointer;
+        background-color: rgba(120, 120, 120, 0.1);
+        // background: transparent url(../img/bg-2.jpg) repeat 0 0 / 75px;
+
+        &:before {
+            content: '';
+            margin: 0 .5rem 0 0;
+            width: 18px;
+            height: 18px;
+            background-image: url(../img/icon-filter.svg);
+            background-repeat: no-repeat;
+            background-position: left center;
+            background-size: contain;
+        }
 
         @include breakpoint(large) {
             display: none;

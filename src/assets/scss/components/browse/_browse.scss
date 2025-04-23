@@ -13,6 +13,7 @@
     @include breakpoint(large) {}
 
     &__header {
+
         @include breakpoint(small only) {
             margin-bottom: 2rem;
         }

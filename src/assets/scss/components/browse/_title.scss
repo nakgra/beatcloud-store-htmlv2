@@ -1,7 +1,7 @@
 .ap-browse-title {
 
     @include breakpoint(small only) {
-        margin: 0 0 1.5rem 0;
+        // margin: 0 0 1.5rem 0;
     }
 
     @include breakpoint(large) {}
@@ -47,11 +47,11 @@
                 rotate: 20deg;
             }
 
-            &:last-child {
-                &:after {
-                    display: none;
-                }
-            }
+            // &:last-child {
+            //     &:after {
+            //         display: none;
+            //     }
+            // }
 
             >a {
                 color: $dark-gray;

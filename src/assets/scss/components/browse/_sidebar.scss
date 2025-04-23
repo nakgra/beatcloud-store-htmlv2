@@ -40,6 +40,7 @@
 
         @include breakpoint(medium down) {
             flex-grow: 1;
+            padding: 1.5rem 0 0 0;
         }
 
         @include breakpoint(large) {
