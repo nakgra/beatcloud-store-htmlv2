@@ -7,7 +7,7 @@ wrapperclass: "-browse"
         <hgroup class="ap-browse-title">
             <ul class="ap-browse-title__breadcrumbs">
                 <li><a href="{{root}}products/index.html">商品を探す</a></li>
-                <li><a href="{{root}}products/category/large.html">大カテゴリ001</a></li>
+                <li><a href="{{root}}products/category/large.html">大カテゴリ002</a></li>
             </ul>
             <h1 class="ap-browse-title__main">小カテゴリ001</h1>
         </hgroup>
@@ -35,7 +35,7 @@ wrapperclass: "-browse"
         <div class="ap-browse-sidebar" data-browse-filter>
             <div class="ap-browse-sidebar__frame" data-browse-filter-container>
                 <div class="ap-browse-filter">
-                    <h2 class="ap-browse-filter__title">カテゴリ</h2>
+                    <h2 class="ap-browse-filter__title">大カテゴリ002</h2>
                     <ul class="ap-browse-filter__item">
                         {{#repeat 5}}
                         <li>
@@ -44,7 +44,7 @@ wrapperclass: "-browse"
                                     <input type="radio" name="cat_l" value="{{@index}}">
                                     <span class="ap-edit-radio__mark"></span>
                                 </div>
-                                大カテゴリ {{@index}}
+                                小カテゴリ {{@index}}
                             </label>
                         </li>
                         {{/repeat}}
@@ -70,56 +70,17 @@ wrapperclass: "-browse"
                 <div class="ap-browse-filter">
                     <h2 class="ap-browse-filter__title">価格</h2>
                     <ul class="ap-browse-filter__item">
+                        {{#each pricerange}}
                         <li>
                             <label class="ap-edit-checkboxset">
                                 <span class="ap-edit-checkbox">
-                                    <input type="hidden" name="" value="0">
-                                    <input type="checkbox" name="" value="1">
+                                    <input type="checkbox" name="" value="{{value}}">
                                     <span class="ap-edit-checkbox__mark"></span>
                                 </span>
-                                セール中
+                                {{title}}
                             </label>
                         </li>
-                        <li>
-                            <label class="ap-edit-checkboxset">
-                                <span class="ap-edit-checkbox">
-                                    <input type="hidden" name="" value="0">
-                                    <input type="checkbox" name="" value="1">
-                                    <span class="ap-edit-checkbox__mark"></span>
-                                </span>
-                                〜5,000円
-                            </label>
-                        </li>
-                        <li>
-                            <label class="ap-edit-checkboxset">
-                                <span class="ap-edit-checkbox">
-                                    <input type="hidden" name="" value="0">
-                                    <input type="checkbox" name="" value="1">
-                                    <span class="ap-edit-checkbox__mark"></span>
-                                </span>
-                                5,000円〜20,000円
-                            </label>
-                        </li>
-                        <li>
-                            <label class="ap-edit-checkboxset">
-                                <span class="ap-edit-checkbox">
-                                    <input type="hidden" name="" value="0">
-                                    <input type="checkbox" name="" value="1">
-                                    <span class="ap-edit-checkbox__mark"></span>
-                                </span>
-                                20,000円〜50,000円
-                            </label>
-                        </li>
-                        <li>
-                            <label class="ap-edit-checkboxset">
-                                <span class="ap-edit-checkbox">
-                                    <input type="hidden" name="" value="0">
-                                    <input type="checkbox" name="" value="1">
-                                    <span class="ap-edit-checkbox__mark"></span>
-                                </span>
-                                50,000円〜100,000円
-                            </label>
-                        </li>
+                        {{/each}}
                     </ul>
                 </div>
             </div>

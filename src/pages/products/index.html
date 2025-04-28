@@ -9,11 +9,12 @@ wrapperclass: "-browse"
         </hgroup>
         <div class="ap-browse-controls" data-browse-nav>
             <span class="ap-browse-controls__filter" data-browse-filter-button>絞り込み条件</span>
-            <div class="ap-browse-order" data-browse-orderby>
-                <span class="ap-browse-order__title" data-browse-orderby-button>並び替え:新着</span>
-                <ul class="ap-browse-order__items" data-browse-orderby-menu>
+            <span class="ap-browse-controls__clear" data-browse-filter-clear>条件をクリア</span>
+            <div class="ap-browse-orderby" data-browse-orderby>
+                <span class="ap-browse-orderby__title" data-browse-orderby-button>並び替え</span>
+                <ul class="ap-browse-orderby__items" data-browse-orderby-menu>
                     {{#each orderby}}
-                    <li>
+                    <li class="-radio">
                         <label class="ap-edit-radio-set">
                             <div class="ap-edit-radio">
                                 <input type="radio" name="cat_l" value="{{value}}">
@@ -66,56 +67,17 @@ wrapperclass: "-browse"
                 <div class="ap-browse-filter">
                     <h2 class="ap-browse-filter__title">価格</h2>
                     <ul class="ap-browse-filter__item">
+                        {{#each pricerange}}
                         <li>
                             <label class="ap-edit-checkboxset">
                                 <span class="ap-edit-checkbox">
-                                    <input type="hidden" name="" value="0">
-                                    <input type="checkbox" name="" value="1">
+                                    <input type="checkbox" name="" value="{{value}}">
                                     <span class="ap-edit-checkbox__mark"></span>
                                 </span>
-                                セール中
+                                {{title}}
                             </label>
                         </li>
-                        <li>
-                            <label class="ap-edit-checkboxset">
-                                <span class="ap-edit-checkbox">
-                                    <input type="hidden" name="" value="0">
-                                    <input type="checkbox" name="" value="1">
-                                    <span class="ap-edit-checkbox__mark"></span>
-                                </span>
-                                〜5,000円
-                            </label>
-                        </li>
-                        <li>
-                            <label class="ap-edit-checkboxset">
-                                <span class="ap-edit-checkbox">
-                                    <input type="hidden" name="" value="0">
-                                    <input type="checkbox" name="" value="1">
-                                    <span class="ap-edit-checkbox__mark"></span>
-                                </span>
-                                5,000円〜20,000円
-                            </label>
-                        </li>
-                        <li>
-                            <label class="ap-edit-checkboxset">
-                                <span class="ap-edit-checkbox">
-                                    <input type="hidden" name="" value="0">
-                                    <input type="checkbox" name="" value="1">
-                                    <span class="ap-edit-checkbox__mark"></span>
-                                </span>
-                                20,000円〜50,000円
-                            </label>
-                        </li>
-                        <li>
-                            <label class="ap-edit-checkboxset">
-                                <span class="ap-edit-checkbox">
-                                    <input type="hidden" name="" value="0">
-                                    <input type="checkbox" name="" value="1">
-                                    <span class="ap-edit-checkbox__mark"></span>
-                                </span>
-                                50,000円〜100,000円
-                            </label>
-                        </li>
+                        {{/each}}
                     </ul>
                 </div>
             </div>

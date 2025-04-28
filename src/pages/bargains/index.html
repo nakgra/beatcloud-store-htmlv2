@@ -1,0 +1,34 @@
+---
+meta-title: "実施中のセール"
+wrapperclass: ""
+---
+<article class="ap-browse">
+    <header class="ap-browse__header">
+        <hgroup class="ap-browse-title">
+            <h1 class="ap-browse-title__main">実施中のセール</h1>
+        </hgroup>
+        <div class="ap-browse-controls">
+            <div class="ap-browse-orderby">
+                <ul class="ap-browse-orderby__items">
+                    <li><a href="">終了日が近い順</a></li>
+                    <li><a href="">新着順</a></li>
+                    <li><a href="">おすすめ順</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <div class="ap-grid -flex">
+        {{#repeat 5}}
+        {{#each bargains}}
+        <div class="ap-grid-item">
+            <a class="ap-grid-item__pic" href="{{../root}}{{path}}"><img src="{{../root}}assets/upload{{img}}" alt=""></a>
+            <h3 class="ap-grid-item__title -medium"><a href="{{../root}}{{path}}">{{ title }}</a></h3>
+            <b class="ap-grid-item__badge">
+                <span>{{ discount }}<small>OFF</small></span>
+            </b>
+            <span class="ap-grid-item__footnote -alert">{{ end }}</span>
+        </div>
+        {{/each}}
+        {{/repeat}}
+    </div>
+</article>

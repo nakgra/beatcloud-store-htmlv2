@@ -4,7 +4,20 @@
     margin: 0 0 0 auto;
 
     @include breakpoint(small only) {
-        // margin: 0 auto;
+        // display: flex;
+        align-items: center;
+        justify-content: space-between;
+        column-gap: 1.5rem;
+
+        margin: 1.5rem auto 0 auto;
+    }
+
+    @include breakpoint(medium only) {
+        // display: flex;
+        align-items: center;
+        // justify-content: flex-end;
+        column-gap: 1.5rem;
+        margin: 0 0 0 auto;
     }
 
     &__filter {
@@ -13,11 +26,12 @@
         align-items: center;
         justify-content: center;
 
-        margin: 1.5rem auto 0 auto;
+        margin: 0;
         padding: 0.5rem 0.75rem;
         font-size: 0.9375rem;
         cursor: pointer;
         background-color: rgba(120, 120, 120, 0.1);
+        @include border-radius;
         // background: transparent url(../img/bg-2.jpg) repeat 0 0 / 75px;
 
         &:before {
@@ -29,6 +43,29 @@
             background-repeat: no-repeat;
             background-position: left center;
             background-size: contain;
+        }
+
+        @include breakpoint(large) {
+            display: none;
+        }
+    }
+
+    &__clear {
+        position: relative;
+
+        margin: 0;
+        padding: 0.5rem 0.75rem;
+        font-size: 0.9375rem;
+        cursor: pointer;
+        // background-color: rgba(120, 120, 120, 0.1);
+        // background: transparent url(../img/bg-2.jpg) repeat 0 0 / 75px;
+        background-color: $white;
+        color: $dark-gray;
+        @include border-radius;
+        // color: $anchor-color;
+
+        &:hover {
+            // color: $anchor-color-hover;
         }
 
         @include breakpoint(large) {

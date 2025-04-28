@@ -1,0 +1,36 @@
+---
+meta-title: "【日本限定企画】Softube Tube-Tech&Summit Audioプラグインセール"
+wrapperclass: ""
+---
+<article class="ap-bargain">
+    <h1 class="ap-bargain__name">【日本限定企画】<span class="-en">Softube Tube-Tech&Summit Audio</span>プラグインセール</h1>
+    <div class="ap-bargain-header">
+        <div class="ap-bargain-header__image">
+            <img src="{{root}}assets/upload/product/001.jpg" alt="">
+        </div>
+        <div class="ap-bargain-header__description">
+            <p>PSPを代表するPSP VintageWarmer2や、beatcloudで最も人気なPSP TripleMeter等、厳選された人気商品ばかりを集めた25製品が96%オフの超特価！</p>
+            <p>PSPを代表するPSP VintageWarmer2や、beatcloudで最も人気なPSP TripleMeter等、厳選された人気商品ばかりを集めた25製品が96%オフの超特価！</p>
+        </div>
+    </div>
+    <ul class="ap-bargain__orderby">
+        <li><a href="">商品名順 A-Z</a></li>
+        <li><a href="">価格の高い順</a></li>
+        <li><a href="">価格の安い順</a></li>
+    </ul>
+    <div class="ap-section">
+        <div class="ap-grid -flex">
+            {{#each popular}}
+            <div class="ap-grid-item">
+                <a href="{{../root}}{{path}}">
+                    <div class="ap-grid-item__pic"><img src="{{../root}}assets/upload{{img}}" alt=""></div>
+                    <h3 class="ap-grid-item__title -medium">
+                        <span class="__divide">{{ brand }}</span>{{ name }}
+                    </h3>
+                    <p class="ap-grid-item__footnote -alert">&yen;{{ price }} <del>&yen;{{ original_price }}</del></p>
+                </a>
+            </div>
+            {{/each}}
+        </div>
+    </div>
+</article>

@@ -1,0 +1,76 @@
+.ap-bargain-header {
+    @include xy-grid-container($width: $ap-product-header-width);
+
+    @include breakpoint(small only) {
+        margin-bottom: 3.75rem;
+    }
+
+    @include breakpoint(medium) {
+        margin-bottom: 4.75rem;
+    }
+
+    @include breakpoint(large) {
+        display: flex;
+        flex-direction: row-reverse;
+    }
+
+    @include breakpoint(xlarge) {
+        margin-bottom: 5.75rem;
+    }
+
+    &__description {
+        font-size: 1.25rem;
+
+        @include breakpoint(small only) {
+            font-size: 1.125rem;
+        }
+
+        @include breakpoint(medium only) {}
+
+        @include breakpoint(large) {
+            display: flex;
+            flex-direction: column;
+
+            margin: 0;
+            padding: 0 4rem 0 0;
+            width: 60%;
+        }
+
+        @include breakpoint(xlarge) {
+            width: 66.6%;
+        }
+    }
+
+    &__image {
+        @include breakpoint(small only) {
+            margin-bottom: 1.5rem;
+        }
+
+        @include breakpoint(medium only) {
+            margin-bottom: 2rem;
+        }
+
+        @include breakpoint(large) {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            justify-content: flex-end;
+            width: 40%;
+        }
+
+        @include breakpoint(xlarge) {
+            width: 33.4%;
+        }
+
+        >img {
+            display: block;
+            width: 100%;
+            max-height: 100%;
+
+            object-fit: cover;
+            border: 1px solid $ap-border-color;
+
+            @include aspect-ratio;
+        }
+    }
+}
