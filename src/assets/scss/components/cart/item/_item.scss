@@ -1,0 +1,70 @@
+.ap-cart-item {
+    @include breakpoint(medium) {
+        display: flex;
+        column-gap: 1.5rem;
+        padding: 1.5rem 0;
+        border-top: 1px solid $ap-border-color;
+
+        &:first-child {
+            border-top: 0;
+        }
+    }
+
+    @include breakpoint(large) {
+        column-gap: 2rem;
+        padding: 1.5rem 0;
+    }
+
+    &__image {
+        display: block;
+
+        @include breakpoint(small only) {
+            display: none;
+            // width: 140px;
+        }
+
+        @include breakpoint(medium) {
+            width: 150px;
+        }
+
+        @include breakpoint(large) {
+            width: 170px;
+        }
+    }
+
+    &__title {
+        margin: 0 0 1.5rem 0;
+        >a {
+            color: $body-font-color;
+        }
+    }
+
+    &__price {
+        font-size: 1.125rem;
+        font-weight: bold;
+    }
+
+    &__actions {
+        display: flex;
+        align-items: center;
+        column-gap: 1.5rem;
+
+        margin: auto 0 0 0;
+        font-size: 0.875rem;
+    }
+
+    &__imagecol {
+        flex: 0 0 auto;
+    }
+
+    &__detailcol {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__pricecol {
+        flex: 0 0 auto;
+        margin: 0 0 0 auto;
+        // width: 10rem;
+    }
+}
