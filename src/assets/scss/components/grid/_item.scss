@@ -8,6 +8,7 @@
     background-color: $white;
     border: 1px solid $ap-border-color;
     overflow: hidden;
+    color: $body-font-color;
 
     @include breakpoint(small only) {
         // margin-bottom: .5rem;
@@ -220,7 +221,8 @@
         // flex-grow: 1;
         margin: auto 0 0 0;
 
-        &.-alert {
+        &.-alert,
+        >.-alert {
             color: $alert-color;
         }
 

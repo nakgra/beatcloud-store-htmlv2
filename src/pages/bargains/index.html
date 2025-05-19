@@ -26,7 +26,10 @@ wrapperclass: ""
             <b class="ap-grid-item__badge">
                 <span>{{ discount }}<small>OFF</small></span>
             </b>
-            <span class="ap-grid-item__footnote -alert">{{ end }}</span>
+            <div class="ap-grid-item__footnote">
+                対象商品: 99<br>
+                <span class="-alert">{{ end }}</span>
+            </div>
         </div>
         {{/each}}
         {{/repeat}}

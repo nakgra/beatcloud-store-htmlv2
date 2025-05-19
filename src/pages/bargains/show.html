@@ -21,15 +21,13 @@ wrapperclass: ""
     <div class="ap-section">
         <div class="ap-grid -flex">
             {{#each popular}}
-            <div class="ap-grid-item">
-                <a href="{{../root}}{{path}}">
-                    <div class="ap-grid-item__pic"><img src="{{../root}}assets/upload{{img}}" alt=""></div>
-                    <h3 class="ap-grid-item__title -medium">
-                        <span class="__divide">{{ brand }}</span>{{ name }}
-                    </h3>
-                    <p class="ap-grid-item__footnote -alert">&yen;{{ price }} <del>&yen;{{ original_price }}</del></p>
-                </a>
-            </div>
+            <a class="ap-grid-item" href="{{../root}}{{path}}">
+                <div class="ap-grid-item__pic"><img src="{{../root}}assets/upload{{img}}" alt=""></div>
+                <h3 class="ap-grid-item__title -medium">
+                    <span class="__divide">{{ brand }}</span>{{ name }}
+                </h3>
+                <p class="ap-grid-item__footnote -alert">&yen;{{ price }} <del>&yen;{{ original_price }}</del></p>
+            </a>
             {{/each}}
         </div>
     </div>
