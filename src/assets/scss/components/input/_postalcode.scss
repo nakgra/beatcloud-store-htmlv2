@@ -1,0 +1,26 @@
+.ap-input-postalcode {
+    display: flex;
+    align-items: center;
+    margin: $ap-input-label-gutter 0 0 0;
+
+    @include breakpoint(small only) {
+        column-gap: .25rem;
+    }
+
+    @include breakpoint(medium) {
+        column-gap: .25rem;
+    }
+
+    &__f {
+        margin-left: 0;
+        width: 3rem;
+    }
+
+    &__l {
+        width: 4rem;
+    }
+
+    &:first-child {
+        margin-top: 0 !important;
+    }
+}

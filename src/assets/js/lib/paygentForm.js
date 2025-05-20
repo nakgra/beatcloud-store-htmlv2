@@ -142,24 +142,32 @@ PaygentForm.prototype = {
 
         error = document.createElement('span');
         error.appendChild(document.createTextNode(message));
-        error.className = 'ap-cc__error';
+        error.className = 'ap-edit-error';
         error.setAttribute('data-cc-error', '');
 
         container = element.closest('[data-cc-inputcontainer]');
         if (!container) {
             container = element.parentNode;
         }
+        func.addClass(container, '-error');
         container.appendChild(error);
     },
 
     clearError: function() {
         let obj = this,
-            errors;
+            errors,
+            containers;
 
         errors = obj.form.querySelectorAll('[data-cc-error]');
-        Array.prototype.forEach.call(errors, function(error) {
-            error.parentNode.removeChild(error);
-        })
+        for (var i = 0; i < errors.length; i++) {
+            // error[i].remove();
+            errors[i].parentNode.removeChild(errors[i]);
+        }
+
+        containers = obj.form.querySelectorAll('[data-cc-inputcontainer]');
+        for (var i = 0; i < containers.length; i++) {
+            func.removeClass(containers[i], '-error');
+        }
     },
 
     processPurchase: function(response) {

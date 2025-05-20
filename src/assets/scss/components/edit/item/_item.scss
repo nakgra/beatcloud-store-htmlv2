@@ -1,0 +1,80 @@
+.ap-edit-item {
+    $parent: &;
+    @include form-label;
+
+    & {
+        margin: 0 0 $form-spacing 0;
+    }
+
+    @include breakpoint(small only) {}
+
+    @include breakpoint(medium) {}
+
+    @include breakpoint(xlarge) {
+        // margin-bottom: $form-spacing * 1.5;
+    }
+
+    input,
+    textarea,
+    select {
+        display: block;
+        margin-bottom: 0;
+    }
+
+    select {
+        width: auto;
+    }
+
+    &.-group {
+        >legend {
+            @include form-label;
+            display: inline;
+            // margin-bottom: $ap-input-label-gutter;
+
+            @include breakpoint(small only) {}
+
+            @include breakpoint(medium) {}
+
+            @include breakpoint(xlarge) {}
+        }
+    }
+
+    &.-digit {
+        input {
+            text-align: right;
+        }
+    }
+
+    &__set {
+        @include breakpoint(small only) {
+            >* {
+                margin-top: .875rem;
+
+                &:first-child {
+                    margin-top: 0;
+                }
+            }
+        }
+
+        @include breakpoint(medium) {
+            display: flex;
+            align-items: center;
+
+            >* {
+                margin-left: 1rem;
+
+                &:first-child {
+                    margin-left: 0;
+                }
+            }
+        }
+
+        & {
+            margin: $ap-input-label-gutter 0 0 0;
+        }
+
+        &:first-child {
+            margin-top: 0!important;
+        }
+    }
+}

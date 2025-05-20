@@ -1,0 +1,14 @@
+.ap-box {
+    background-color: $white;
+
+    @include breakpoint(medium) {
+        padding: 1.5rem;
+    }
+
+    @include breakpoint(large) {
+        padding: 1.5rem;
+    }
+
+    @include breakpoint(xlarge) {
+    }
+}

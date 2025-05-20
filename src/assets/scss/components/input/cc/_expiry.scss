@@ -1,0 +1,16 @@
+.ap-input-cc-expiry {
+    display: flex;
+    align-items: center;
+    column-gap: .5rem;
+    // width: 7rem;
+
+    &__month {
+        margin: 0;
+        width: auto;
+    }
+
+    &__year {
+        margin: 0;
+        width: auto;
+    }
+}

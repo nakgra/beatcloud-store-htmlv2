@@ -1,3 +1,24 @@
 .ap-section {
     @include xy-grid-container;
+
+    &.-margin {
+        @include breakpoint(small only) {
+            margin-bottom: 2rem;
+        }
+
+        @include breakpoint(medium) {
+            margin-bottom: 2.5rem;
+        }
+
+        @include breakpoint(large) {
+        }
+
+        @include breakpoint(xlarge) {
+            margin-bottom: 3rem;
+        }
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
 }

@@ -1,0 +1,16 @@
+.ap-checkout-paybycard {
+    @include breakpoint(small only) {
+        margin: 1rem 0 0 0;
+    }
+
+    @include breakpoint(medium) {
+        margin: 1rem 0 0 1.5rem;
+    }
+
+    &__note {
+        margin: .75rem 0 0 0;
+        padding: 0;
+        font-size: .875rem;
+        color: $dark-gray;
+    }
+}

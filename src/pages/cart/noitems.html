@@ -1,0 +1,49 @@
+---
+meta-title: ""
+wrapperclass: ""
+---
+<article class="ap-cart">
+    <header class="ap-cart-header">
+        <h1 class="ap-cart-header__title">ショッピングカートは空です</h1>
+        <ul class="ap-cart-header__items">
+            <li><a href="" class="-active">ライセンス商品 <span class=""></span></a></li>
+            <li><a href="">配送商品 <span></span></a></li>
+            <li><a href="">大型/特殊商品 <span class=""></span></a></li>
+        </ul>
+    </header>
+    <!-- <div class="ap-cart__empty">カートに入っている商品はありません。</div> -->
+</article>
+<div class="ap-section -margin">
+    <div class="ap-box">
+        <h2 class="ap-cart__subtitle">おすすめのセール</h2>
+        <div class="ap-grid -full">
+            {{#each bargains}}
+            <a class="ap-grid-item" href="{{../root}}{{path}}">
+                <div class="ap-grid-item__pic"><img src="{{../root}}assets/upload{{img}}" alt=""></div>
+                <h3 class="ap-grid-item__title -medium">{{ title }}</h3>
+                <b class="ap-grid-item__badge"><span>{{ discount }}<small>OFF</small></span></b>
+                <div class="ap-grid-item__footnote">
+                    対象商品: 99<br>
+                    <span class="-alert">{{ end }}</span>
+                </div>
+            </a>
+            {{/each}}
+        </div>
+    </div>
+</div>
+<div class="ap-section -margin">
+    <div class="ap-box">
+        <h2 class="ap-cart__subtitle">「あとで買う」に入っている商品</h2>
+        <div class="ap-grid -full">
+            {{#each popular}}
+            <a class="ap-grid-item" href="{{../root}}{{path}}">
+                <div class="ap-grid-item__pic"><img src="{{../root}}assets/upload{{img}}" alt=""></div>
+                <h3 class="ap-grid-item__title -medium">
+                    <span class="__divide">{{ brand }}</span>{{ name }}
+                </h3>
+                <p class="ap-grid-item__footnote -alert">&yen;{{ price }} <del>&yen;{{ original_price }}</del></p>
+            </a>
+            {{/each}}
+        </div>
+    </div>
+</div>

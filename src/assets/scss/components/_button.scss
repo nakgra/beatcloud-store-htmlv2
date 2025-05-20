@@ -1,0 +1,29 @@
+.ap-button {
+    $tmp-margin: $button-margin;
+    $tmp-padding: $button-padding;
+
+    $button-margin: 0 !global;
+    $button-padding: .55rem .75rem !global;
+
+    &.-action {
+        @include button($background: $primary-color); //, $background-hover: $warning-color);
+        padding: 1rem;
+        font-size: 1.0625rem;
+        font-weight: 500;
+    }
+
+    &.-alert {
+        @include button($background: $alert-color, $background-hover: $warning-color);
+    }
+
+    &:not(.-alert):not(.-action) {
+        @include button;
+    }
+
+    $button-margin: $tmp-margin !global;
+    $button-padding: $tmp-padding !global;
+
+    &.-expanded {
+        display: block;
+    }
+}

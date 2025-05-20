@@ -26,19 +26,46 @@ wrapperclass: ""
                             <span>1</span>
                             <button class="ap-cart-item-qtycontrol__inc"><span>増やす</span></button>
                         </div>
+                        <div class="ap-cart-item__uprice">&times; &yen;9,999</div>
                         <div class="ap-cart-item__delete">削除</div>
                         <div class="ap-cart-item__bookmark">あとで買う</div>
                     </div>
                 </div>
                 <div class="ap-cart-item__pricecol">
-                    <div class="ap-cart-item__price">999,999円</div>
+                    <div class="ap-cart-item__price">&yen;999,999</div>
                 </div>
             </div>
             {{/repeat}}
         </div>
-
-        <div class="ap-cart-main__summary">
-            合計
+        <div class="ap-cart-main__proceed">
+            <div class="ap-box">
+                <dl class="ap-cart-breakdown">
+                    <div class="ap-cart-breakdown__item">
+                        <dt class="ap-cart-breakdown__label">小計<small>(税込)</small></dt>
+                        <dd class="ap-cart-breakdown__total"><span>999,999</span><small>円</small></dd>
+                    </div>
+                </dl>
+                <form action="">
+                    <a href="{{root}}checkout/index.html" class="button expanded -last">ご注文手続きへ</a>
+                    <!-- <input type="submit" class="button expanded -last" value="ご注文手続きへ"> -->
+                </form>
+            </div>
         </div>
     </div>
 </article>
+<div class="ap-section">
+    <div class="ap-box">
+        <h2 class="ap-cart__subtitle">「あとで買う」に入っている商品</h2>
+        <div class="ap-grid -full">
+            {{#each popular}}
+            <a class="ap-grid-item" href="{{../root}}{{path}}">
+                <div class="ap-grid-item__pic"><img src="{{../root}}assets/upload{{img}}" alt=""></div>
+                <h3 class="ap-grid-item__title -medium">
+                    <span class="__divide">{{ brand }}</span>{{ name }}
+                </h3>
+                <p class="ap-grid-item__footnote -alert">&yen;{{ price }} <del>&yen;{{ original_price }}</del></p>
+            </a>
+            {{/each}}
+        </div>
+    </div>
+</div>

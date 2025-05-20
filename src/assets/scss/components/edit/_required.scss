@@ -1,0 +1,12 @@
+.ap-edit-required {
+    display: inline;
+    margin-left: .125rem;
+
+    font-size: .75rem;
+    font-weight: normal;
+    color: $alert-color;
+
+    &.-if {
+        color: orange;
+    }
+}

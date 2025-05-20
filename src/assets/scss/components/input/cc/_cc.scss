@@ -1,0 +1,39 @@
+.ap-input-cc {
+    &__name {
+        width: 20rem;
+        max-width: 100%;
+
+        @include breakpoint(small only) {}
+
+        @include breakpoint(medium) {}
+    }
+
+    &__number {
+        width: 14rem;
+    }
+
+    &__ex {
+        margin: 0 0 0 .75rem;
+        font-size: .875rem;
+        color: $dark-gray;
+    }
+
+    &__cvc {
+        width: 4.5rem;
+    }
+
+    &__error {
+        display: block;
+        margin: 0;
+        font-size: .875rem;
+        color: $alert-color;
+    }
+
+    &__message {
+        &.reveal {
+            width: 300px;
+            font-size: .875rem;
+            text-align: center;
+        }
+    }
+}

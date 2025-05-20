@@ -1,0 +1,226 @@
+---
+layout: checkout
+meta-title: "ご注文入力"
+wrapperclass: ""
+---
+<ul class="ap-checkout-steps">
+    <li><a href="{{root}}cart/index.html">カート</a></li>
+    <li><span>ご注文入力</span></li>
+</ul>
+<form class="ap-checkout" action="" method="POST" class="ap-checkout" data-checkout>
+    <div class="ap-checkout__edit">
+        <div class="ap-checkout-section">
+            <h2 class="ap-checkout-section__title">ご注文内容</h2>
+            <div class="ap-checkout-section__items">
+                {{#repeat 5}}
+                <div class="ap-checkout-item">
+                    <div class="ap-checkout-item__detailcol">
+                        <div class="ap-checkout-item__title">UNIVERSAL AUDIO(ソフトウェア) UAD Studio Classics Bundle</div>
+                        <div class="ap-checkout-item__description">
+                            数量1 &times; &yen;3,000
+                        </div>
+                    </div>
+                    <div class="ap-checkout-item__price">&yen;999,999</div>
+                </div>
+                {{/repeat}}
+            </div>
+        </div>
+        <div class="ap-checkout-modifier -error">
+            <label for="order-coupon">クーポンコード</label>
+            <div class="ap-checkout-modifier__value -error">
+                <input type="text" name="coupon" id="order-coupon" value="" autocomplete="off">
+                <div class="ap-edit-error">エラーエラーエラーエラーエラーエラー</div>
+            </div>
+            <input class="ap-button" type="button" name="applycoupon" value="適用" data-checkout-update="button">
+        </div>
+        <div class="ap-checkout-modifier">
+            <label for="order-points">ポイントを使う (32,457ポイント使用可能)</label>
+            <div class="ap-checkout-modifier__value">
+                <input class="-digit" type="text" name="points" id="order-points" value="0" autocomplete="off">
+            </div>
+            <input class="ap-button" type="button" name="applypoints" value="適用" data-checkout-update="button">
+        </div>
+        <div class="ap-checkout-section">
+            <h2 class="ap-checkout-section__title">追加費用（任意）</h2>
+            <div class="ap-checkout-section__items">
+                <ul class="ap-checkout-additionalfees">
+                    <li>
+                        <label class="ap-edit-checkboxset">
+                            <span class="ap-edit-checkbox">
+                                <input type="hidden" name="order-options[]" value="0">
+                                <input type="checkbox" name="order-options[]" value="1" data-checkout-update="checkbox">
+                                <span class="ap-edit-checkbox__mark"></span>
+                            </span>
+                            <span class="ap-checkout-additionalfees__name">設置料</span> <b>&yen;15,000</b>
+                        </label>
+                    </li>
+                    <li>
+                        <label class="ap-edit-checkboxset">
+                            <span class="ap-edit-checkbox">
+                                <input type="hidden" name="order-options[]" value="0">
+                                <input type="checkbox" name="order-options[]" value="1" data-checkout-update="checkbox">
+                                <span class="ap-edit-checkbox__mark"></span>
+                            </span>
+                            <span class="ap-checkout-additionalfees__name">Output Platform Output Platform Output 設置料</span>
+                            <b>&yen;15,000</b>
+                        </label>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="ap-checkout-section">
+            <h2 class="ap-checkout-section__title">ご請求先/お届け先</h2>
+            <div class="ap-checkout-section__items">
+                <fieldset class="ap-edit-item">
+                    <div class="ap-input-nameset">
+                        <label class="ap-input-nameset__name">
+                            姓 <span class="ap-edit-required">必須</span>
+                            <input type="text" name="last_name" value="中村" required="">
+                        </label>
+                        <label class="ap-input-nameset__name">
+                            名 <span class="ap-edit-required">必須</span>
+                            <input type="text" name="first_name" value="亮介" required="">
+                        </label>
+                    </div>
+                </fieldset>
+                <label class="ap-edit-item">
+                    会社名
+                    <input type="text" name="co_name" value="グランテック株式会社">
+                </label>
+                <fieldset class="ap-edit-item">
+                    <legend>郵便番号 <span class="ap-edit-required">必須</span></legend>
+                    <div class="ap-input-postalcode">
+                        <input class="ap-input-postalcode__f" type="text" name="postalcode1" value="101" maxlength="3" required="">
+                        <span>&mdash;</span>
+                        <input class="ap-input-postalcode__l" type="text" name="postalcode2" value="0021" maxlength="4" required="">
+                    </div>
+                </fieldset>
+                <label class="ap-edit-item">
+                    都道府県 <span class="ap-edit-required">必須</span>
+                    <select class="ap-input-select" name="prefecture_id" required="" data-checkout-update="select">
+                        <option value="">選択</option>
+                        <option value="1">北海道</option>
+                        <option value="2">青森県</option>
+                        <option value="3">岩手県</option>
+                        <option value="4">宮城県</option>
+                        <option value="5">秋田県</option>
+                        <option value="6">山形県</option>
+                        <option value="7">福島県</option>
+                        <option value="8">茨城県</option>
+                        <option value="9">栃木県</option>
+                        <option value="10">群馬県</option>
+                        <option value="11">埼玉県</option>
+                        <option value="12">千葉県</option>
+                        <option value="13" selected="">東京都</option>
+                        <option value="14">神奈川県</option>
+                        <option value="15">新潟県</option>
+                        <option value="16">富山県</option>
+                        <option value="17">石川県</option>
+                        <option value="18">福井県</option>
+                        <option value="19">山梨県</option>
+                        <option value="20">長野県</option>
+                        <option value="21">岐阜県</option>
+                        <option value="22">静岡県</option>
+                        <option value="23">愛知県</option>
+                        <option value="24">三重県</option>
+                        <option value="25">滋賀県</option>
+                        <option value="26">京都府</option>
+                        <option value="27">大阪府</option>
+                        <option value="28">兵庫県</option>
+                        <option value="29">奈良県</option>
+                        <option value="30">和歌山県</option>
+                        <option value="31">鳥取県</option>
+                        <option value="32">島根県</option>
+                        <option value="33">岡山県</option>
+                        <option value="34">広島県</option>
+                        <option value="35">山口県</option>
+                        <option value="36">徳島県</option>
+                        <option value="37">香川県</option>
+                        <option value="38">愛媛県</option>
+                        <option value="39">高知県</option>
+                        <option value="40">福岡県</option>
+                        <option value="41">佐賀県</option>
+                        <option value="42">長崎県</option>
+                        <option value="43">熊本県</option>
+                        <option value="44">大分県</option>
+                        <option value="45">宮崎県</option>
+                        <option value="46">鹿児島県</option>
+                        <option value="47">沖縄県</option>
+                        <option value="48">その他の地域</option>
+                    </select>
+                </label>
+                <label class="ap-edit-item">
+                    市区町村 <span class="ap-edit-required">必須</span>
+                    <input class="" type="text" name="locality" value="千代田区外神田" required="">
+                </label>
+                <label class="ap-edit-item">
+                    番地 <span class="ap-edit-required">必須</span>
+                    <input class="" type="text" name="streetaddress" value="6-15-11" required="">
+                </label>
+                <label class="ap-edit-item">
+                    建物など
+                    <input class="" type="text" name="extendedaddress" value="update">
+                </label>
+                <label class="ap-edit-item">
+                    電話番号 <span class="ap-edit-required">必須</span>
+                    <input type="text" class="ap-input-phone" name="phone" value="0312341234" required="">
+                </label>
+            </div>
+        </div>
+        <div class="ap-checkout-section">
+            <h2 class="ap-checkout-section__title">その他</h2>
+            <div class="ap-checkout-section__items">
+                <label class="ap-edit-item">
+                    備考（領収書など）
+                    <textarea name="notation" id="" cols="30" rows="3" data-textarea></textarea>
+                </label>
+                </label>
+                <p class="ap-edit-guide">※領収書は、登録者名と購入品名で発行します。それ以外で発行をご希望の場合は、宛名/但書を入力してください。</p>
+            </div>
+        </div>
+    </div>
+    <div class="ap-checkout__proceed">
+        <div class="ap-checkout-summary">
+            <table class="ap-checkout-breakdown">
+                <tfoot>
+                    <tr>
+                        <th>総計</th>
+                        <td>¥31,320</td>
+                    </tr>
+                </tfoot>
+                <tbody>
+                    <tr>
+                        <th>小計</th>
+                        <td>¥31,320</td>
+                    </tr>
+                    <tr>
+                        <th>送料</th>
+                        <td>¥0</td>
+                    </tr>
+                    <tr>
+                        <th>利用ポイント</th>
+                        <td>-¥432</td>
+                    </tr>
+                    <tr>
+                        <th>クーポン</th>
+                        <td>CPN2018</td>
+                    </tr>
+                    <tr>
+                        <th>代引手数料</th>
+                        <td>¥660</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="ap-checkout-notation">
+                <ul>
+                    <li>ご購入手続き後、メールにてダウンロード先URL、ライセンス・シリアルキー等が納品されます。</li>
+                    <li>ライセンス商品のため、このご注文は返品をお受けしておりません。ご注意ください。</li>
+                </ul>
+            </div>
+            <a href="{{root}}checkout/payment-card.html" class="ap-button -action -expanded" >お支払い方法へ カード</a>
+            <a href="{{root}}checkout/payment-cod.html" class="ap-button -action -expanded" >お支払い方法へ 代引き</a>
+            <a href="{{root}}checkout/payment-bank.html" class="ap-button -action -expanded" >お支払い方法へ 銀行</a>
+            <!-- <input type="submit" class="button expanded -last" value="ご注文手続きへ" data-checkout-submit> -->
+        </div>
+    </div>
+</form>

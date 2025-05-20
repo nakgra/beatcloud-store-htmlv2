@@ -1,0 +1,42 @@
+.ap-input-birthdate {
+    display: flex;
+    align-items: center;
+    margin: $ap-input-label-gutter 0 0 0;
+
+    @include breakpoint(small only) {
+        column-gap: .875rem;
+    }
+
+    @include breakpoint(medium) {
+        column-gap: 1rem;
+    }
+
+    &__year,
+    &__month,
+    &__day {
+        display: flex;
+        align-items: center;
+        text-align: right;
+
+        >input {
+            margin-right: .25rem;
+        }
+    }
+
+    &__year {
+        margin-left: 0;
+        width: 6rem;
+    }
+
+    &__month {
+        width: 4rem;
+    }
+
+    &__day {
+        width: 4rem;
+    }
+
+    &:first-child {
+        margin-top: 0 !important;
+    }
+}

@@ -1,0 +1,17 @@
+.ap-checkout-summary {
+    background-color: $white;
+
+    @include breakpoint(medium) {
+        padding: 1.5rem;
+    }
+
+    @include breakpoint(large) {
+        position: sticky;
+        top: 1.5rem;
+
+        padding: 1.5rem;
+    }
+
+    @include breakpoint(xlarge) {
+    }
+}

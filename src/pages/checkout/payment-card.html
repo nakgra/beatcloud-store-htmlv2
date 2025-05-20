@@ -1,0 +1,151 @@
+---
+layout: checkout
+meta-title: "お支払い方法"
+wrapperclass: ""
+---
+<ul class="ap-checkout-steps">
+    <li><a href="{{root}}cart/index.html">カート</a></li>
+    <li><a href="{{root}}checkout/index.html">ご注文入力</a></li>
+    <li><span>お支払い方法</span></li>
+</ul>
+<form class="ap-checkout" action="" method="POST" class="ap-checkout" data-checkout="">
+    <div class="ap-checkout__edit">
+        <div class="ap-checkout-section">
+            <h2 class="ap-checkout-section__title">お支払い方法</h2>
+            <div class="ap-checkout-section__items">
+                <div class="ap-checkout-paymentitem">
+                    <label class="ap-edit-radio-set">
+                        <div class="ap-edit-radio">
+                            <input type="radio" name="payment" value="card" required="" checked="" data-checkout-card="" data-checkout-update="radio">
+                            <span class="ap-edit-radio__mark"></span>
+                        </div>
+                        クレジットカード
+                    </label>
+                    <div class="ap-checkout-paybycard" data-cc-fieldset>
+                        <label class="ap-edit-item" data-cc-inputcontainer>
+                            カード番号 <span class="ap-edit-required">必須</span>
+                            <input type="text" class="ap-input-cc__number" data-cc-number="" pattern="\d*" autocompletetype="cc-number" required="">
+                        </label>
+                        <fieldset class="ap-edit-item -error" data-cc-inputcontainer>
+                            <legend>有効期限 <span class="ap-edit-required">必須</span></legend>
+                            <span class="ap-input-cc-expiry">
+                                <select class="ap-input-cc-expiry__month" data-cc-expiry-m="data-cc-expiry-m">
+                                    <option value="01">01</option>
+                                    <option value="02">02</option>
+                                    <option value="03">03</option>
+                                    <option value="04">04</option>
+                                    <option value="05">05</option>
+                                    <option value="06">06</option>
+                                    <option value="07">07</option>
+                                    <option value="08">08</option>
+                                    <option value="09">09</option>
+                                    <option value="10">10</option>
+                                    <option value="11">11</option>
+                                    <option value="12">12</option>
+                                </select>
+                                <span class="">/</span>
+                                <select class="ap-input-cc-expiry__year" data-cc-expiry-y="data-cc-expiry-y">
+                                    <option value="25">2025</option>
+                                    <option value="26">2026</option>
+                                    <option value="27">2027</option>
+                                    <option value="28">2028</option>
+                                    <option value="29">2029</option>
+                                    <option value="30">2030</option>
+                                    <option value="31">2031</option>
+                                    <option value="32">2032</option>
+                                    <option value="33">2033</option>
+                                    <option value="34">2034</option>
+                                    <option value="35">2035</option>
+                                    <option value="36">2036</option>
+                                    <option value="37">2037</option>
+                                    <option value="38">2038</option>
+                                    <option value="39">2039</option>
+                                    <option value="40">2040</option>
+                                    <option value="41">2041</option>
+                                    <option value="42">2042</option>
+                                    <option value="43">2043</option>
+                                    <option value="44">2044</option>
+                                    <option value="45">2045</option>
+                                </select>
+                            </span>
+                            <div class="ap-edit-error">エラーエラーエラーエラーエラーエラー</div>
+                        </fieldset>
+                        <label class="ap-edit-item" data-cc-inputcontainer>
+                            セキュリティコード <span class="ap-edit-required">必須</span>
+                            <input type="text" class="ap-input-cc__cvc" data-cc-cvc="" autocomplete="off" required="">
+                        </label>
+                        <label class="ap-edit-item" data-cc-inputcontainer>
+                            カード名義 <span class="ap-edit-required">必須</span>
+                            <input type="text" class="ap-input-cc__name" data-cc-name="" required="">
+                        </label>
+                        <input type="hidden" value="" data-cc-pgid="">
+                        <input type="hidden" value="" data-cc-pgkey="">
+                        <input type="hidden" name="cc_token" value="" data-cc-send-token="">
+                        <input type="hidden" name="cc_number" value="" data-cc-send-number="">
+                        <input type="hidden" name="cc_validuntil" value="" data-cc-send-validuntil="">
+                        <input type="hidden" name="cc_fp" value="" data-cc-send-fp="">
+                        <input type="hidden" name="cc_hc" value="" data-cc-send-hc="">
+                        <p class="ap-checkout-paybycard__note">カード番号は当サービスに保管されません。</p>
+                    </div>
+                </div>
+                <div class="ap-checkout-paymentitem">
+                    <label class="ap-edit-radio-set">
+                        <div class="ap-edit-radio">
+                            <input type="radio" name="payment" value="cod" required="" data-checkout-cod="" data-checkout-update="radio">
+                            <span class="ap-edit-radio__mark"></span>
+                        </div>
+                        代金引換
+                    </label>
+                </div>
+                <div class="ap-checkout-paymentitem">
+                    <label class="ap-edit-radio-set">
+                        <div class="ap-edit-radio">
+                            <input type="radio" name="payment" value="ib" required="" data-checkout-cod="" data-checkout-update="radio">
+                            <span class="ap-edit-radio__mark"></span>
+                        </div>
+                        銀行ネット決済
+                    </label>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="ap-checkout__proceed">
+        <div class="ap-checkout-summary">
+            <table class="ap-checkout-breakdown">
+                <tfoot>
+                    <tr>
+                        <th>総計</th>
+                        <td>¥31,320</td>
+                    </tr>
+                </tfoot>
+                <tbody>
+                    <tr>
+                        <th>小計</th>
+                        <td>¥31,320</td>
+                    </tr>
+                    <tr>
+                        <th>送料</th>
+                        <td>¥0</td>
+                    </tr>
+                    <tr>
+                        <th>利用ポイント</th>
+                        <td>-¥432</td>
+                    </tr>
+                    <tr>
+                        <th>クーポン</th>
+                        <td>CPN2018</td>
+                    </tr>
+                    <tr>
+                        <th>代引手数料</th>
+                        <td>¥660</td>
+                    </tr>
+                </tbody>
+            </table>
+            <!-- <p>ライセンス商品になりますので、この商品は返品をお受けしておりません。ご注意ください。ご購入手続き後、メールにてダウンロード先URL、ライセンス・シリアルキー等が納品されます。</p> -->
+            <form action="">
+                <a href="{{root}}checkout/confirm.html" class="ap-button -action -expanded" data-checkout-submit>注文内容の確認</a>
+                <!-- <input type="submit" class="button expanded -last" value="注文内容の確認" data-checkout-submit> -->
+            </form>
+        </div>
+    </div>
+</form>

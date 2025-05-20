@@ -1,9 +1,11 @@
 {
     "apibaseurl": "https://beatcloud.jp/",
-    "actions": {
-      "checkoutUpdate": ""
+    "actions":
+    {
+        "checkoutUpdate": ""
     },
-    "paygent": {
-      "getToken": "https://token.paygent.co.jp/js/PaygentToken.js"
+    "paygent":
+    {
+        "getToken": "https://token.paygent.co.jp/js/PaygentToken.js"
     }
 }

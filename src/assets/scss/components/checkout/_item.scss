@@ -1,0 +1,40 @@
+.ap-checkout-item {
+    @include breakpoint(small only) {}
+
+    @include breakpoint(medium) {
+        display: flex;
+        column-gap: 1.5rem;
+        padding: 1.5rem 0;
+        border-top: 1px solid $ap-border-color;
+
+        &:first-child {
+            border-top: 0;
+            padding-top: 0;
+        }
+        &:last-child {
+            padding-bottom: 0;
+        }
+    }
+
+    @include breakpoint(large) {
+        column-gap: 2rem;
+        padding: 1.5rem 0;
+    }
+
+    &__title {
+        margin: 0 0 auto 0;
+    }
+
+    &__price {
+        flex: 0 0 auto;
+        margin: 0 0 0 auto;
+        font-size: 1.125rem;
+        font-weight: bold;
+    }
+
+    &__description {
+        margin: .5rem 0 0 0;
+    }
+
+    &__detailcol {}
+}
