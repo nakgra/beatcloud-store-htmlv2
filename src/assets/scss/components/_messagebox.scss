@@ -1,0 +1,20 @@
+.ap-messagebox {
+    @include xy-grid-container($width: 800px);
+
+    @include breakpoint(small only) {
+        margin-bottom: 2rem;
+    }
+
+    @include breakpoint(medium) {
+        margin-bottom: 2.5rem;
+    }
+
+    @include breakpoint(large) {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    @include breakpoint(xlarge) {
+        margin-bottom: 3rem;
+    }
+}

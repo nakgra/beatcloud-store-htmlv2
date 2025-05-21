@@ -17,10 +17,15 @@ wrapperclass: ""
                     <div class="ap-checkout-item__detailcol">
                         <div class="ap-checkout-item__title">UNIVERSAL AUDIO(ソフトウェア) UAD Studio Classics Bundle</div>
                         <div class="ap-checkout-item__description">
-                            数量1 &times; &yen;3,000
+                            <span class="ap-checkout-item__qty">数量 1</span>
+                            <span class="ap-checkout-item__price">
+                                <strong>&yen;10,800</strong>
+                                <del>&yen;20,520</del>
+                                <small>クーポン適用</small>
+                            </span>
                         </div>
                     </div>
-                    <div class="ap-checkout-item__price">&yen;999,999</div>
+                    <div class="ap-checkout-item__subtotal">&yen;999,999</div>
                 </div>
                 {{/repeat}}
             </div>
@@ -217,9 +222,9 @@ wrapperclass: ""
                     <li>ライセンス商品のため、このご注文は返品をお受けしておりません。ご注意ください。</li>
                 </ul>
             </div>
-            <a href="{{root}}checkout/payment-card.html" class="ap-button -action -expanded" >お支払い方法へ カード</a>
-            <a href="{{root}}checkout/payment-cod.html" class="ap-button -action -expanded" >お支払い方法へ 代引き</a>
-            <a href="{{root}}checkout/payment-bank.html" class="ap-button -action -expanded" >お支払い方法へ 銀行</a>
+            <a href="{{root}}checkout/payment-card.html" class="ap-button -action -expanded">お支払い方法へ カード</a>
+            <a href="{{root}}checkout/payment-cod.html" class="ap-button -action -expanded">お支払い方法へ 代引き</a>
+            <a href="{{root}}checkout/payment-bank/index.html" class="ap-button -action -expanded">お支払い方法へ 銀行</a>
             <!-- <input type="submit" class="button expanded -last" value="ご注文手続きへ" data-checkout-submit> -->
         </div>
     </div>

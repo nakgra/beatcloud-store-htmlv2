@@ -1,0 +1,63 @@
+---
+layout: checkout
+meta-title: "決済のお手続き"
+wrapperclass: ""
+---
+<form class="ap-checkout" action="" method="POST" class="ap-checkout" data-checkout>
+    <header class="ap-checkout-header">
+        <h1 class="ap-checkout-header__title">決済のお手続き</h1>
+        <p class="ap-checkout-header__lead -alert">まだ画面を閉じないでください。ご注文手続きはまだ完了していません。</p>
+    </header>
+    <div class="ap-checkout__edit">
+        <div class="ap-checkout-section">
+            <h2 class="ap-checkout-section__title">ご注文内容</h2>
+            <div class="ap-checkout-section__items">
+                <div class="ap-checkout-review-header">
+                    <p>ご注文ありがとうございました。</p>
+                </div>
+                <dl class="ap-checkout-review">
+                    <div class="ap-checkout-review__row">
+                        <dt>注文番号</dt>
+                        <dd>#14316</dd>
+                    </div>
+                    <div class="ap-checkout-review__row">
+                        <dt>付与ポイント</dt>
+                        <dd>
+                            <p>999</p>
+                            <ul class="">
+                                <li>1年間有効</li>
+                                <li>決済が完了し、ご入金が確認されたあとに付与されます。</li>
+                            </ul>
+                        </dd>
+                    </div>
+                    <div class="ap-checkout-review__row">
+                        <dt>お支払い</dt>
+                        <dd>次の画面で銀行ネット決済のお手続きへ進みます。</dd>
+                    </div>
+                    <div class="ap-checkout-review__row">
+                        <dt>商品のお届け</dt>
+                        <dd>
+                            <ul>
+                                <li>弊社スタッフによりご入金確認後、ご案内をお送りします。</li>
+                                <li>土日祝日のご注文などの場合にご入金情報の確認は翌営業日となるなど、ご入金確認まではお時間をいただく場合がございます。</li>
+                            </ul>
+                        </dd>
+                    </div>
+                </dl>
+            </div>
+        </div>
+    </div>
+    <div class="ap-checkout__proceed">
+        <div class="ap-checkout-summary">
+            <div class="ap-checkout-notation">
+                <ul>
+                    <li>ペイジェントの銀行ネット決済へ進みます。これより違うドメインに遷移します。</li>
+                    <li>お手続き中に画面を閉じないようにご注意ください。</li>
+                    <li class="-alert">お支払い期限は1時間です。</li>
+                </ul>
+            </div>
+            <a href="{{root}}checkout/payment-bank/allset.html" class="ap-button -action -expanded">決済画面へ</a>
+            <!-- <input type="submit" class="button expanded -last" value="ご注文を確定" data-checkout-submit> -->
+        </div>
+    </div>
+</form>

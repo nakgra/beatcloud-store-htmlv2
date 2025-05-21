@@ -11,6 +11,7 @@
             border-top: 0;
             padding-top: 0;
         }
+
         &:last-child {
             padding-bottom: 0;
         }
@@ -25,15 +26,49 @@
         margin: 0 0 auto 0;
     }
 
-    &__price {
+    &__subtotal {
         flex: 0 0 auto;
         margin: 0 0 0 auto;
         font-size: 1.125rem;
-        font-weight: bold;
+        font-weight: 500;
     }
 
     &__description {
+        display: flex;
+        align-items: center;
+        column-gap: .5rem;
+
         margin: .5rem 0 0 0;
+    }
+
+    &__qty {
+        line-height: 1;
+
+        &:after {
+            content: "\00D7"; //&times;
+            margin: 0 0 0 .5rem;
+        }
+    }
+
+    &__price {
+        display: flex;
+        align-items: flex-end;
+        column-gap: .5rem;
+        line-height: 1;
+
+        >strong {
+            font-weight: normal;
+        }
+
+        >del {
+            font-size: .875rem;
+            color: $dark-gray;
+        }
+
+        >small {
+            font-size: .8rem;
+            color: $alert-color;
+        }
     }
 
     &__detailcol {}

@@ -21,11 +21,30 @@
         }
 
         >.ap-edit-checkboxset {
-            // display: flex;
+            display: flex;
             // align-items: center;
-            column-gap: 1rem;
+            // column-gap: 1rem;
             font-size: 1rem;
             line-height: 1.4;
+
+            >b {
+                flex: 0 0 auto;
+                margin: 0 0 0 1rem;
+                font-weight: 500;
+            }
+        }
+    }
+
+    &.-preview {
+        >li {
+            display: flex;
+            align-items: center;
+            column-gap: 1rem;
+
+            >b {
+                flex: 0 0 auto;
+                font-weight: 500;
+            }
         }
     }
 

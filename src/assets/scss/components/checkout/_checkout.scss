@@ -1,13 +1,21 @@
 .ap-checkout {
     @include xy-grid-container($width: $ap-product-header-width);
 
-    @include breakpoint(small only) {}
+    @include breakpoint(small only) {
+        margin-bottom: 2rem;
+    }
 
-    @include breakpoint(medium) {}
+    @include breakpoint(medium) {
+        margin-bottom: 2.5rem;
+    }
 
     @include breakpoint(large) {
         display: flex;
-        column-gap: 2rem;
+        flex-wrap: wrap;
+    }
+
+    @include breakpoint(xlarge) {
+        margin-bottom: 3rem;
     }
 
     &__edit {
@@ -16,6 +24,7 @@
         @include breakpoint(medium) {}
 
         @include breakpoint(large) {
+            padding: 0 2rem 0 0;
             width: 65%;
         }
 

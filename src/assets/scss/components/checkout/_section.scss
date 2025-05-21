@@ -1,8 +1,9 @@
 .ap-checkout-section {
     background-color: $white;
+    border: 1px solid $ap-border-color;
 
     @include breakpoint(medium) {
-        margin-bottom: 1.5rem;
+        margin-bottom: 2rem;
     }
 
     @include breakpoint(large) {}

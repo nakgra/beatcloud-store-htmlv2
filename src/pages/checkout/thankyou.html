@@ -1,0 +1,58 @@
+---
+layout: default
+meta-title: "ご注文が完了しました"
+wrapperclass: ""
+---
+<article class="ap-messagebox">
+    <header class="ap-checkout-header">
+        <h1 class="ap-checkout-header__title">お買い上げありがとうございました。</h1>
+    </header>
+    <div class="ap-checkout-section">
+        <h2 class="ap-checkout-section__title">ご注文内容</h2>
+        <div class="ap-checkout-section__items">
+            <dl class="ap-checkout-review">
+                <div class="ap-checkout-review__row">
+                    <dt>注文番号</dt>
+                    <dd>
+                        #14316 <a href="{{root}}account/order/show.html">ご注文内容を表示</a>
+                    </dd>
+                </div>
+                <div class="ap-checkout-review__row">
+                    <dt>付与ポイント</dt>
+                    <dd>
+                        <p>999</p>
+                        <ul class="">
+                            <li>1年間有効</li>
+                            <li>決済が完了し、ご入金が確認されたあとに付与されます。</li>
+                        </ul>
+                    </dd>
+                </div>
+                <div class="ap-checkout-review__row">
+                    <dt>商品のお届け</dt>
+                    <dd>
+                        <ul>
+                            <li>弊社スタッフによりご入金確認後、ご案内をお送りします。</li>
+                            <li>土日祝日のご注文などの場合にご入金情報の確認は翌営業日となるなど、ご入金確認まではお時間をいただく場合がございます。</li>
+                        </ul>
+                    </dd>
+                </div>
+            </dl>
+        </div>
+    </div>
+</article>
+<div class="ap-section">
+    <div class="ap-box">
+        <h2 class="ap-cart__subtitle">「あとで買う」に入っている商品</h2>
+        <div class="ap-grid -full">
+            {{#each popular}}
+            <a class="ap-grid-item" href="{{../root}}{{path}}">
+                <div class="ap-grid-item__pic"><img src="{{../root}}assets/upload{{img}}" alt=""></div>
+                <h3 class="ap-grid-item__title -medium">
+                    <span class="__divide">{{ brand }}</span>{{ name }}
+                </h3>
+                <p class="ap-grid-item__footnote -alert">&yen;{{ price }} <del>&yen;{{ original_price }}</del></p>
+            </a>
+            {{/each}}
+        </div>
+    </div>
+</div>

@@ -1,0 +1,85 @@
+---
+layout: checkout
+meta-title: "お支払い方法"
+wrapperclass: ""
+---
+<ul class="ap-checkout-steps">
+    <li><a href="{{root}}cart/index.html">カート</a></li>
+    <li><a href="{{root}}checkout/index.html">ご注文入力</a></li>
+    <li><span>お支払い方法</span></li>
+</ul>
+<form class="ap-checkout" action="" method="POST" class="ap-checkout" data-checkout="">
+    <div class="ap-checkout__edit">
+        <div class="ap-checkout-section">
+            <h2 class="ap-checkout-section__title">お支払い方法</h2>
+            <div class="ap-checkout-section__items">
+                <div class="ap-checkout-paymentitem">
+                    <label class="ap-edit-radio-set">
+                        <div class="ap-edit-radio">
+                            <input type="radio" name="payment" value="card" required="" data-checkout-card="" data-checkout-update="radio">
+                            <span class="ap-edit-radio__mark"></span>
+                        </div>
+                        クレジットカード
+                    </label>
+                </div>
+                <div class="ap-checkout-paymentitem">
+                    <label class="ap-edit-radio-set">
+                        <div class="ap-edit-radio">
+                            <input type="radio" name="payment" value="cod" required="" checked data-checkout-cod="" data-checkout-update="radio">
+                            <span class="ap-edit-radio__mark"></span>
+                        </div>
+                        代金引換
+                    </label>
+                </div>
+                <div class="ap-checkout-paymentitem">
+                    <label class="ap-edit-radio-set">
+                        <div class="ap-edit-radio">
+                            <input type="radio" name="payment" value="ib" required="" data-checkout-cod="" data-checkout-update="radio">
+                            <span class="ap-edit-radio__mark"></span>
+                        </div>
+                        銀行ネット決済
+                    </label>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="ap-checkout__proceed">
+        <div class="ap-checkout-summary">
+            <table class="ap-checkout-breakdown">
+                <tfoot>
+                    <tr>
+                        <th>総計</th>
+                        <td>¥31,320</td>
+                    </tr>
+                </tfoot>
+                <tbody>
+                    <tr>
+                        <th>小計</th>
+                        <td>¥31,320</td>
+                    </tr>
+                    <tr>
+                        <th>送料</th>
+                        <td>¥0</td>
+                    </tr>
+                    <tr>
+                        <th>利用ポイント</th>
+                        <td>-¥432</td>
+                    </tr>
+                    <tr>
+                        <th>クーポン</th>
+                        <td>CPN2018</td>
+                    </tr>
+                    <tr>
+                        <th>代引手数料</th>
+                        <td>¥660</td>
+                    </tr>
+                </tbody>
+            </table>
+            <!-- <p>ライセンス商品になりますので、この商品は返品をお受けしておりません。ご注意ください。ご購入手続き後、メールにてダウンロード先URL、ライセンス・シリアルキー等が納品されます。</p> -->
+            <form action="">
+                <a href="{{root}}checkout/confirm.html" class="ap-button -action -expanded" data-checkout-submit-fake>注文内容の確認</a>
+                <!-- <input type="submit" class="button expanded -last" value="注文内容の確認" data-checkout-submit> -->
+            </form>
+        </div>
+    </div>
+</form>

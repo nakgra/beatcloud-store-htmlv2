@@ -1,0 +1,24 @@
+.ap-checkout-notation {
+    margin: 0 0 1.5rem 0;
+    font-size: 0.9375rem;
+    // color: $dark-gray;
+
+    ul {
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+        line-height: 1.4;
+
+        >li {
+            margin: 0 0 .75rem 0;
+
+            &.-alert {
+                color: $alert-color;
+            }
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+}

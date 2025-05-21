@@ -1,5 +1,6 @@
 .ap-box {
     background-color: $white;
+    border: 1px solid $ap-border-color;
 
     @include breakpoint(medium) {
         padding: 1.5rem;
