@@ -1,22 +1,17 @@
-.ap-cart-main {
-    @include breakpoint(small only) {}
-
+.ap-account-main {
     @include breakpoint(medium) {}
 
     @include breakpoint(large) {
         display: flex;
-        column-gap: 2rem;
     }
 
-    &__items {
-        background: $white;
-        @include bordered();
+    &__content {
+        // background: $white;
 
-        @include breakpoint(medium) {
-            padding: 0 1.5rem;
-        }
+        @include breakpoint(medium) {}
 
         @include breakpoint(large) {
+            padding: 0 0 0 2rem;
             width: 65%;
         }
 
@@ -25,7 +20,7 @@
         }
     }
 
-    &__proceed {
+    &__nav {
         @include breakpoint(medium) {}
 
         @include breakpoint(large) {

@@ -36,6 +36,7 @@
     &__content {
         position: relative;
         background: rgba(255, 255, 255, 1.0);
+        border-bottom: 1px solid #f1f1f1;//$ap-border-color;
 
         &.-active {
             position: fixed;
@@ -46,7 +47,8 @@
             // background: rgba(255, 255, 255, .9);
 
             transition: background 1s ease-in;
-            box-shadow: 0 0 3px $medium-gray;
+            box-shadow: 0 0 2px $medium-gray;
+            // border-bottom: 0;
 
             #{$parent}__name {
                 img {

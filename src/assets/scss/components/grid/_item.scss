@@ -6,7 +6,7 @@
     flex-direction: column;
 
     background-color: $white;
-    border: 1px solid $ap-border-color;
+    @include bordered;
     overflow: hidden;
     color: $body-font-color;
 

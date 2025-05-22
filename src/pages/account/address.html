@@ -1,0 +1,142 @@
+---
+meta-title: "マイページ"
+wrapperclass: ""
+---
+<article class="ap-account">
+    <div class="ap-account-maintitle">
+        <h1 class="ap-account-name">
+            <span class="ap-account-name__id">会員ID: 17612</span>
+            <span class="ap-account-name__name">中村 亮介 <small>様</small></span>
+        </h1>
+        <dl class="ap-account-stats">
+            <div class="ap-account-stats__item">
+                <dt>保有ポイント</dt>
+                <dd>6,000</dd>
+            </div>
+            <div class="ap-account-stats__item">
+                <dt>今月の紹介料計</dt>
+                <dd>&yen;6,000</dd>
+            </div>
+        </dl>
+    </div>
+    <div class="ap-account-main">
+        <nav class="ap-account-main__nav">
+            <ul class="ap-account-menu">
+                <li class="-error">
+                    <a href="{{root}}account/address.html">ご登録住所（お届け先）
+                        <!-- <b class="ap-edit-error">ご住所に問題があります。修正してください。</b> -->
+                    </a>
+                </li>
+                <li><a href="{{root}}account/edit.html">会員情報</a></li>
+                <li><a href="{{root}}account/history/index.html">注文履歴</a></li>
+                <li><a href="{{root}}account/account/edit.html">ポイント明細</a></li>
+                <li><a href="{{root}}account/account/edit.html">紹介料明細</a></li>
+                <li><a href="{{root}}account/wishlist/index.html">ほしい物リスト</a></li>
+                <li><a href="{{root}}account/history/index.html">閲覧履歴</a></li>
+            </ul>
+        </nav>
+        <div class="ap-account-main__content">
+            <div class="ap-block">
+                <h2 class="ap-block__title">ご請求先/お届け先</h2>
+                <form action="" class="ap-block__content">
+                    <fieldset class="ap-edit-item">
+                        <div class="ap-input-nameset">
+                            <label class="ap-input-nameset__name">
+                                姓 <span class="ap-edit-required">必須</span>
+                                <input type="text" name="last_name" value="中村" required="">
+                            </label>
+                            <label class="ap-input-nameset__name">
+                                名 <span class="ap-edit-required">必須</span>
+                                <input type="text" name="first_name" value="亮介" required="">
+                            </label>
+                        </div>
+                    </fieldset>
+                    <label class="ap-edit-item">
+                        会社名
+                        <input type="text" name="co_name" value="グランテック株式会社">
+                    </label>
+                    <fieldset class="ap-edit-item">
+                        <legend>郵便番号 <span class="ap-edit-required">必須</span></legend>
+                        <div class="ap-input-postalcode">
+                            <input class="ap-input-postalcode__f" type="text" name="postalcode1" value="101" maxlength="3" required="">
+                            <span>&mdash;</span>
+                            <input class="ap-input-postalcode__l" type="text" name="postalcode2" value="0021" maxlength="4" required="">
+                        </div>
+                    </fieldset>
+                    <label class="ap-edit-item">
+                        都道府県 <span class="ap-edit-required">必須</span>
+                        <select class="ap-input-select" name="prefecture_id" required="" data-checkout-update="select">
+                            <option value="">選択</option>
+                            <option value="1">北海道</option>
+                            <option value="2">青森県</option>
+                            <option value="3">岩手県</option>
+                            <option value="4">宮城県</option>
+                            <option value="5">秋田県</option>
+                            <option value="6">山形県</option>
+                            <option value="7">福島県</option>
+                            <option value="8">茨城県</option>
+                            <option value="9">栃木県</option>
+                            <option value="10">群馬県</option>
+                            <option value="11">埼玉県</option>
+                            <option value="12">千葉県</option>
+                            <option value="13" selected="">東京都</option>
+                            <option value="14">神奈川県</option>
+                            <option value="15">新潟県</option>
+                            <option value="16">富山県</option>
+                            <option value="17">石川県</option>
+                            <option value="18">福井県</option>
+                            <option value="19">山梨県</option>
+                            <option value="20">長野県</option>
+                            <option value="21">岐阜県</option>
+                            <option value="22">静岡県</option>
+                            <option value="23">愛知県</option>
+                            <option value="24">三重県</option>
+                            <option value="25">滋賀県</option>
+                            <option value="26">京都府</option>
+                            <option value="27">大阪府</option>
+                            <option value="28">兵庫県</option>
+                            <option value="29">奈良県</option>
+                            <option value="30">和歌山県</option>
+                            <option value="31">鳥取県</option>
+                            <option value="32">島根県</option>
+                            <option value="33">岡山県</option>
+                            <option value="34">広島県</option>
+                            <option value="35">山口県</option>
+                            <option value="36">徳島県</option>
+                            <option value="37">香川県</option>
+                            <option value="38">愛媛県</option>
+                            <option value="39">高知県</option>
+                            <option value="40">福岡県</option>
+                            <option value="41">佐賀県</option>
+                            <option value="42">長崎県</option>
+                            <option value="43">熊本県</option>
+                            <option value="44">大分県</option>
+                            <option value="45">宮崎県</option>
+                            <option value="46">鹿児島県</option>
+                            <option value="47">沖縄県</option>
+                            <option value="48">その他の地域</option>
+                        </select>
+                    </label>
+                    <label class="ap-edit-item">
+                        市区町村 <span class="ap-edit-required">必須</span>
+                        <input class="" type="text" name="locality" value="千代田区外神田" required="">
+                    </label>
+                    <label class="ap-edit-item">
+                        番地 <span class="ap-edit-required">必須</span>
+                        <input class="" type="text" name="streetaddress" value="6-15-11" required="">
+                    </label>
+                    <label class="ap-edit-item">
+                        建物など
+                        <input class="" type="text" name="extendedaddress" value="update">
+                    </label>
+                    <label class="ap-edit-item">
+                        電話番号 <span class="ap-edit-required">必須</span>
+                        <input type="text" class="ap-input-phone" name="phone" value="0312341234" required="">
+                    </label>
+                    <hr>
+                    <input type="submit" class="ap-button -action" value="保存する">
+                </div>
+            </div>
+        </div>
+    </div>
+</article>

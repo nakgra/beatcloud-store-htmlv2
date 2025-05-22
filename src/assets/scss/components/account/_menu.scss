@@ -1,0 +1,45 @@
+.ap-account-menu {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    @include bordered;
+    background-color: $white;
+
+    @include breakpoint(medium down) {
+        margin: 0 0 3rem 0;
+        text-align: center;
+    }
+
+    >li {
+        border-bottom: 1px solid $ap-border-color;
+
+        >a {
+            display: block;
+            margin: 0;
+
+            color: $body-font-color;
+
+            &:hover {
+                color: $anchor-color-hover;
+            }
+
+            @include breakpoint(small only) {
+                padding: .875rem;
+            }
+
+            @include breakpoint(medium) {
+                padding: .75rem .875rem;
+            }
+
+            @include breakpoint(large) {}
+        }
+
+        .ap-error {
+            display: block;
+
+            font-size: .8rem;
+            font-weight: normal;
+            color: $alert-color;
+        }
+    }
+}

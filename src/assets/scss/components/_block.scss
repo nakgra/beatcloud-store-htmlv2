@@ -1,4 +1,4 @@
-.ap-checkout-section {
+.ap-block {
     background-color: $white;
     @include bordered();
 
@@ -24,7 +24,7 @@
         @include breakpoint(xlarge) {}
     }
 
-    &__items {
+    &__content {
         @include breakpoint(medium) {
             padding: 1.5rem;
         }
