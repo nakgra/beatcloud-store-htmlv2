@@ -1,0 +1,80 @@
+.ap-myproducts {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    border-spacing: 0;
+    // font-size: .875rem;
+    border-top: 1px solid $ap-border-color;
+
+    th,
+    td {}
+
+    >thead {
+        margin: 0 0 .5rem 0;
+
+        >tr {
+
+            >th,
+            >td {
+                font-weight: normal;
+                font-size: .875rem;
+
+                @include breakpoint(medium down) {
+                    padding: .75rem .75rem .75rem .75rem;
+                    border-bottom: 1px solid $ap-border-color;
+                }
+
+                @include breakpoint(large) {
+                    padding: .75rem .75rem .75rem .75rem;
+                    // border-top: 3px solid $ap-border-color;
+                    border-bottom: 1px solid $ap-border-color;
+                }
+
+                &:first-child {
+                    padding-left: 0;
+                }
+
+                &:last-child {
+                    padding-right: 0;
+                }
+            }
+        }
+    }
+
+    >tbody {
+        margin: 1rem 0 0 0;
+
+        >tr {
+
+            >th,
+            >td {
+                padding: .75rem;
+                border-bottom: 1px solid $ap-border-color;
+                font-size: .9375rem;
+
+                &:first-child {
+                    padding-left: 0;
+                }
+
+                &:last-child {
+                    padding-right: 0;
+                }
+            }
+        }
+    }
+
+    .__id {
+        width: 6rem;
+        text-align: right;
+    }
+
+    .__name {
+        // width: 10rem;
+        text-align: left;
+    }
+
+    .__qty {
+        width: 4rem;
+        text-align: right;
+    }
+}

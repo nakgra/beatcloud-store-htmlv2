@@ -1,0 +1,11 @@
+.ap-edit-action {
+    @include breakpoint(medium) {
+        margin: 2rem 0 0 0;
+        padding: 0;
+        // border-top: 1px solid $ap-border-color;
+    }
+
+    @include breakpoint(large) {}
+
+    @include breakpoint(xlarge) {}
+}

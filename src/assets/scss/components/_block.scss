@@ -36,5 +36,26 @@
         >*:last-child {
             margin-bottom: 0;
         }
+
+        &+.ap-block__content {
+            border-top: 1px solid $ap-border-color;
+        }
+    }
+
+    &__footer {
+        @include breakpoint(medium) {}
+
+        @include breakpoint(large) {}
+
+        @include breakpoint(xlarge) {}
+    }
+
+    &__description {
+        margin: 0 0 1.5rem 0;
+        font-size: 0.9375rem;
+
+        >*:last-child {
+            margin-bottom: 0;
+        }
     }
 }

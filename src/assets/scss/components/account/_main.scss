@@ -12,11 +12,11 @@
 
         @include breakpoint(large) {
             padding: 0 0 0 2rem;
-            width: 65%;
+            width: 72%;
         }
 
         @include breakpoint(xlarge) {
-            width: 70%;
+            width: 75%;
         }
     }
 
@@ -24,11 +24,11 @@
         @include breakpoint(medium) {}
 
         @include breakpoint(large) {
-            width: 35%;
+            width: 28%;
         }
 
         @include breakpoint(xlarge) {
-            width: 30%;
+            width: 25%;
         }
     }
 }

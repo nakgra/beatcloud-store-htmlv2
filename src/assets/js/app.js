@@ -29,6 +29,7 @@ import Search from './lib/Search';
 import Textarea from './lib/textarea';
 import PageTop from './lib/pageTop';
 import Browse from './lib/browse';
+import Datepicker from './lib/datepicker';
 
 (function(window, document) {
     CheckoutForm.setup();
@@ -42,4 +43,5 @@ import Browse from './lib/browse';
     Search.setup();
     PageTop.setup();
     Browse.setup();
+    Datepicker.setup();
 })(window, window.document);

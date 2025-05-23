@@ -19,18 +19,18 @@ wrapperclass: ""
             </div>
         </dl>
     </div>
+    <ul class="ap-breadcrumbs">
+        <li><a href="{{root}}account/index.html">マイページ</a></li>
+        <li><span>ポイント明細</span></li>
+    </ul>
     <div class="ap-account-main">
         <nav class="ap-account-main__nav">
             <ul class="ap-account-menu">
-                <li class="-error">
-                    <a href="{{root}}account/address.html">ご登録住所（お届け先）
-                        <!-- <b class="ap-edit-error">ご住所に問題があります。修正してください。</b> -->
-                    </a>
-                </li>
+                <li><a href="{{root}}account/address.html">ご登録住所（お届け先）</a></li>
                 <li><a href="{{root}}account/edit.html">会員情報</a></li>
                 <li><a href="{{root}}account/myproducts/index.html">マイプロダクト</a></li>
                 <li><a href="{{root}}account/myorders/index.html">注文履歴</a></li>
-                <li><a href="{{root}}account/rewards.html">ポイント明細</a></li>
+                <li><a class="-active" href="{{root}}account/rewards.html">ポイント明細</a></li>
                 <li><a href="{{root}}account/associate/index.html">紹介料明細</a></li>
                 <li><a href="{{root}}account/bookmarks.html">あとで買うリスト</a></li>
                 <li><a href="{{root}}account/history.html">閲覧履歴</a></li>
@@ -38,9 +38,30 @@ wrapperclass: ""
         </nav>
         <div class="ap-account-main__content">
             <div class="ap-block">
-                <h2 class="ap-block__title">最近のご注文</h2>
+                <h2 class="ap-block__title">ポイント明細</h2>
                 <div class="ap-block__content">
-                    過去90日のご注文はありません
+                    <table class="ap-rewards">
+                        <tbody>
+                            <tr>
+                                <th>使用可能ポイント</th>
+                                <td>40,000</td>
+                            </tr>
+                            <tr>
+                                <th>付与予定ポイント</th>
+                                <td>40,000</td>
+                            </tr>
+                            <tr>
+                                <th>有効期限が近いポイント</th>
+                                <td>
+                                    <ul class="ap-rewards-detail">
+                                        <li><span>2017/11/13まで:</span> 15,000</li>
+                                        <li><span>2017/11/13まで:</span> 15,000</li>
+                                        <li><span>2017/11/13まで:</span> 15,000</li>
+                                    </ul>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
             </div>
         </div>

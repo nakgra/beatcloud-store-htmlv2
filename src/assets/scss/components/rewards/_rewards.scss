@@ -1,0 +1,51 @@
+.ap-rewards {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    border-spacing: 0;
+    font-size: 0.9375rem;
+
+    th,
+    td {
+        font-weight: normal;
+        text-align: left;
+        border-bottom: 1px solid $ap-border-color;
+        vertical-align: top;
+    }
+
+    th {
+        padding: .75rem .75rem .75rem 0;
+        width: 15rem;
+    }
+
+    td {
+        padding: .75rem;
+    }
+
+    >thead {
+        >tr {
+            >th {
+                color: $dark-gray;
+            }
+        }
+    }
+
+    >tbody {
+        >tr {
+            &:first-child {
+                th,
+                td {
+                    padding-top: 0;
+                }
+            }
+
+            &:last-child {
+                th,
+                td {
+                    padding-bottom: 0;
+                    border-bottom: 0;
+                }
+            }
+        }
+    }
+}

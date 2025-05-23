@@ -1,15 +1,21 @@
 .ap-account-maintitle {
+    background-color: $white;
+    @include bordered();
+
     @include breakpoint(small only) {
         margin-bottom: 2rem;
+        padding: 1.125rem;
     }
 
     @include breakpoint(medium only) {
         margin-bottom: 2rem;
+        padding: 1.5rem;
     }
 
     @include breakpoint(large) {
         display: flex;
         align-items: flex-end;
-        margin-bottom: 4rem;
+        margin-bottom: 2.5rem;
+        padding: 1.5rem;
     }
 }

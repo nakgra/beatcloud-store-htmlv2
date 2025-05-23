@@ -1,0 +1,32 @@
+.ap-associate-total {
+    display: flex;
+    align-items: center;
+    line-height: 1;
+    font-size: 0.9375rem;
+
+    @include breakpoint(small only) {}
+
+    @include breakpoint(medium) {
+        margin: 0 0 0 2rem;
+    }
+
+    @include breakpoint(large) {}
+
+    &__amount {
+        margin: 0 0 0 .5rem;
+        line-height: 1;
+        font-weight: 500;
+
+        @include breakpoint(small only) {
+            font-size: 1.25rem;
+        }
+
+        @include breakpoint(medium) {
+            font-size: 1.5rem;
+        }
+
+        @include breakpoint(large) {
+            font-size: 1.65rem;
+        }
+    }
+}

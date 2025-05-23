@@ -1,0 +1,71 @@
+---
+meta-title: "マイページ"
+wrapperclass: ""
+---
+<article class="ap-account">
+    <div class="ap-account-maintitle">
+        <h1 class="ap-account-name">
+            <span class="ap-account-name__id">会員ID: 17612</span>
+            <span class="ap-account-name__name">中村 亮介 <small>様</small></span>
+        </h1>
+        <dl class="ap-account-stats">
+            <div class="ap-account-stats__item">
+                <dt>保有ポイント</dt>
+                <dd>6,000</dd>
+            </div>
+            <div class="ap-account-stats__item">
+                <dt>今月の紹介料計</dt>
+                <dd>&yen;6,000</dd>
+            </div>
+        </dl>
+    </div>
+    <ul class="ap-breadcrumbs">
+        <li><a href="{{root}}account/index.html">マイページ</a></li>
+        <li><span>注文履歴</span></li>
+    </ul>
+    <div class="ap-account-main">
+        <nav class="ap-account-main__nav">
+            <ul class="ap-account-menu">
+                <li><a href="{{root}}account/address.html">ご登録住所（お届け先）</a></li>
+                <li><a href="{{root}}account/edit.html">会員情報</a></li>
+                <li><a class="-active" href="{{root}}account/myproducts/index.html">マイプロダクト</a></li>
+                <li><a href="{{root}}account/myorders/index.html">注文履歴</a></li>
+                <li><a href="{{root}}account/rewards.html">ポイント明細</a></li>
+                <li><a href="{{root}}account/associate/index.html">紹介料明細</a></li>
+                <li><a href="{{root}}account/bookmarks.html">あとで買うリスト</a></li>
+                <li><a href="{{root}}account/history.html">閲覧履歴</a></li>
+            </ul>
+        </nav>
+        <div class="ap-account-main__content">
+            <div class="ap-block">
+                <h2 class="ap-block__title">マイプロダクト</h2>
+                <div class="ap-block__content">
+                    <div class="ap-block__description">
+                        <p>購入した商品のライセンスや補足説明を確認できます。</p>
+                    </div>
+                    <table class="ap-myproducts">
+                        <thead>
+                            <tr>
+                                <th class="__name">商品名</th>
+                                <th class="__qty">数量</th>
+                                <th class="__id">注文番号</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="__name"><a href="{{root}}account/myproducts/show.html">UNIVERSAL AUDIO UAD Studio Classics Bundle</a></td>
+                                <td class="__qty">3</td>
+                                <td class="__id"><a href="{{root}}account/myorders/show.html">81362</a></td>
+                            </tr>
+                            <tr>
+                                <td class="__name"><a href="{{root}}account/myproducts/show.html">UNIVERSAL AUDIO UAD Studio Classics Bundle</a></td>
+                                <td class="__qty">1</td>
+                                <td class="__id"><a href="{{root}}account/myorders/show.html">81499</a></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</article>

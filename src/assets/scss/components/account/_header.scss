@@ -1,0 +1,49 @@
+.ap-account-header {
+    flex: 1 0 100%;
+
+    @include breakpoint(small only) {
+        margin-bottom: 2rem;
+    }
+
+    @include breakpoint(medium) {
+        margin-bottom: 2rem;
+    }
+
+    @include breakpoint(large) {
+        display: flex;
+        align-items: center;
+        margin-bottom: 2rem;
+    }
+
+    &__title {
+        margin: 0;
+        font-weight: 500;
+
+        @include breakpoint(small only) {
+            font-size: 1.125rem;
+        }
+
+        @include breakpoint(medium only) {
+            margin-bottom: 2rem;
+        }
+
+        @include breakpoint(medium) {
+            // margin-right: auto;
+            font-size: 1.25rem;
+        }
+
+        @include breakpoint(large) {}
+    }
+
+    &__lead {
+        margin: 0;
+
+        @include breakpoint(large) {
+            margin-left: 1rem;
+        }
+
+        &.-alert {
+            color: $alert-color;
+        }
+    }
+}

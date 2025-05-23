@@ -1,0 +1,97 @@
+.ap-myorders {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    border-spacing: 0;
+    // font-size: .875rem;
+    border-top: 1px solid $ap-border-color;
+
+    th,
+    td {}
+
+    >thead {
+        margin: 0 0 .5rem 0;
+
+        >tr {
+
+            >th,
+            >td {
+                font-weight: normal;
+                font-size: .875rem;
+
+                @include breakpoint(medium down) {
+                    padding: .75rem .75rem .75rem .75rem;
+                    border-bottom: 1px solid $ap-border-color;
+                }
+
+                @include breakpoint(large) {
+                    padding: .75rem .75rem .75rem .75rem;
+                    // border-top: 3px solid $ap-border-color;
+                    border-bottom: 1px solid $ap-border-color;
+                }
+            }
+
+            &:first-child {
+                padding-left: 0;
+            }
+
+            &:last-child {
+                padding-right: 0;
+            }
+        }
+    }
+
+    >tbody {
+        margin: 1rem 0 0 0;
+
+        >tr {
+
+            >th,
+            >td {
+                padding: .75rem .75rem .75rem .75rem;
+                border-bottom: 1px solid $ap-border-color;
+                font-size: .9375rem;
+
+                &:first-child {
+                    padding-left: 0;
+                }
+
+                &:last-child {
+                    padding-right: 0;
+                }
+            }
+        }
+    }
+
+    .__id {
+        width: 6rem;
+        text-align: right;
+    }
+
+    .__date {
+        width: 7rem;
+        text-align: left;
+    }
+
+    .__status {
+        >span {
+            padding: 0 0 0 .5rem;
+            color: $dark-gray;
+        }
+
+        >.-alert {
+            display: inline-block;
+            margin: 0 0 0 .5rem;
+            padding: .35rem .35rem;
+            line-height: 1;
+            font-size: .75rem;
+            color: $alert-color;
+            background-color: #FFE7E7; //$alert-color;
+            @include border-radius;
+        }
+    }
+
+    .__total {
+        text-align: right;
+    }
+}

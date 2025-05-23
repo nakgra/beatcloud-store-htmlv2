@@ -14,13 +14,28 @@
         border-bottom: 1px solid $ap-border-color;
 
         >a {
+            position: relative;
             display: block;
             margin: 0;
-
             color: $body-font-color;
 
             &:hover {
                 color: $anchor-color-hover;
+            }
+
+            &.-active {
+                display: flex;
+                align-items: center;
+                color: $medium-gray;
+
+                &:after {
+                    content: '';
+                    border: solid $anchor-color; //$dark-gray;
+                    border-width: 0 1px 1px 0;
+                    margin: 1px 0 0 auto;
+                    padding: .25rem;
+                    transform: rotate(-45deg);
+                }
             }
 
             @include breakpoint(small only) {

@@ -1,5 +1,7 @@
 .ap-checkout {
-    @include xy-grid-container($width: $ap-product-header-width);
+    &:not(.-preview) {
+        @include xy-grid-container($width: $ap-product-header-width);
+    }
 
     @include breakpoint(small only) {
         margin-bottom: 2rem;

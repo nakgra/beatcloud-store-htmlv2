@@ -1,4 +1,4 @@
-.ap-checkout-breakdown {
+.ap-checkout-info {
     margin: 0 0 1.5rem 0;
     width: 100%;
     border-spacing: 0;
@@ -29,25 +29,6 @@
         }
     }
 
-    >tfoot {
-        color: $alert-color;
-
-        >tr {
-            >th {
-                padding: .75rem .5rem;
-                font-size: 1rem;
-                border-bottom: 1px solid $ap-border-color;
-            }
-
-            >td {
-                padding: .75rem .5rem;
-                font-size: 1.5rem;
-                font-weight: bold;
-                border-bottom: 1px solid $ap-border-color;
-            }
-        }
-    }
-
     &:first-child {
         border-top: 0;
 
@@ -67,7 +48,7 @@
     &:last-child {
         margin-bottom: 0;
 
-        >tfoot {
+        >tbody {
             >tr {
                 &:last-child {
                     >th,

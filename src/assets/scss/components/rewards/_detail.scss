@@ -1,0 +1,17 @@
+.ap-rewards-detail {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+
+    >li {
+        margin: 0 0 .5rem 0;
+        padding: 0 0 .5rem 0;
+        border-bottom: 1px dashed $ap-border-color;
+
+        &:last-child {
+            margin-bottom: 0;
+            padding-bottom: 0;
+            border-bottom: 0;
+        }
+    }
+}
