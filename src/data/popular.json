@@ -4,6 +4,7 @@
         "name": "Total Studio 4 MAX",
         "path": "products/show.html",
         "img": "/popular/001.jpg",
+        "lead": "０１２３４５６７８９０１２３４５６７８９０１２３４５６７８９",
         "description": "",
         "price": "21,440",
         "original_price": "98,990"
@@ -13,6 +14,7 @@
         "name": "MODO MAX",
         "path": "products/show.html",
         "img": "/popular/002.jpg",
+        "lead": "０１２３４５６７８９０１２３４５６７８９",
         "description": "",
         "price": "16,490",
         "original_price": "49,490"
@@ -22,6 +24,7 @@
         "name": "TONEX MAX",
         "path": "products/show.html",
         "img": "/popular/003.jpg",
+        "lead": "",
         "description": "",
         "price": "16,490",
         "original_price": "49,490"
@@ -31,6 +34,7 @@
         "name": "AmpliTube 5 MAX V2",
         "path": "products/show.html",
         "img": "/popular/004.jpg",
+        "lead": "０１２３４５６７８９",
         "description": "",
         "price": "16,490",
         "original_price": "49,490"
@@ -40,6 +44,7 @@
         "name": "Pianoverse Max",
         "path": "products/show.html",
         "img": "/popular/005.jpg",
+        "lead": "０１２３４５６７８９０１２３４５６７８９０１２３４５６７８９",
         "description": "",
         "price": "16,490",
         "original_price": "49,490"
@@ -49,6 +54,7 @@
         "name": "FL STUDIO 21 Signature クロスグレード",
         "path": "products/show.html",
         "img": "/popular/006.jpg",
+        "lead": "０１２３４５６７８９０１２３４５６７８９０１２３４５６７８９",
         "description": "",
         "price": "20,900",
         "original_price": ""

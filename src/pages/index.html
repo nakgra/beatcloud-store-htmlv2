@@ -59,8 +59,9 @@ wrapperclass: "-home"
     </div>
     <div class="ap-grid">
         {{#each popular}}
-        <a class="ap-grid-item" href="{{root}}{{path}}">
+        <a class="ap-grid-item -haslead" href="{{root}}{{path}}">
             <div class="ap-grid-item__pic"><img src="{{root}}assets/upload{{img}}" alt=""></div>
+            {{#if lead}}<p class="ap-grid-item__lead">{{ lead }}</p>{{/if}}
             <h3 class="ap-grid-item__title -small">
                 <span class="__divide">{{ brand }}</span>{{ name }}
             </h3>
