@@ -98,13 +98,13 @@
 
                 >a {
                     display: block;
-                    padding: 1.25rem 1.5rem;
+                    padding: 1.4rem 1.5rem 1.25rem 1.5rem;
                     color: $body-font-color;
                     font-size: .9375rem;
 
                     .-active & {
                         font-size: .9375rem;
-                        padding-top: 1rem;
+                        padding-top: 1.2rem;
                         padding-bottom: 1rem;
                         transition: padding-top .2s ease-out, padding-bottom .2s ease-out;
                     }
@@ -119,7 +119,7 @@
                 font-size: 1rem;
 
                 >a {
-                    padding: 1.35rem 1.75rem;
+                    padding: 1.45rem 1.75rem 1.35rem 1.75rem;
                     font-weight: 500;
                 }
             }
@@ -132,7 +132,7 @@
                 font-size: 1rem;
 
                 >a {
-                    padding: 1.35rem 2rem;
+                    padding: 1.45rem 2rem 1.35rem 2rem;
                     font-weight: 500;
                 }
             }
