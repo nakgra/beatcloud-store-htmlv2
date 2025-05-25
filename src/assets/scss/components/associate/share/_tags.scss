@@ -1,0 +1,51 @@
+.ap-associate-share-tags {
+    @include breakpoint(small only) {}
+
+    @include breakpoint(medium only) {}
+
+    @include breakpoint(large) {
+        display: flex;
+        column-gap: 2rem;
+    }
+
+    @include breakpoint(xlarge) {
+    }
+
+    &__item {
+        @include breakpoint(small only) {
+            margin: 0 0 1rem 0;
+        }
+
+        @include breakpoint(medium only) {
+            margin: 0 0 1rem 0;
+        }
+
+        @include breakpoint(large) {
+            flex: 0 0 auto;
+            width: calc((100% - 4rem) / 3);
+        }
+
+        @include breakpoint(xlarge) {
+        }
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    &__name {
+        margin: 0;
+        font-weight: normal;
+    }
+
+    &__target {
+        margin: 0;
+        padding: 0.25rem;
+        line-height: 1.5;
+        width: 100%;
+        height: auto;
+        overflow: scroll;
+        white-space: nowrap;
+        background-color: rgba(180, 180, 180, 0.1);
+    }
+}

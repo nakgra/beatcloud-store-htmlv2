@@ -45,7 +45,12 @@
         }
 
         @include breakpoint(large) {
+            margin-bottom: 1.75rem;
             font-size: 1.25rem;
+        }
+
+        @include breakpoint(xlarge) {
+            margin-bottom: 2.25rem;
         }
 
         >*:last-child {

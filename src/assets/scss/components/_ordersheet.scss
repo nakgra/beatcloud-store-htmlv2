@@ -1,0 +1,57 @@
+.ap-ordersheet {
+    @include breakpoint(small only) {
+        // margin-bottom: 2rem;
+    }
+
+    @include breakpoint(medium) {
+        // margin-bottom: 2.5rem;
+    }
+
+    @include breakpoint(large) {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row-reverse;
+
+        &.-row {
+            flex-direction: row;
+        }
+    }
+
+    @include breakpoint(xlarge) {
+        // margin-bottom: 3rem;
+    }
+
+    &__edit {
+        // background: $white;
+
+        @include breakpoint(medium) {}
+
+        @include breakpoint(large) {
+            flex: 0 0 auto;
+            padding: 0 2rem 0 0;
+            width: 70%;
+        }
+
+        @include breakpoint(xlarge) {
+            width: 70%;
+        }
+    }
+
+    &__proceed {
+        @include breakpoint(small only) {
+            margin-bottom: 2rem;
+        }
+
+        @include breakpoint(medium) {
+            margin-bottom: 2.5rem;
+        }
+
+        @include breakpoint(large) {
+            width: 30%;
+        }
+
+        @include breakpoint(xlarge) {
+            width: 30%;
+        }
+    }
+}

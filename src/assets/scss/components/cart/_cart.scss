@@ -1,5 +1,5 @@
 .ap-cart {
-    @include xy-grid-container($width: $ap-product-header-width);
+    @include xy-grid-container($width: $ap-ordersheet-body-width);
 
     @include breakpoint(small only) {
         margin-bottom: 2rem;

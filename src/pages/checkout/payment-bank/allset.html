@@ -3,46 +3,75 @@ layout: default
 meta-title: "ご注文が完了しました"
 wrapperclass: ""
 ---
-<article class="ap-messagebox">
+<article class="ap-checkout">
     <header class="ap-checkout-header">
         <h1 class="ap-checkout-header__title">ご注文手続きが完了しました。ありがとうございました。</h1>
     </header>
-    <div class="ap-checkout-section">
-        <h2 class="ap-checkout-section__title">ご注文内容</h2>
-        <div class="ap-checkout-section__items">
-            <dl class="ap-checkout-review">
-                <div class="ap-checkout-review__row">
-                    <dt>注文番号</dt>
-                    <dd>
-                        #14316 <a href="{{root}}account/myorders/show.html">ご注文内容を表示</a>
-                    </dd>
+    <div class="ap-ordersheet -row">
+        <div class="ap-ordersheet__edit">
+            <div class="ap-block">
+                <h2 class="ap-block__title">ご注文内容</h2>
+                <div class="ap-block__content">
+                    <dl class="ap-checkout-review">
+                        <div class="ap-checkout-review__row">
+                            <dt>注文番号</dt>
+                            <dd>
+                                #14316 <a href="{{root}}account/myorders/show.html">ご注文内容を表示</a>
+                            </dd>
+                        </div>
+                        <div class="ap-checkout-review__row">
+                            <dt>商品のお届け</dt>
+                            <dd>
+                                <ul>
+                                    <li>弊社スタッフによりご入金確認後、ご案内をお送りします。</li>
+                                    <li>土日祝日のご注文などの場合にご入金情報の確認は翌営業日となるなど、ご入金確認まではお時間をいただく場合がございます。</li>
+                                </ul>
+                            </dd>
+                        </div>
+                    </dl>
                 </div>
-                <div class="ap-checkout-review__row">
-                    <dt>商品のお届け</dt>
-                    <dd>
-                        <ul>
-                            <li>弊社スタッフによりご入金確認後、ご案内をお送りします。</li>
-                            <li>土日祝日のご注文などの場合にご入金情報の確認は翌営業日となるなど、ご入金確認まではお時間をいただく場合がございます。</li>
-                        </ul>
-                    </dd>
+            </div>
+            <div class="ap-block">
+                <h2 class="ap-block__title">「あとで買う」に入っている商品</h2>
+                <div class="ap-block__content">
+                    {{#each popular}}
+                    <div class="ap-cart-item">
+                        <div class="ap-cart-item__imagecol">
+                            <img class="ap-cart-item__image" src="{{../root}}assets/upload{{img}}" alt="">
+                        </div>
+                        <div class="ap-cart-item__detailcol">
+                            <div class="ap-cart-item__title"><a href="{{../root}}{{path}}">{{ brand }} {{ name }}</a></div>
+                            <div class="ap-cart-item__actions">
+                                <div class="ap-cart-item__uprice">&yen;{{ price }} <del>&yen;{{ original_price }}</del></div>
+                                <div class="ap-cart-item__addcart">カートに追加</div>
+                            </div>
+                        </div>
+                    </div>
+                    {{/each}}
                 </div>
-            </dl>
+            </div>
+        </div>
+        <div class="ap-ordersheet__proceed">
+            <div class="ap-block">
+                <h2 class="ap-block__title">終了間近のセール</h2>
+                <div class="ap-block__content">
+                    <div class="ap-grid -single">
+                        {{#each expires_soon}}
+                        <a href="{{../root}}{{path}}" class="ap-grid-item">
+                            <span class="ap-grid-item__pic"><img src="{{../root}}assets/upload{{img}}" alt=""></span>
+                            <h3 class="ap-grid-item__title -medium">{{ title }}</h3>
+                            <b class="ap-grid-item__badge">
+                                <span>{{ discount }}<small>OFF</small></span>
+                            </b>
+                            <div class="ap-grid-item__footnote">
+                                対象商品: 99<br>
+                                <span class="-alert">{{ end }}</span>
+                            </div>
+                        </a>
+                        {{/each}}
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </article>
-<div class="ap-section">
-    <div class="ap-box">
-        <h2 class="ap-cart__subtitle">「あとで買う」に入っている商品</h2>
-        <div class="ap-grid -full">
-            {{#each popular}}
-            <a class="ap-grid-item" href="{{../root}}{{path}}">
-                <div class="ap-grid-item__pic"><img src="{{../root}}assets/upload{{img}}" alt=""></div>
-                <h3 class="ap-grid-item__title -medium">
-                    <span class="__divide">{{ brand }}</span>{{ name }}
-                </h3>
-                <p class="ap-grid-item__footnote -alert">&yen;{{ price }} <del>&yen;{{ original_price }}</del></p>
-            </a>
-            {{/each}}
-        </div>
-    </div>
-</div>

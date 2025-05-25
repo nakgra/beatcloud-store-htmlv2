@@ -18,30 +18,32 @@ $(document).foundation();
 
 
 import * as func from './helpers/functions';
+import Browse from './lib/browse';
 import Carousel from './lib/carousel';
 import CheckoutForm from './lib/checkoutForm';
 import CheckPassword from './lib/checkPassword';
 import Confirm from './lib/confirm';
+import CopyText from './lib/copyText';
+import Datepicker from './lib/datepicker';
 import Header from './lib/header';
 import Jumplink from './lib/jumplink';
 import Nav from './lib/nav';
+import PageTop from './lib/pageTop';
 import Search from './lib/Search';
 import Textarea from './lib/textarea';
-import PageTop from './lib/pageTop';
-import Browse from './lib/browse';
-import Datepicker from './lib/datepicker';
 
 (function(window, document) {
+    Browse.setup();
+    Carousel.setup();
     CheckoutForm.setup();
     CheckPassword.setup();
     Confirm.setup();
-    Jumplink.setup();
-    Textarea.setup();
-    Header.setup();
-    Nav.setup();
-    Carousel.setup();
-    Search.setup();
-    PageTop.setup();
-    Browse.setup();
+    CopyText.setup();
     Datepicker.setup();
+    Header.setup();
+    Jumplink.setup();
+    Nav.setup();
+    PageTop.setup();
+    Search.setup();
+    Textarea.setup();
 })(window, window.document);

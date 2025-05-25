@@ -17,8 +17,14 @@
     }
 
     @include breakpoint(xlarge) {
+    }
+
+    &__frame {
         @include xy-grid-container;
-        display: flex;
+
+        @include breakpoint(xlarge) {
+            display: flex;
+        }
     }
 
     &__nav {

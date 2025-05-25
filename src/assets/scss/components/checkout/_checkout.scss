@@ -1,6 +1,6 @@
 .ap-checkout {
     &:not(.-preview) {
-        @include xy-grid-container($width: $ap-product-header-width);
+        @include xy-grid-container($width: $ap-ordersheet-body-width);
     }
 
     @include breakpoint(small only) {
@@ -12,38 +12,9 @@
     }
 
     @include breakpoint(large) {
-        display: flex;
-        flex-wrap: wrap;
     }
 
     @include breakpoint(xlarge) {
         margin-bottom: 3rem;
-    }
-
-    &__edit {
-        // background: $white;
-
-        @include breakpoint(medium) {}
-
-        @include breakpoint(large) {
-            padding: 0 2rem 0 0;
-            width: 65%;
-        }
-
-        @include breakpoint(xlarge) {
-            width: 70%;
-        }
-    }
-
-    &__proceed {
-        @include breakpoint(medium) {}
-
-        @include breakpoint(large) {
-            width: 35%;
-        }
-
-        @include breakpoint(xlarge) {
-            width: 30%;
-        }
     }
 }

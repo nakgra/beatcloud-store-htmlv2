@@ -4,22 +4,27 @@
     & {
         @include breakpoint(small only) {
             display: grid;
-            gap: .5rem;
+            gap: .75rem;
             grid-template-columns: repeat(2, minmax(0, 1fr));
         }
 
         @include breakpoint(medium) {
             display: grid;
             gap: 1.25rem;
-            grid-template-columns: repeat(2, minmax(0, 1fr));
+            grid-template-columns: repeat(3, minmax(0, 1fr));
         }
 
         @include breakpoint(large) {
             gap: 1.5rem;
             grid-template-columns: repeat(3, minmax(0, 1fr));
+
+            &.-single {
+                grid-template-columns: repeat(1, minmax(0, 1fr));
+            }
         }
 
         @include breakpoint(xlarge) {
+
             // gap: 1.5rem;
             &.-flex {
                 grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -31,6 +36,7 @@
         }
 
         @include breakpoint(xxlarge) {
+
             // gap: 1.5rem;
             &.-flex {
                 grid-template-columns: repeat(4, minmax(0, 1fr));
@@ -40,9 +46,5 @@
                 grid-template-columns: repeat(5, minmax(0, 1fr));
             }
         }
-    }
-
-    &__item {
-
     }
 }

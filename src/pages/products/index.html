@@ -96,7 +96,7 @@ wrapperclass: "-browse"
                     <h3 class="ap-grid-item__title -small">
                         <span class="__divide">{{ brand }}</span>{{ name }}
                     </h3>
-                    <p class="ap-grid-item__footnote -alert">&yen;{{ price }} <del>&yen;{{ original_price }}</del></p>
+                    <p class="ap-grid-item__footnote -alert">&yen;{{ price }}{{#if original_price}} <del>&yen;{{ original_price }}</del>{{/if}}</p>
                 </a>
                 {{/each}}
                 {{/repeat}}

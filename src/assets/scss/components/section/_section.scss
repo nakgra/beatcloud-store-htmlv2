@@ -1,6 +1,10 @@
 .ap-section {
     @include xy-grid-container;
 
+    &.-constraint {
+        max-width: $ap-grid-width;
+    }
+
     &.-margin {
         @include breakpoint(small only) {
             margin-bottom: 2rem;

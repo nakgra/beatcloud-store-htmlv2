@@ -8,10 +8,55 @@ wrapperclass: ""
     <li><span>ご注文入力</span></li>
 </ul>
 <form class="ap-checkout" action="" method="POST" class="ap-checkout" data-checkout>
-    <div class="ap-checkout__edit">
-        <div class="ap-checkout-section">
-            <h2 class="ap-checkout-section__title">ご注文内容</h2>
-            <div class="ap-checkout-section__items">
+    <div class="ap-ordersheet">
+        <div class="ap-ordersheet__proceed">
+            <div class="ap-checkout-summary">
+                <table class="ap-checkout-breakdown">
+                    <tfoot>
+                        <tr>
+                            <th>総計</th>
+                            <td>¥31,320</td>
+                        </tr>
+                    </tfoot>
+                    <tbody>
+                        <tr>
+                            <th>小計</th>
+                            <td>¥31,320</td>
+                        </tr>
+                        <tr>
+                            <th>送料</th>
+                            <td>¥0</td>
+                        </tr>
+                        <tr>
+                            <th>利用ポイント</th>
+                            <td>-¥432</td>
+                        </tr>
+                        <tr>
+                            <th>クーポン</th>
+                            <td>CPN2018</td>
+                        </tr>
+                        <tr>
+                            <th>代引手数料</th>
+                            <td>¥660</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="ap-checkout-notation">
+                    <ul>
+                        <li>ご購入手続き後、メールにてダウンロード先URL、ライセンス・シリアルキー等が納品されます。</li>
+                        <li>ライセンス商品のため、このご注文は返品をお受けしておりません。ご注意ください。</li>
+                    </ul>
+                </div>
+                <a href="{{root}}checkout/payment-card.html" class="ap-button -action -expanded">お支払い方法へ カード</a>
+                <a href="{{root}}checkout/payment-cod.html" class="ap-button -action -expanded">お支払い方法へ 代引き</a>
+                <a href="{{root}}checkout/payment-bank/index.html" class="ap-button -action -expanded">お支払い方法へ 銀行</a>
+                <!-- <input type="submit" class="button expanded -last" value="ご注文手続きへ" data-checkout-submit> -->
+            </div>
+        </div>
+    <div class="ap-ordersheet__edit">
+        <div class="ap-block">
+            <h2 class="ap-block__title">ご注文内容</h2>
+            <div class="ap-block__content">
                 {{#repeat 5}}
                 <div class="ap-checkout-item">
                     <div class="ap-checkout-item__detailcol">
@@ -45,9 +90,9 @@ wrapperclass: ""
             </div>
             <input class="ap-button" type="button" name="applypoints" value="適用" data-checkout-update="button">
         </div>
-        <div class="ap-checkout-section">
-            <h2 class="ap-checkout-section__title">追加費用（任意）</h2>
-            <div class="ap-checkout-section__items">
+        <div class="ap-block">
+            <h2 class="ap-block__title">追加費用（任意）</h2>
+            <div class="ap-block__content">
                 <ul class="ap-checkout-additionalfees">
                     <li>
                         <label class="ap-edit-checkboxset">
@@ -73,9 +118,9 @@ wrapperclass: ""
                 </ul>
             </div>
         </div>
-        <div class="ap-checkout-section">
-            <h2 class="ap-checkout-section__title">ご請求先/お届け先</h2>
-            <div class="ap-checkout-section__items">
+        <div class="ap-block">
+            <h2 class="ap-block__title">ご請求先/お届け先</h2>
+            <div class="ap-block__content">
                 <fieldset class="ap-edit-item">
                     <div class="ap-input-nameset">
                         <label class="ap-input-nameset__name">
@@ -172,9 +217,9 @@ wrapperclass: ""
                 </label>
             </div>
         </div>
-        <div class="ap-checkout-section">
-            <h2 class="ap-checkout-section__title">その他</h2>
-            <div class="ap-checkout-section__items">
+        <div class="ap-block">
+            <h2 class="ap-block__title">その他</h2>
+            <div class="ap-block__content">
                 <label class="ap-edit-item">
                     備考（領収書など）
                     <textarea name="notation" id="" cols="30" rows="3" data-textarea></textarea>
@@ -184,48 +229,5 @@ wrapperclass: ""
             </div>
         </div>
     </div>
-    <div class="ap-checkout__proceed">
-        <div class="ap-checkout-summary">
-            <table class="ap-checkout-breakdown">
-                <tfoot>
-                    <tr>
-                        <th>総計</th>
-                        <td>¥31,320</td>
-                    </tr>
-                </tfoot>
-                <tbody>
-                    <tr>
-                        <th>小計</th>
-                        <td>¥31,320</td>
-                    </tr>
-                    <tr>
-                        <th>送料</th>
-                        <td>¥0</td>
-                    </tr>
-                    <tr>
-                        <th>利用ポイント</th>
-                        <td>-¥432</td>
-                    </tr>
-                    <tr>
-                        <th>クーポン</th>
-                        <td>CPN2018</td>
-                    </tr>
-                    <tr>
-                        <th>代引手数料</th>
-                        <td>¥660</td>
-                    </tr>
-                </tbody>
-            </table>
-            <div class="ap-checkout-notation">
-                <ul>
-                    <li>ご購入手続き後、メールにてダウンロード先URL、ライセンス・シリアルキー等が納品されます。</li>
-                    <li>ライセンス商品のため、このご注文は返品をお受けしておりません。ご注意ください。</li>
-                </ul>
-            </div>
-            <a href="{{root}}checkout/payment-card.html" class="ap-button -action -expanded">お支払い方法へ カード</a>
-            <a href="{{root}}checkout/payment-cod.html" class="ap-button -action -expanded">お支払い方法へ 代引き</a>
-            <a href="{{root}}checkout/payment-bank/index.html" class="ap-button -action -expanded">お支払い方法へ 銀行</a>
-            <!-- <input type="submit" class="button expanded -last" value="ご注文手続きへ" data-checkout-submit> -->
-        </div>
     </div>
 </form>

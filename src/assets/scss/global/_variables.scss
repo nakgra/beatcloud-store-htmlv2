@@ -8,6 +8,10 @@ $ap-product-header-width: 1300px;
 $ap-product-body-width: 824px;
 $ap-product-body-width-xlarge: 824px;
 
+$ap-ordersheet-body-width: 1440px;
+
+$ap-grid-width: 1500px;
+
 $ap-aspect-ratio: 16 / 9!global;
 
 @mixin aspect-ratio() {

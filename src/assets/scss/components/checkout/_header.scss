@@ -12,7 +12,7 @@
     @include breakpoint(large) {
         display: flex;
         align-items: center;
-        margin-bottom: 2rem;
+        margin-bottom: 3rem;
     }
 
     &__title {
@@ -44,6 +44,94 @@
 
         &.-alert {
             color: $alert-color;
+        }
+    }
+
+    &__items {
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+
+        @include breakpoint(large) {
+            margin-left: auto;
+        }
+
+        >li {
+            font-size: 0.9375rem;
+
+            >a {
+                display: flex;
+                align-items: center;
+                padding: 0.5rem 0.75rem;
+                background-color: rgba(120, 120, 120, 0.1);
+                color: $dark-gray;//$body-font-color;
+
+                &:hover {
+                    background-color: $white;//gba(120, 120, 120, 0.5);
+                }
+
+                &.-active {
+                    color: $body-font-color;
+                    background-color: $white;
+                }
+
+                >span {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    margin: 0 0 0 .5rem;
+                    padding: 0;
+                    width: 24px;
+                    height: 24px;
+                    line-height: 1;
+                    // background-color: $primary-color;
+
+                    background: radial-gradient(
+                        ellipse at center,
+                        rgba(210, 210, 210, 1) 0%,
+                        rgba(210, 210, 210, 1) 70%,
+                        rgba(210, 210, 210, 0) 72%
+                    );
+
+                    &.-exists {
+                        background: radial-gradient(
+                            ellipse at center,
+                            rgba(238, 98, 77, 1) 0%,
+                            rgba(238, 98, 77, 1) 70%,
+                            rgba(238, 98, 77, 0) 72%
+                        );
+                    }
+
+                    // border-radius: 50%;
+                    font-size: .75rem;
+                    // font-weight: bold;
+                    color: $white;
+                }
+            }
+
+            &:first-child {
+                >a {
+                    border-top-left-radius: $global-radius;
+                    border-bottom-left-radius: $global-radius;
+                }
+            }
+
+            &:last-child {
+                >a {
+                    border-top-right-radius: $global-radius;
+                    border-bottom-right-radius: $global-radius;
+                }
+            }
+        }
+
+        @include breakpoint(medium) {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            column-gap: 2px;
+
+            >li {
+            }
         }
     }
 }

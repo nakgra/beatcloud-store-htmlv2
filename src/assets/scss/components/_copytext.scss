@@ -1,0 +1,75 @@
+.ap-copytext {
+    $parent: &;
+
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    vertical-align:top;
+
+    &__icon {
+        flex: 0 0 auto;
+        position: relative;
+        order: 1;
+
+        content: "";
+        display: block;
+        margin: 0 0 0 .35rem;
+        width: 12px;
+        height: 15px;
+        background: transparent url(../img/copy.svg) no-repeat 0 0 / 200% 100%;
+        cursor: pointer;
+
+        &:hover {
+            background-position: 100% 0!important;
+        }
+
+        &.-copied {
+            background: none;
+
+            &:after {
+              content: "";
+              position: absolute;
+              left: 0;
+              right: 0;
+              top: 0;
+              bottom: 0;
+              margin: auto;
+              width: 8px;
+              height: 13px;
+              border: solid $primary-color;
+              border-width: 0 4px 4px 0;
+              transform: rotate(45deg);
+            }
+        }
+    }
+
+    &__button {
+        flex: 0 0 auto;
+        position: relative;
+        order: 1;
+
+        display: inline-flex;
+        align-items: center;
+        margin: 0 0 0 .35rem;
+
+        color: $anchor-color;
+        cursor: pointer;
+
+        &:hover {
+            color: $anchor-color-hover;
+        }
+
+        &.-copied {
+            &:after {
+              content: "";
+              margin: 0 0 0 .35rem;
+              width: 8px;
+              height: 13px;
+              border: solid $primary-color;
+              border-width: 0 4px 4px 0;
+              transform: rotate(45deg);
+            }
+        }
+    }
+
+}

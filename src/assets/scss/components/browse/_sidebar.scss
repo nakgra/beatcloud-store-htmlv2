@@ -26,11 +26,11 @@
     }
 
     @include breakpoint(xlarge) {
-        width: 23%;
+        width: 20%;
     }
 
     @include breakpoint(xxlarge) {
-        width: 21%;
+        width: 18%;
     }
 
     &__frame {
