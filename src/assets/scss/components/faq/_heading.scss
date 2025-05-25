@@ -1,0 +1,49 @@
+.ap-faq-heading {
+    $parent: &;
+
+    position: relative;
+    display: flex;
+    align-items: center;
+
+    margin: 0;
+    font-size: 1.125rem;
+    font-weight: normal;
+
+    cursor: pointer;
+
+    &:before {
+        content: "Q.";
+        margin: 0 .5rem 0 0;
+        font-weight: bold;
+        font-size: 2.5rem;
+        color: $medium-gray;
+    }
+
+    &__title {
+        margin: 0 auto 0 0;
+    }
+
+    &__icon {
+        flex: 0 0 auto;
+
+        margin: 0 0 0 2rem;
+        padding: .25rem .35rem;
+        line-height: 1.2;
+
+        font-size: .8rem;
+        background-color: #eee;//$light-gray;
+        @include border-radius;
+        // color: $anchor-color;
+    }
+
+    &:hover {
+        #{$parent}__title {
+            color: $anchor-color;
+        }
+
+        #{$parent}__icon {
+            background-color: $anchor-color-hover;
+            color: $white;
+        }
+    }
+}

@@ -25,12 +25,14 @@ import CheckPassword from './lib/checkPassword';
 import Confirm from './lib/confirm';
 import CopyText from './lib/copyText';
 import Datepicker from './lib/datepicker';
+import Faq from './lib/faq';
 import Header from './lib/header';
 import Jumplink from './lib/jumplink';
 import Nav from './lib/nav';
 import PageTop from './lib/pageTop';
 import Search from './lib/Search';
 import Textarea from './lib/textarea';
+
 
 (function(window, document) {
     Browse.setup();
@@ -40,6 +42,7 @@ import Textarea from './lib/textarea';
     Confirm.setup();
     CopyText.setup();
     Datepicker.setup();
+    Faq.setup();
     Header.setup();
     Jumplink.setup();
     Nav.setup();

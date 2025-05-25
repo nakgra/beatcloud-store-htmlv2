@@ -1,0 +1,22 @@
+.ap-sct {
+    >dt {
+        margin: 0 0 .5rem 0;
+    }
+
+    >dd {
+        margin: 0 0 1rem 0;
+        padding: 0 0 1rem 0;
+        border-bottom: 1px solid $light-gray;
+
+        &:last-child {
+            margin-bottom: 0;
+            padding-bottom: 0;
+            border-bottom: 0
+        }
+
+        >*:last-child {
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+    }
+}

@@ -23,10 +23,6 @@
             font-size: 1.125rem;
         }
 
-        @include breakpoint(medium only) {
-            margin-bottom: 2rem;
-        }
-
         @include breakpoint(medium) {
             // margin-right: auto;
             font-size: 1.25rem;

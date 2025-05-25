@@ -1,0 +1,44 @@
+.ap-about {
+
+    &__row {
+        border-top: 1px solid $light-gray;
+
+        >dt {
+            text-decoration: none;
+        }
+
+        @include breakpoint(small only) {
+            >dt {
+                margin: 0;
+                padding: 1rem 0 0 0;
+                text-decoration: none;
+                font-weight: bold;
+            }
+
+            >dd {
+                margin: .5rem 0 1rem 0;
+                padding: 0;
+            }
+        }
+
+        @include breakpoint(medium only) {}
+
+        @include breakpoint(medium) {
+            display: flex;
+
+            >dt {
+                margin: 0;
+                padding: 1rem 0 1rem 0;
+                width: 10rem;
+                text-align: right;
+                font-weight: normal;
+            }
+
+            >dd {
+                flex: 1;
+                margin: 0 0 0 1.5rem;
+                padding: 1rem 0 1rem 0;
+            }
+        }
+    }
+}

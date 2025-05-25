@@ -1,0 +1,37 @@
+.ap-faq {
+    $parent: &;
+
+    margin: 0;
+    padding: 1.5rem 0;
+    border-top: 3px solid $ap-border-color;
+
+    &:last-child {
+        border-bottom: 3px solid $ap-border-color;
+    }
+
+    @include breakpoint(small only) {
+        padding: 1.25rem 0;
+    }
+
+    @include breakpoint(medium only) {}
+
+    @include breakpoint(large) {}
+
+    &__answer {
+        display: none;
+
+        >*:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    &.-active {
+        #{$parent}-heading {
+            margin: 0 0 .875rem 0;
+        }
+
+        #{$parent}__answer {
+            display: block;
+        }
+    }
+}

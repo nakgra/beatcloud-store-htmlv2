@@ -1,0 +1,34 @@
+---
+title: お問い合わせ
+---
+<div class="ap-page">
+    <div class="ap-page-header">
+        <h1 class="ap-page-header__title">お問い合わせ</h1>
+    </div>
+    <div class="ap-callout -success">
+        お問い合わせを送信しました。
+    </div>
+    <ul class="">
+        <li>商品に関するお問い合わせは、ご購入前のご質問をお受けしています。</li>
+        <li>ご購入いただいた商品のサポート問い合わせは、製品により窓口が異なります。ご購入時にお送りしたメールに記載がありますのでご確認ください。</li>
+    </ul>
+    <form action="" method="POST">
+        <label class="ap-edit-item">
+            お名前 <span class="ap-edit-required">必須</span>
+            <input type="text" name="name" value="" required>
+            <span class="ap-edit-guide"><a href="">ログインする</a></span>
+        </label>
+        <label class="ap-edit-item">
+            メールアドレス <span class="ap-edit-required">必須</span>
+            <input type="text" name="email" value="" required>
+        </label>
+        <label class="ap-edit-item">
+            お問い合わせ内容 <span class="ap-edit-required">必須</span>
+            <textarea name="message" rows="7" data-textarea required></textarea>
+        </label>
+        <div class="ap-edit-action">
+            <p><a href="">プライバシーポリシー</a>に同意していただいた上でお問い合わせください。</p>
+            <input class="ap-button -action" type="submit" value="送信する">
+        </div>
+    </form>
+</div>

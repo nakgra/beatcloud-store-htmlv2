@@ -1,0 +1,32 @@
+.ap-page-header {
+    @include breakpoint(small only) {
+        margin-bottom: 2rem;
+    }
+
+    @include breakpoint(medium) {
+        margin-bottom: 2rem;
+    }
+
+    @include breakpoint(large) {
+        display: flex;
+        align-items: center;
+        margin-bottom: 3rem;
+    }
+
+    &__title {
+        margin: 0;
+        font-weight: 500;
+
+        @include breakpoint(small only) {
+            font-size: 1.35rem;
+        }
+
+        @include breakpoint(medium only) {
+            font-size: 1.5rem;
+        }
+
+        @include breakpoint(large) {
+            font-size: 1.75rem;
+        }
+    }
+}

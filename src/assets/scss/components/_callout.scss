@@ -1,0 +1,20 @@
+.ap-callout {
+    margin: 0 0 1.5rem 0;
+    padding: 1rem;
+    // border: 1px solid $ap-border-color;
+    background-color: $white;
+    @include border-radius;
+
+    &.-success {
+        border-color: #97AFF9;
+        background-color: rgba(147, 204, 255, 0.2);
+    }
+
+    @include breakpoint(small only) {}
+
+    @include breakpoint(medium only) {}
+
+    @include breakpoint(large) {
+        margin-bottom: 2rem;
+    }
+}
