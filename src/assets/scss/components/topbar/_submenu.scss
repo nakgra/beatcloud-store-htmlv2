@@ -44,76 +44,103 @@
 
             >span,
             >a {
-                display: block;
+                >span {
+                    display: block;
 
-                white-space: nowrap;
-                overflow: hidden;
-                text-indent: 100%;
-                cursor: pointer;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-indent: 100%;
+                    cursor: pointer;
+                }
 
                 &.-bookmarks {
-                    width: 14px;
-                    height: 20px;
-                    background: transparent url(../img/icon-bookmark.svg) no-repeat center 0 / contain;
+                    >span {
+                        width: 14px;
+                        height: 20px;
+                        background: transparent url(../img/icon-bookmark.svg) no-repeat center 0 / contain;
+                    }
                 }
 
                 &.-search {
-                    width: 20px;
-                    height: 20px;
-                    background: transparent url(../img/icon-search.svg) no-repeat center 0 / contain;
+                    >span {
+                        width: 20px;
+                        height: 20px;
+                        background: transparent url(../img/icon-search.svg) no-repeat center 0 / contain;
+                    }
                 }
 
                 &.-cart {
-                    width: 20px;
-                    height: 20px;
-                    background: transparent url(../img/icon-cart.svg) no-repeat center 0 / contain;
+                    position: relative;
+
+                    >span {
+                        width: 20px;
+                        height: 20px;
+                        background: transparent url(../img/icon-cart.svg) no-repeat center 0 / contain;
+                    }
+
+                    >small {
+                        position: absolute;
+                        top: -0.5rem;
+                        right: 2px;
+                        // left: 0;
+                        overflow: auto;
+                        text-indent: 0;
+
+                        // width: .8rem;
+                        // height: .8rem;
+                        line-height: 1;
+                        color: $alert-color;//$body-font-color;
+
+                        font-size: .7rem;
+                        font-weight: 500;
+                    }
                 }
 
                 @include breakpoint(small only) {
-                    &.-bookmarks {
+                    &.-bookmarks > span {
                         width: 14px;
                         height: 20px;
                     }
 
-                    &.-search {
+                    &.-search > span {
                         width: 20px;
                         height: 20px;
                     }
 
-                    &.-cart {
+                    &.-cart > span {
                         width: 20px;
                         height: 20px;
                     }
                 }
 
                 .-active & {
-                    &.-bookmarks {
+                    &.-bookmarks > span {
                         width: 13px;
                         height: 19px;
                     }
 
-                    &.-search {
+                    &.-search > span {
                         width: 19px;
                         height: 19px;
                     }
 
-                    &.-cart {
+                    &.-cart > span {
                         width: 19px;
                         height: 19px;
                     }
 
                     @include breakpoint(small only) {
-                        &.-bookmarks {
+                        &.-bookmarks > span {
                             width: 13px;
                             height: 18px;
                         }
 
-                        &.-search {
+                        &.-search > span {
                             width: 18px;
                             height: 18px;
                         }
 
-                        &.-cart {
+                        &.-cart > span {
                             width: 18px;
                             height: 18px;
                         }
