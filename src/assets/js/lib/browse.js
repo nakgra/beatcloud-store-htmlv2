@@ -38,7 +38,7 @@ class Browse {
         Array.prototype.forEach.call(obj.element.elements, function(formControl) {
             formControl.addEventListener('change', function(e) {
                 if (Foundation.MediaQuery.atLeast('large')) {
-                    console.log('change', this.value);
+                    obj.element.submit();
                 }
             });
         });
