@@ -1,0 +1,46 @@
+.ap-product-body-heading {
+    display: flex;
+
+    line-height: 1.25;
+    font-weight: 500;
+
+    &:before {
+        content: '';
+        display: block;
+        // height: 100%;
+        background-color: $body-font-color;
+    }
+
+    @include breakpoint(small only) {
+        margin: 0 0 2rem 0;
+        padding: 0 0 0 0;
+        font-size: 1.5rem;
+
+        &:before {
+            margin-right: 1rem;
+            width: 4px;
+        }
+    }
+
+    @include breakpoint(medium only) {
+        margin: 0 0 2.5rem 0;
+        padding: 0 0 0 0;
+        font-size: 1.6rem;
+
+        &:before {
+            margin-right: 1.125rem;
+            width: 5px;
+        }
+    }
+
+    @include breakpoint(large) {
+        margin: 0 0 3rem 0;
+        padding: 0 0 0 0;
+        font-size: 1.75rem;
+
+        &:before {
+            margin-right: 1.25rem;
+            width: 7px;
+        }
+    }
+}

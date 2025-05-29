@@ -1,0 +1,27 @@
+.ap-product-fees-item {
+    @include breakpoint(small only) {
+        margin-bottom: .35rem;
+    }
+
+    @include breakpoint(medium only) {
+        margin-bottom: .35rem;
+    }
+
+    @include breakpoint(large) {
+        margin-bottom: .35rem;
+    }
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+
+    &__title {
+        font-weight: normal;
+        color: $anchor-color;
+        cursor: pointer;
+
+        &:hover {
+            color: $anchor-color-hover;
+        }
+    }
+}

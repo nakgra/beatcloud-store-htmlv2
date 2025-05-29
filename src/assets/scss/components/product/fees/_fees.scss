@@ -1,0 +1,24 @@
+.ap-product-fees {
+
+    @include breakpoint(small only) {
+        margin-top: 1.5rem;
+        margin-bottom: 0;
+    }
+
+    @include breakpoint(medium only) {
+        margin-top: 1.5rem;
+        margin-bottom: 0;
+    }
+
+    @include breakpoint(large) {
+        margin: 0;
+        padding: 0 0 0 1.25rem;
+        list-style-type: none;
+
+        border-left: 5px solid rgba(180, 180, 180, 0.2);
+    }
+
+    >li {
+
+    }
+}

@@ -25,17 +25,21 @@
     &__title {
         margin: 0;
         font-size: 1rem;
+        border-bottom: 2px solid rgba(180, 180, 180, 0.2);
 
         @include breakpoint(small only) {
             margin-bottom: 1rem;
+            padding-bottom: 1rem;
         }
 
         @include breakpoint(medium only) {
             margin-bottom: 1rem;
+            padding-bottom: 1rem;
         }
 
         @include breakpoint(large) {
             margin-bottom: 1rem;
+            padding-bottom: 1rem;
             text-align: center;
         }
 

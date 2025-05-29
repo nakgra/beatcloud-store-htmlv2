@@ -1,0 +1,117 @@
+$ap-mw-gutter: (small: .875rem);
+
+.reveal.-mw {
+    padding: 0;
+
+    @include breakpoint(medium) {
+        width: 480px;
+        height: 60vh;
+    }
+
+    &.-small {
+        width: 360px;
+        height: 55vh;
+    }
+
+    &.-large {
+        @include breakpoint(medium) {
+            width: 700px;
+        }
+    }
+
+    &.-xlarge {
+        @include breakpoint(large) {
+            width: 820px;
+        }
+    }
+
+    &.-long {
+        @include breakpoint(medium) {
+            height: 75vh;
+        }
+    }
+}
+
+.ap-mw {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+
+    &__header {
+        flex: 0;
+
+        &:not(.-flow) {
+            display: flex;
+            align-items: center;
+        }
+
+        margin: 0;
+        padding: 1rem;
+        border-bottom: 1px solid $ap-border-color;
+        font-size: .875rem;
+
+        &.-entry {
+            color: $body-font-color;
+            font-size: 1rem;
+        }
+    }
+
+    &__subheader {
+        flex: 0;
+        margin: -1rem 0 1rem 0;
+        border-bottom: 1px solid $ap-border-color;
+        font-size: .875rem;
+        color: $dark-gray;
+
+        @include -zf-breakpoint-value(auto, $ap-mw-gutter) {
+            $gutter: rem-calc($-zf-bp-value);
+            padding: 1rem unquote("#{$gutter}") .875rem;
+        }
+    }
+
+    &__body {
+        position: relative;
+        flex-grow: 1;
+        margin: 0;
+        padding: 0;
+    }
+
+    &__footer {
+        flex: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 1rem 0 0 0;
+
+        background-color: #f9f9f9;
+
+        @include -zf-breakpoint-value(auto, $ap-mw-gutter) {
+            $gutter: rem-calc($-zf-bp-value);
+            padding: .6rem unquote("#{$gutter}");
+        }
+
+        .-end {
+            margin-left: auto !important;
+        }
+
+        color: $dark-gray;
+        font-size: .875rem;
+    }
+
+    &__footercontent {}
+
+    label {
+        color: $body-font-color;
+    }
+
+    input[type=text],
+    select {
+        margin-bottom: 0;
+        width: 100%;
+        font-size: .875rem;
+    }
+
+    input[type=checkbox] {}
+}

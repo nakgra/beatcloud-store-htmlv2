@@ -1,0 +1,107 @@
+.ap-product-body-content {
+
+    border-bottom: 1px dashed $ap-border-color-nega;
+
+    @include breakpoint(small only) {
+        margin-bottom: 2rem;
+        padding-bottom: 2rem;
+    }
+
+    @include breakpoint(medium only) {
+        margin-bottom: 2.5rem;
+        padding-bottom: 2.5rem;
+    }
+
+    @include breakpoint(large) {
+        margin-bottom: 3rem;
+        padding-bottom: 3rem;
+    }
+
+    @include breakpoint(xlarge) {}
+
+    &:last-child {
+        margin-bottom: 0;
+        padding-bottom: 0;
+        border-bottom: 0;
+    }
+
+    h2,
+    h3 {
+        line-height: 1.4;
+        font-weight: 500;
+
+        @include breakpoint(small only) {
+            margin: 1.25rem 0 1rem 0;
+            font-size: 1.25rem;
+        }
+
+        @include breakpoint(medium only) {
+            margin: 1.25rem 0 1rem 0;
+            font-size: 1.4rem;
+        }
+
+        @include breakpoint(large) {
+            margin: 1.25rem 0 1rem 0;
+            font-size: 1.5rem;
+        }
+    }
+
+    h4 {
+        line-height: 1.4;
+        font-weight: 700;
+
+        @include breakpoint(small only) {
+            margin: 1rem 0 .5rem 0;
+            font-size: 1.125rem;
+        }
+
+        @include breakpoint(medium only) {
+            margin: 1rem 0 .5rem 0;
+            font-size: 1.125rem;
+        }
+
+        @include breakpoint(large) {
+            margin: 1rem 0 .5rem 0;
+            font-size: 1.125rem;
+        }
+    }
+
+    figure {
+        margin: 0 0 1.125rem 0;
+    }
+
+    img {
+        display: block;
+        margin: 0 auto;
+        max-width: 100%;
+    }
+
+    hr {
+        margin: 2rem 0;
+        max-width: 5rem;
+        border-color: $body-font-color;
+    }
+
+    p {
+        @include breakpoint(xlarge) {
+            font-size: 1.0625rem;
+        }
+    }
+
+    &:first-child,
+    .ap-anchor:first-child+& {
+        margin-top: 0;
+        padding-top: 0;
+        border-top: 0;
+    }
+
+    >:first-child {
+        margin-top: 0;
+        padding-top: 0;
+    }
+
+    >:last-child {
+        margin-bottom: 0;
+        padding-bottom: 0;
+    }
+}

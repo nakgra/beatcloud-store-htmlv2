@@ -1,0 +1,35 @@
+.ap-pagination {
+    margin: 2rem 0 0 0;
+
+    @include breakpoint(small only) {}
+
+    @include breakpoint(medium only) {
+        margin-top: 2.5rem;
+    }
+
+    @include breakpoint(large) {
+        margin-top: 3rem;
+    }
+
+
+    .pagination {
+        @include breakpoint(small only) {}
+
+        .disabled {
+            background-color: $white;
+        }
+
+        >li {
+            font-weight: 500;
+        }
+
+        a {
+            background-color: $white;
+
+            &:hover {
+                background-color: $pagination-item-background-hover;
+                color: $white;
+            }
+        }
+    }
+}

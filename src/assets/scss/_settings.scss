@@ -557,20 +557,20 @@ $orbit-control-zindex: 10;
 // 27. Pagination
 // --------------
 
-$pagination-font-size: rem-calc(14);
+$pagination-font-size: rem-calc(15);
 $pagination-margin-bottom: $global-margin;
 $pagination-item-color: $black;
-$pagination-item-padding: rem-calc(3 10);
-$pagination-item-spacing: rem-calc(1);
-$pagination-radius: $global-radius;
-$pagination-item-background-hover: $light-gray;
-$pagination-item-background-current: $primary-color;
+$pagination-item-padding: rem-calc(8 16);
+$pagination-item-spacing: rem-calc(8);
+$pagination-radius: 0;//$global-radius;
+$pagination-item-background-hover: $anchor-color-hover;//$light-gray;
+$pagination-item-background-current: $light-gray;
 $pagination-item-color-current: $white;
 $pagination-item-color-disabled: $medium-gray;
 $pagination-ellipsis-color: $black;
 $pagination-mobile-items: false;
 $pagination-mobile-current-item: false;
-$pagination-arrows: true;
+$pagination-arrows: false;
 $pagination-arrow-previous: '\00AB';
 $pagination-arrow-next: '\00BB';
 
@@ -759,10 +759,10 @@ $reveal-background: $white;
 $reveal-width: 600px;
 $reveal-max-width: $global-width;
 $reveal-padding: $global-padding;
-$reveal-border: 3px solid #FFD2C9;//$light-gray;
-$reveal-radius: $global-radius;
+$reveal-border: 1px solid $medium-gray;
+$reveal-radius: 0;//$global-radius;
 $reveal-zindex: 1005;
-$reveal-overlay-background: rgba($white, 0.45);
+$reveal-overlay-background: rgba($black, 0.2);
 
 // 48. Slider
 // ----------

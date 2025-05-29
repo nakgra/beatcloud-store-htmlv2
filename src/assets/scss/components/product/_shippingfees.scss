@@ -1,0 +1,37 @@
+.ap-product-shippingfees {
+    margin: 0;
+    padding: 1.5rem;
+
+    > ul {
+        display: flex;
+        flex-wrap: wrap;
+        column-gap: 2rem;
+
+        margin: 0 0 1.5rem 0;
+        padding: 0;
+        list-style-type: none;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        >li {
+            display: flex;
+            column-gap: .5rem;
+            padding: .5rem 0;
+            width: calc((100% - 2rem) / 2);
+            text-align: right;
+
+            >span {
+                // flex: 0 0 auto;
+                margin: 0 auto 0 0;
+                // width: 5rem;
+                text-align: left;
+            }
+
+            @include breakpoint(medium) {
+                width: calc((100% - 4rem) / 3);
+            }
+        }
+    }
+}
