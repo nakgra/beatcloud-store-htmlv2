@@ -29,5 +29,9 @@
     "faq": {
         "open": "開く",
         "close": "閉じる"
+    },
+    "bookmark": {
+        "bookmark": "あとで買う",
+        "bookmarked": "保存済み"
     }
 }

@@ -4,6 +4,7 @@ module.exports = function(req, res, next) {
         // req.url += '_post' // アクセス先をPOST用に変更
     }
 
+    // res.statusCode = 422;
     // if (req.url == '/store-issue-title' || req.url == '/update-issue-title') {
     // }
 

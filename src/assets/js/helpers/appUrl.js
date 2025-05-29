@@ -6,8 +6,9 @@ var AppUrl = {
             return args[capturedGroup];
         });
 
-        if (full) {
-            return config.origin.replace(/\/$/, '') + '/' + path;
+        let base = document.head.querySelector('meta[name="apibaseurl"]');
+        if (full && base) {
+            return base.content.replace(/\/$/, '') + '/' + path.replace(/^\//, '');
         }
 
         return path;

@@ -1,1 +1,16 @@
-{}
+{
+    "addcart": {
+        "product_id": 888,
+        "qty": 99,
+        "totalqty": 200
+    },
+    "addcart_err": {
+        "message": "エラー",
+        "errors": {
+            "product_id" : [
+                "多すぎます",
+                "テスト"
+            ]
+        }
+    }
+}

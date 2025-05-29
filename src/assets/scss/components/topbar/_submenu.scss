@@ -44,6 +44,8 @@
 
             >span,
             >a {
+                display: block;
+
                 >span {
                     display: block;
 
@@ -80,7 +82,7 @@
 
                     >small {
                         position: absolute;
-                        top: -0.5rem;
+                        top: -0.6rem;
                         right: 2px;
                         // left: 0;
                         overflow: auto;

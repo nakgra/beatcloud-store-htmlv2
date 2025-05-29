@@ -33,56 +33,6 @@
         }
     }
 
-    &__cart {
-        $tmp-margin: $button-margin;
-        $tmp-padding: $button-padding;
-        $tmp-button-color: $button-color;
-        $tmp-button-color-alt: $button-color-alt;
-
-        $button-margin: 0!global;
-        $button-padding: 1.25rem 1.25rem !global;
-
-        @include button;
-
-        $button-margin: $tmp-margin !global;
-        $button-padding: $tmp-padding !global;
-
-        @include breakpoint(small only) {
-            margin-bottom: 1rem;
-            padding: 1.0625rem 1.25rem 1rem 1.25rem;
-            font-size: 1.0625rem !important;
-        }
-
-        @include breakpoint(medium only) {
-            padding: 1.25rem 1.25rem;
-        }
-
-        & {
-            // color: $black;
-            background-color: $primary-color;
-            font-size: 1.0625rem;
-            font-weight: 500;
-
-            >span {
-                position: relative;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-
-                &:before {
-                    content: '';
-                    margin: 0 .5rem 0 0;
-                    width: 20px;
-                    height: 20px;
-                    background-image: url(../img/icon-cart-w.svg);
-                    background-repeat: no-repeat;
-                    background-position: left center;
-                    background-size: contain;
-                }
-            }
-        }
-    }
-
     &__wishlist {
         $tmp-margin: $button-margin;
         $tmp-padding: $button-padding;

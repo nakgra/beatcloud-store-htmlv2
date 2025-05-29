@@ -2,6 +2,7 @@
     "apibaseurl": "https://beatcloud.jp/",
     "actions":
     {
+        "addcart": "cart",
         "checkoutUpdate": ""
     },
     "paygent":

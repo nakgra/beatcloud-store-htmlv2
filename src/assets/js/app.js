@@ -18,6 +18,7 @@ $(document).foundation();
 
 
 import * as func from './helpers/functions';
+import AddCart from './lib/addCart';
 import Browse from './lib/browse';
 import Carousel from './lib/carousel';
 import CheckoutForm from './lib/checkoutForm';
@@ -35,6 +36,7 @@ import Textarea from './lib/textarea';
 
 
 (function(window, document) {
+    AddCart.setup();
     Browse.setup();
     Carousel.setup();
     CheckoutForm.setup();
