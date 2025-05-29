@@ -1,0 +1,65 @@
+.ap-signup {
+    @include xy-grid-container($width: $ap-product-body-width);
+
+    @include breakpoint(small only) {}
+
+    @include breakpoint(medium only) {}
+
+    @include breakpoint(large) {}
+
+    &__confirmation {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        border-spacing: 0;
+
+        @include breakpoint(small only) {
+
+            >tbody {
+                >tr {
+                    display: block;
+
+                    >th,
+                    >td {
+                        display: block;
+                        padding: .25rem .5rem;
+                        text-align: left;
+                        font-weight: normal;
+                    }
+
+                    >th {
+                        color: $dark-gray;
+                        font-size: .875rem;
+                    }
+
+                    >td {
+                        margin: 0 0 .5rem 0;
+                    }
+                }
+            }
+        }
+
+        @include breakpoint(medium) {
+            // border-top: 1px solid $ap-border-color;
+
+            >tbody {
+                >tr {
+
+                    >th,
+                    >td {
+                        padding: .5rem .75rem;
+                        text-align: left;
+                        font-weight: normal;
+                        border-bottom: 1px solid $ap-border-color;
+                    }
+
+                    >th {
+                        max-width: 7rem;
+                        // background-color: #f9f9f9;
+                        color: $dark-gray;
+                    }
+                }
+            }
+        }
+    }
+}

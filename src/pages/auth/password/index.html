@@ -1,0 +1,21 @@
+---
+meta-title: "パスワードの再設定"
+wrapperclass: ""
+---
+<div class="ap-resetpassword">
+    <form class="ap-block" action="">
+        <h2 class="ap-block__title">パスワードの再設定</h2>
+        <div class="ap-block__content">
+            <p class="ap-message -success">パスワード再設定用のURLをメールでお送りしました。</p>
+
+            <label class="ap-edit-item">
+                登録メールアドレス
+                <input type="text" name="email" value="">
+            </label>
+            <div class="ap-edit-action">
+                <a href="{{root}}auth/password/form.html" class="button">再設定用のURLを送信</a>
+                <!-- <input type="submit" name="send" value="再設定用のURLを送信" class="button"> -->
+            </div>
+        </div>
+    </form>
+</div>

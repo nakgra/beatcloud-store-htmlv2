@@ -2,6 +2,7 @@
     "apibaseurl": "http://localhost:3000/",
     "actions":
     {
-        "addcart": "addcart"
+        "addcart": "addcart",
+        "bookmark": "bookmark"
     }
 }

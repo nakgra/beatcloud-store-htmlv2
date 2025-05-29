@@ -84,6 +84,24 @@
                     }
                 }
             }
+
+            &[data-bookmark-done] {
+                background-color: $warning-color;
+                color: $white;
+                >span {
+                    &:before {
+                        background-image: url(../img/icon-bookmarked-w.svg);
+                    }
+                }
+            }
+
+            &.-disabled,
+            &[aria-disabled="true"],
+            &:disabled {
+                background-color: $medium-gray;
+                cursor: default;
+                pointer-events: none;
+            }
         }
     }
 

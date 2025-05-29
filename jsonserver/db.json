@@ -12,5 +12,22 @@
                 "テスト"
             ]
         }
+    },
+    "bookmark": {
+        "product_id": 888,
+        "result": false
+    },
+    "bookmark_err": {
+        "message": "エラー",
+        "errors": {
+            "product_id" : [
+                "向こうです",
+                "テスト"
+            ],
+            "flg" : [
+                "無効です",
+                "テスト"
+            ]
+        }
     }
 }

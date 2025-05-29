@@ -1,0 +1,43 @@
+---
+meta-title: "ログイン"
+wrapperclass: ""
+---
+<div class="ap-login">
+    <!-- <div class="ap-login__block"> -->
+    <form class="ap-block" action="">
+        <h2 class="ap-block__title">会員の方</h2>
+        <div class="ap-block__content">
+            <p class="ap-message -success">パスワードを更新しました。</p>
+            <div class="ap-edit-errors">
+                <ul>
+                    <li>ログインできません</li>
+                    <li>ログインできません</li>
+                </ul>
+            </div>
+
+            <label class="ap-edit-item">
+                メールアドレス
+                <input type="text" name="email" value="">
+            </label>
+            <label class="ap-edit-item">
+                パスワード
+                <input type="password" name="password" value="">
+                <a href="{{root}}auth/password/index.html">パスワードを忘れた場合</a>
+            </label>
+            <div class="ap-edit-action">
+                <a href="{{root}}account/index.html" class="button">ログイン</a>
+                <!-- <input type="submit" name="send" value="ログイン" class="button"> -->
+            </div>
+        </div>
+    </form>
+    <!-- </div> -->
+    <!-- <div class="ap-login__block"> -->
+    <div class="ap-block">
+        <h2 class="ap-block__title">初めてのご利用の方</h2>
+        <div class="ap-block__content">
+            <p>beatcloudでのお買い物には、会員登録が必要です。</p>
+            <p><a href="{{root}}auth/signup/index.html" class="button expanded">会員登録へ進む</a></p>
+        </div>
+    </div>
+    <!-- </div> -->
+</div>

@@ -1,0 +1,131 @@
+---
+layout:
+title: 会員登録
+---
+<form class="ap-signup" action="" method="POST">
+    <div class="ap-block">
+        <h1 class="ap-block__title">会員登録</h1>
+        <div class="ap-block__content">
+            <label class="ap-edit-item">
+                メールアドレス
+                <input type="text" name="email" value="">
+            </label>
+            <label class="ap-edit-item">
+                パスワード
+                <input class="ap-input-phone" type="password" name="password" id="password" value="" class="" maxlength="20" data-checkpassword>
+            </label>
+            <fieldset class="ap-edit-item">
+                <legend>会員種別</legend>
+                <ul class="ap-edit-radio-list">
+                    <li>
+                    	<label class="ap-edit-radio-set">
+                    	    <div class="ap-edit-radio">
+                    	        <input type="radio" name="payment" value="1" >
+                    	        <span class="ap-edit-radio__mark"></span>
+                    	    </div>
+                    	    個人登録
+                    	</label>
+                    </li>
+                    <li>
+                    	<label class="ap-edit-radio-set">
+                    	    <div class="ap-edit-radio">
+                    	        <input type="radio" name="payment" value="2" >
+                    	        <span class="ap-edit-radio__mark"></span>
+                    	    </div>
+                    	    法人登録
+                    	</label>
+                    </li>
+                </ul>
+            </fieldset>
+            <div class="ap-edit-item">
+                <label class="ap-edit-checkboxset">
+                    <span class="ap-edit-checkbox">
+                        <input type="hidden" name="" value="0">
+                        <input type="checkbox" name="" value="1">
+                        <span class="ap-edit-checkbox__mark"></span>
+                    </span>
+                    フックアップからのお知らせを受け取る
+                </label>
+            </div>
+        </div>
+        <div class="ap-block__content">
+            <div class="ap-input-nameset">
+                <label class="ap-input-nameset__name">
+                    姓 <span class="ap-edit-required">必須</span>
+                    <input type="text" name="last_name" value="">
+                </label>
+                <label class="ap-input-nameset__name">
+                    名 <span class="ap-edit-required">必須</span>
+                    <input type="text" name="first_name" value="">
+                </label>
+            </div>
+            <div class="ap-input-nameset">
+                <label class="ap-input-nameset__name">
+                    姓カナ
+                    <input type="text" name="last_name" value="">
+                </label>
+                <label class="ap-input-nameset__name">
+                    名カナ
+                    <input type="text" name="first_name" value="">
+                </label>
+            </div>
+            <label class="ap-edit-item">
+                法人名 <span class="ap-edit-required">法人登録の場合は必須</span>
+                <input type="text" name="co_name">
+            </label>
+            <label class="ap-edit-item">
+                法人名カナ
+                <input type="text" name="co_name_kana">
+            </label>
+            <label class="ap-edit-item">
+                部署
+                <input type="text" name="co_name_division">
+            </label>
+        </div>
+        <div class="ap-block__content">
+            <fieldset class="ap-edit-item">
+                <legend>郵便番号 <span class="ap-edit-required">必須</span></legend>
+                <div class="ap-input-postalcode">
+                    <input class="ap-input-postalcode__f" type="text" name="postalcode1" value="101" maxlength="3" required="">
+                    <span>&mdash;</span>
+                    <input class="ap-input-postalcode__l" type="text" name="postalcode2" value="0021" maxlength="4" required="">
+                </div>
+            </fieldset>
+            <label class="ap-edit-item">
+                都道府県 <span class="ap-edit-required">必須</span>
+                <select class="ap-input-select" name="address[prefecture]">
+                    <option value="">選択</option>
+                    <option value="">東京</option>
+                </select>
+            </label>
+            <label class="ap-edit-item">市区町村 <span class="ap-edit-required">必須</span>
+                <input class="" type="text" name="address[locality]" value="">
+            </label>
+            <label class="ap-edit-item">番地 <span class="ap-edit-required">必須</span>
+                <input class="" type="text" name="address[streetaddress]" value="">
+            </label>
+            <label class="ap-edit-item">建物など
+                <input class="" type="text" name="address[extenedaddress]" value="">
+            </label>
+            <label class="ap-edit-item">電話番号 <span class="ap-edit-required">必須</span>
+                <input class="" type="text" name="address[phone]" value="">
+            </label>
+        </div>
+        <div class="ap-block__content">
+            <div class="ap-edit-item">
+                <label class="ap-edit-checkboxset">
+                    <span class="ap-edit-checkbox">
+                        <input type="hidden" name="" value="0">
+                        <input type="checkbox" name="" value="1">
+                        <span class="ap-edit-checkbox__mark"></span>
+                    </span>
+                    <a href="{{root}}about/privacy.html">プライバシーポリシー</a>に同意する <span class="ap-edit-required">必須</span>
+                </label>
+            </div>
+            <div class="ap-edit-action">
+                <p class="ap-edit-guide">次のページで入力内容をご確認いただきます。</p>
+                <!-- <input type="submit" name="send" value="送信する" class="ap-button -action"> -->
+                <a class="ap-button -action" href="{{root}}auth/signup/confirm.html">送信する</a>
+            </div>
+        </div>
+</form>

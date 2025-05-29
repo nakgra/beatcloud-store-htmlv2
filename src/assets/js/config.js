@@ -1,2 +1,2 @@
-const config = JSON.parse('{"apibaseurl":"http://localhost:3000/","actions":{"addcart":"addcart"}}');
+const config = JSON.parse('{"apibaseurl":"http://localhost:3000/","actions":{"addcart":"addcart","bookmark":"account/wishlist/add","checkoutUpdate":"checkout/update.html"},"paygent":{"getToken":"https://sandbox.paygent.co.jp/js/PaygentToken.js"}}');
 export default config;

@@ -2,7 +2,8 @@
     "apibaseurl": "https://beatcloud.jp/",
     "actions":
     {
-        "addcart": "cart",
+        "addcart": "addcart",
+        "bookmark": "account/wishlist/add",
         "checkoutUpdate": ""
     },
     "paygent":

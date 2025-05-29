@@ -15,12 +15,18 @@
     }
 
     &__title {
+        margin: 0;
+        border-bottom: 1px solid $ap-border-color;
+        font-weight: 500;
+
+        @include breakpoint(small only) {
+            padding: .75rem 1.25rem;
+            font-size: 1rem;
+        }
+
         @include breakpoint(medium) {
-            margin: 0;
             padding: 1rem 1.5rem;
             font-size: 1rem;
-            border-bottom: 1px solid $ap-border-color;
-            font-weight: 500;
         }
 
         @include breakpoint(large) {}
@@ -29,6 +35,10 @@
     }
 
     &__content {
+        @include breakpoint(small only) {
+            padding: 1.25rem;
+        }
+
         @include breakpoint(medium) {
             padding: 1.5rem;
         }

@@ -54,10 +54,18 @@
                 //     background-color: $warning-color;
                 // }
             }
-        }
 
-        &[aria-hidden="true"] {
-            display: none!important;
+            &.-disabled,
+            &[aria-disabled="true"],
+            &:disabled {
+                background-color: $medium-gray;
+                cursor: default;
+                pointer-events: none;
+            }
+
+            &[aria-hidden="true"] {
+                display: none!important;
+            }
         }
     }
 }

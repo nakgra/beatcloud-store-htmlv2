@@ -13,7 +13,7 @@
 
     &__name {
         @include breakpoint(small only) {
-            width: 50%;
+            width: calc((100% - .875rem) / 2);
         }
 
         @include breakpoint(medium) {
