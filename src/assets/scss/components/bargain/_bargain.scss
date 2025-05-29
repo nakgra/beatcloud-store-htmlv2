@@ -7,28 +7,28 @@
             font-weight: 900;
 
             @include breakpoint(small only) {
-                font-size: 1.75rem;
+                font-size: 2rem;
             }
 
             @include breakpoint(medium only) {
-                font-size: 2.25rem;
+                font-size: 2.5rem;
             }
 
             @include breakpoint(large) {
-                font-size: 2.75rem;
+                font-size: 3rem;
             }
 
-            .-en {
+            .-ja {
                 @include breakpoint(small only) {
-                    font-size: 2rem;
+                    font-size: 1.7rem;
                 }
 
                 @include breakpoint(medium only) {
-                    font-size: 2.5rem;
+                    font-size: 2.2rem;
                 }
 
                 @include breakpoint(large) {
-                    font-size: 3rem;
+                    font-size: 2.7rem;
                 }
             }
         }
