@@ -12,11 +12,18 @@
         font-weight: 500;
     }
 
+    &.-small {
+        @include button;
+        padding: .35rem .35rem;
+        line-height: 1;
+        font-size: .8rem;
+    }
+
     &.-alert {
         @include button($background: $alert-color, $background-hover: $warning-color);
     }
 
-    &:not(.-alert):not(.-action) {
+    &:not(.-alert):not(.-action):not(.-small) {
         @include button;
     }
 

@@ -58,7 +58,7 @@
 
         @include breakpoint(medium) {
             padding: 0 0 0 .5rem;
-            border-left: 1px solid $ap-border-color;
+            border-left: 2px solid $ap-border-color;
             font-size: 0.875rem;
         }
     }
@@ -68,6 +68,22 @@
         margin: 0.75rem 0 0 0;
         color: $dark-gray;
         // font-size: 0.9375rem;
+    }
+
+    &__associate {
+        display: flex;
+        align-items: center;
+        margin: 0.75rem 0 0 0;
+        padding: 0;
+
+        >b {
+            margin: 0 .75rem 0 .25rem;
+            color: $alert-color;
+            font-weight: 500;
+        }
+
+        // color: $dark-gray;
+        // background-color: $ap-border-color;
     }
 
     &__code {
