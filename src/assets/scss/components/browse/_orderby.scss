@@ -92,6 +92,13 @@
                         // color: $anchor-color;
                     }
                 }
+
+                &.-active {
+                    &.-radio,
+                    >a {
+                        background-color: $white!important;
+                    }
+                }
             }
 
             .ap-edit-radio-set,

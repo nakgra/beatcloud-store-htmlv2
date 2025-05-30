@@ -90,6 +90,12 @@
                         }
                     }
                 }
+
+                &.-active {
+                    >a {
+                        background-color: $white;
+                    }
+                }
             }
         }
 
