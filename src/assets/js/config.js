@@ -1,2 +1,2 @@
-const config = JSON.parse('{"apibaseurl":"http://localhost:3000/","actions":{"addcart":"addcart","bookmark":"bookmark"}}');
+const config = JSON.parse('{"apibaseurl":"http://localhost:3000/","actions":{"cart":{"increase":"increase","decrease":"decrease","stash":"stash","delete":"delete"},"addcart":"addcart","bookmark":"bookmark"}}');
 export default config;

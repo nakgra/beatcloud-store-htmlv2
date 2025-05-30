@@ -379,6 +379,15 @@ export function disabled(control, disabled = true) {
     }
 }
 
+export function isInt(value) {
+    if (isNan(value)) {
+        return false;
+    }
+
+    let x = parseFloat(value);
+    return (x | 0) === x;
+}
+
 /**
  *
  * await sleep(3000);

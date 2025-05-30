@@ -53,7 +53,15 @@
     }
 
     &__price {
+        margin: 0 1rem 0 0;
+        // padding: 0 1.5rem 0 0;
+        line-height: 1.2;
+        // border-right: 3px solid $ap-border-color;
         font-size: 1.125rem;
+    }
+
+    &__subtotal {
+        font-size: 1.25rem;
         font-weight: 500;
     }
 
@@ -68,6 +76,84 @@
 
         margin: 1.25rem 0 0 0;
         font-size: 0.875rem;
+    }
+
+    &__delete {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        // color: $anchor-color;
+        cursor: pointer;
+        font-size: .8rem;
+
+        &:before {
+            content: '';
+            margin: 0 .4rem 0 0;
+            width: 14px;
+            height: 14px;
+            background-image: url(../img/icon-delete.svg);
+            background-repeat: no-repeat;
+            background-position: left center;
+            background-size: contain;
+        }
+
+        &:hover {
+            color: $anchor-color;
+        }
+    }
+
+    &__stash {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        // color: $anchor-color;
+        cursor: pointer;
+        font-size: .8rem;
+
+        &:before {
+            content: '';
+            margin: 0 .4rem 0 0;
+            width: 10px;
+            height: 15px;
+            background-image: url(../img/icon-bookmark.svg);
+            background-repeat: no-repeat;
+            background-position: left center;
+            background-size: contain;
+        }
+
+        &:hover {
+            color: $anchor-color;
+        }
+    }
+
+    &__addcart {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        // color: $anchor-color;
+        cursor: pointer;
+        font-size: .8rem;
+
+        &:before {
+            content: '';
+            margin: 0 .4rem 0 0;
+            width: 14px;
+            height: 14px;
+            background-image: url(../img/icon-cart.svg);
+            background-repeat: no-repeat;
+            background-position: left center;
+            background-size: contain;
+        }
+
+        &:hover {
+            color: $anchor-color;
+        }
     }
 
     &__imagecol {

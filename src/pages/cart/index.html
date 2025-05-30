@@ -11,14 +11,14 @@ wrapperclass: ""
             <li><a href="">大型/特殊商品 <span class="-exists">2</span></a></li>
         </ul>
     </header>
-    <div class="ap-ordersheet">
+    <div class="ap-ordersheet" data-cart>
         <div class="ap-ordersheet__proceed">
             <div class="ap-block">
                 <div class="ap-block__content">
                     <dl class="ap-cart-breakdown">
                         <div class="ap-cart-breakdown__item">
                             <dt class="ap-cart-breakdown__label">小計<small>(税込)</small></dt>
-                            <dd class="ap-cart-breakdown__total"><span>999,999</span><small>円</small></dd>
+                            <dd class="ap-cart-breakdown__total"><span data-cart-total>999,999</span><small>円</small></dd>
                         </div>
                     </dl>
                     <form action="">
@@ -51,9 +51,9 @@ wrapperclass: ""
         <div class="ap-ordersheet__edit">
             <div class="ap-block">
                 <h2 class="ap-block__title">カートに入っている商品</h2>
-                <div class="ap-block__content">
+                <div class="ap-block__content" data-cart-container>
                     {{#repeat 5}}
-                    <div class="ap-cart-item">
+                    <div class="ap-cart-item" data-cart-item="999">
                         <div class="ap-cart-item__imagecol">
                             <img class="ap-cart-item__image" src="{{root}}assets/upload/product/001.jpg" alt="">
                         </div>
@@ -61,17 +61,17 @@ wrapperclass: ""
                             <div class="ap-cart-item__title"><a href="{{root}}products/show.html">UNIVERSAL AUDIO(ソフトウェア) UAD Studio Classics Bundle UNIVERSAL AUDIO(ソフトウェア) UAD Studio Classics Bundle</a></div>
                             <div class="ap-cart-item__actions">
                                 <div class="ap-cart-item-qtycontrol">
-                                    <button disabled class="ap-cart-item-qtycontrol__dec"><span>減らす</span></button>
-                                    <span>1</span>
-                                    <button class="ap-cart-item-qtycontrol__inc"><span>増やす</span></button>
+                                    <button disabled class="ap-cart-item-qtycontrol__dec" data-cart-item-dec><span>減らす</span></button>
+                                    <span data-cart-item-qty="1">1</span>
+                                    <button class="ap-cart-item-qtycontrol__inc" data-cart-item-inc><span>増やす</span></button>
                                 </div>
-                                <div class="ap-cart-item__uprice">&times; &yen;9,999</div>
-                                <div class="ap-cart-item__delete">削除</div>
-                                <div class="ap-cart-item__bookmark">あとで買う</div>
+                                <div class="ap-cart-item__price">&times; &yen;<span data-cart-item-price>9,999</span></div>
+                                <button class="ap-cart-item__stash" data-cart-item-stash>あとで買う</button>
+                                <button class="ap-cart-item__delete" data-cart-item-del>削除</button>
                             </div>
                         </div>
                         <div class="ap-cart-item__pricecol">
-                            <div class="ap-cart-item__price">&yen;999,999</div>
+                            <div class="ap-cart-item__subtotal">&yen;<span data-cart-item-subtotal>999,999</span></div>
                         </div>
                     </div>
                     {{/repeat}}
@@ -81,7 +81,7 @@ wrapperclass: ""
                 <h2 class="ap-block__title">「あとで買う」に入っている商品</h2>
                 <div class="ap-block__content">
                     {{#each popular}}
-                    <div class="ap-cart-item">
+                    <div class="ap-cart-item" data-cart-stashed="999">
                         <div class="ap-cart-item__imagecol">
                             <img class="ap-cart-item__image" src="{{../root}}assets/upload{{img}}" alt="">
                         </div>
@@ -89,7 +89,7 @@ wrapperclass: ""
                             <div class="ap-cart-item__title"><a href="{{../root}}{{path}}">{{ brand }} {{ name }}</a></div>
                             <div class="ap-cart-item__actions">
                                 <div class="ap-cart-item__uprice">&yen;{{ price }} <del>&yen;{{ original_price }}</del></div>
-                                <div class="ap-cart-item__addcart">カートに追加</div>
+                                <button class="ap-cart-item__addcart" data-cart-stashed-push>カートに追加</button>
                             </div>
                         </div>
                     </div>
