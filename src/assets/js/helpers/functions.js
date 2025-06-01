@@ -380,7 +380,7 @@ export function disabled(control, disabled = true) {
 }
 
 export function isInt(value) {
-    if (isNan(value)) {
+    if (isNaN(value)) {
         return false;
     }
 

@@ -2,6 +2,13 @@
     "apibaseurl": "https://beatcloud.jp/",
     "actions":
     {
+        "cart": {
+            "increase": "cart/increase",
+            "decrease": "cart/decrease",
+            "stash": "cart/stash",
+            "delete": "cart/delete"
+        },
+        "move_to_cart": "bookmarks/cart",
         "addcart": "addcart",
         "bookmark": "account/wishlist/add",
         "checkoutUpdate": ""

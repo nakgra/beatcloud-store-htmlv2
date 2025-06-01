@@ -29,5 +29,51 @@
                 "テスト"
             ]
         }
+    },
+    "cart_increase": {
+        "product_id": "111",
+        "max_qty": 5,
+        "price": "3,000",
+        "qty": 3,
+        "subtotal": "10,000",
+        "total": "110,000"
+    },
+    "cart_decrease": {
+        "product_id": "111",
+        "max_qty": 5,
+        "price": "3,100",
+        "qty": 2,
+        "subtotal": "9,999",
+        "total": "10,999"
+    },
+    "cart_stash": {
+        "total": "9,000",
+        "cart_qty": "5",
+        "product": {
+            "id": "30",
+            "name": "UNIVERSAL AUDIO(ソフトウェア) UAD Studio Classics Bundle",
+            "image": "http://localhost:8020/assets/upload/product/001.jpg",
+            "href": "http://localhost:8020/products/show.html",
+            "price": "1,500",
+            "original": "2,300"
+        }
+    },
+    "cart_delete": {
+        "total": "8,000",
+        "cart_qty": "2"
+    },
+    "move_to_cart": {
+        "total": "11,111",
+        "cart_qty": "2",
+        "product": {
+            "id": "30",
+            "name": "UNIVERSAL AUDIO(ソフトウェア) UAD Studio Classics Bundle 2",
+            "image": "http://localhost:8020/assets/upload/product/001.jpg",
+            "href": "http://localhost:8020/products/show.html",
+            "qty": "1",
+            "price": "1,501",
+            "max_qty": 5,
+            "subtotal": "1,501"
+        }
     }
 }
