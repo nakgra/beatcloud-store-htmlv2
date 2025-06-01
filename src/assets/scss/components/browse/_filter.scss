@@ -79,6 +79,10 @@
                     text-decoration: underline;
                 }
             }
+
+            &[aria-hidden="true"] {
+                display: none!important;
+            }
         }
 
         .ap-edit-radio-set,
@@ -97,5 +101,17 @@
                 }
             }
         }
+    }
+
+    &__fold {
+        display: block;
+        margin: .75rem 0 0 0;
+        color: $anchor-color;
+
+        &:hover {
+            color: $anchor-color-hover;
+        }
+
+        cursor: pointer;
     }
 }

@@ -40,9 +40,36 @@ wrapperclass: ""
             <div class="ap-block">
                 <h2 class="ap-block__title">閲覧履歴</h2>
                 <div class="ap-block__content">
-
+                    {{#each popular}}
+                    <div class="ap-cart-item" data-addcart="999">
+                        <div class="ap-cart-item__imagecol">
+                            <img class="ap-cart-item__image" src="{{../root}}assets/upload{{img}}" alt="">
+                        </div>
+                        <div class="ap-cart-item__detailcol">
+                            <div class="ap-cart-item__title"><a href="{{../root}}{{path}}">{{ brand }} {{ name }}</a></div>
+                            <div class="ap-cart-item__actions">
+                                <div class="ap-cart-item__price">&yen;<span>{{ price }}</span> <del>&yen;<span>{{ original_price }}</span></del></div>
+                                <button class="ap-cart-item__addcart" data-addcart-send aria-hidden="false" data-altname="product_id">カートに追加</button>
+                                <a href="{{../root}}cart/index.html" class="ap-cart-item__addcart" data-addcart-view aria-hidden="true">カートにあります</a>
+                            </div>
+                        </div>
+                    </div>
+                    {{/each}}
                 </div>
             </div>
+            <nav class="ap-pagination">
+                <ul class="pagination">
+                    <li class="pagination-previous disabled"><span>前へ</span></li>
+                    <li class="current"><span>1</span></li>
+                    <li><a href="#" aria-label="Page 2">2</a></li>
+                    <li><a href="#" aria-label="Page 3">3</a></li>
+                    <li><a href="#" aria-label="Page 4">4</a></li>
+                    <li class="ellipsis" aria-hidden="true"></li>
+                    <li><a href="#" aria-label="Page 12">12</a></li>
+                    <li><a href="#" aria-label="Page 13">13</a></li>
+                    <li class="pagination-next"><a href="#" aria-label="Next page">次へ</span></a></li>
+                </ul>
+            </nav>
         </div>
     </div>
 </article>

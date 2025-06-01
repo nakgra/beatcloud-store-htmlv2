@@ -40,7 +40,21 @@ wrapperclass: ""
             <div class="ap-block">
                 <h2 class="ap-block__title">あとで買うリスト</h2>
                 <div class="ap-block__content">
-
+                    {{#each popular}}
+                    <div class="ap-cart-item" data-cart-stashed="999">
+                        <div class="ap-cart-item__imagecol">
+                            <img class="ap-cart-item__image" src="{{../root}}assets/upload{{img}}" alt="">
+                        </div>
+                        <div class="ap-cart-item__detailcol">
+                            <div class="ap-cart-item__title"><a href="{{../root}}{{path}}">{{ brand }} {{ name }}</a></div>
+                            <div class="ap-cart-item__actions">
+                                <div class="ap-cart-item__price">&yen;<span>{{ price }}</span> <del>&yen;<span>{{ original_price }}</span></del></div>
+                                <button class="ap-cart-item__addcart" data-cart-stashed-move>カートに移動</button>
+                                <button class="ap-cart-item__delete" data-cart-stashed-del>削除</button>
+                            </div>
+                        </div>
+                    </div>
+                    {{/each}}
                 </div>
             </div>
         </div>

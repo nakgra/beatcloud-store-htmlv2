@@ -41,9 +41,11 @@ class Stashed extends Base {
         obj.totalEl = document.querySelector('[data-cart-total]');
         obj.cartCount = document.querySelector('[data-cartcount]');
         obj.moveEl = obj.element.querySelector('[' + obj.getMyAttrName('-move') + ']');
+        obj.delEl = obj.element.querySelector('[' + obj.getMyAttrName('-del') + ']');
 
         obj.initElement();
         obj.initMove(obj.element, obj.productId);
+        obj.initDelete(obj.element, obj.productId);
     }
 
     /**
@@ -72,7 +74,7 @@ class Stashed extends Base {
 
         obj.moveEl.addEventListener('click', function(e) {
             e.preventDefault();
-console.log('click');
+
             if (obj.processing) {
                 return;
             }
@@ -82,48 +84,107 @@ console.log('click');
             let formData = new FormData;
             formData.append('product_id', productId);
 
-            obj.dispatcher.post(AppUrl.url(config.actions.move_to_cart), formData)
+            obj.dispatcher.post(AppUrl.url(config.actions.bookmark.move), formData)
                 .then(function(response) { // success
                     obj.clearErrors();
 
-                    let clone = obj.cartItemTemplate.content.firstElementChild.cloneNode(true);
-                    clone.setAttribute('data-cart-item', response.data.product.id);
-
                     func.addClass(item, '-deleted');
-
-                    let imageEl, hrefEl, qtyEl, incEl, priceEl, subtotalEl;
-                    imageEl = clone.querySelector('[data-cart-item-image]');
-                    hrefEl = clone.querySelector('[data-cart-item-href]');
-                    qtyEl = clone.querySelector('[data-cart-item-qty]');
-                    incEl = clone.querySelector('[data-cart-item-inc]');
-                    priceEl = clone.querySelector('[data-cart-item-price]');
-                    subtotalEl = clone.querySelector('[data-cart-item-subtotal]');
-
-                    imageEl.src = response.data.product.image;
-                    hrefEl.href = response.data.product.href;
-                    hrefEl.innerText = response.data.product.name;
-                    qtyEl.innerText = response.data.product.qty;
-                    qtyEl.setAttribute('data-cart-item-qty', response.data.product.qty);
-                    incEl.setAttribute('data-cart-item-qty', response.data.product.max_qty);
-                    priceEl.innerText = response.data.product.price;
-                    subtotalEl.innerText = response.data.product.subtotal;
 
                     let cartitemsContainer = document.querySelector('[data-cart-item-container]');
                     if (cartitemsContainer) {
+                        let clone = obj.cartItemTemplate.content.firstElementChild.cloneNode(true);
+                        clone.setAttribute('data-cart-item', response.data.product.id);
+
+                        let imageEl, hrefEl, qtyEl, incEl, priceEl, subtotalEl;
+                        imageEl = clone.querySelector('[data-cart-item-image]');
+                        hrefEl = clone.querySelector('[data-cart-item-href]');
+                        qtyEl = clone.querySelector('[data-cart-item-qty]');
+                        incEl = clone.querySelector('[data-cart-item-inc]');
+                        priceEl = clone.querySelector('[data-cart-item-price]');
+                        subtotalEl = clone.querySelector('[data-cart-item-subtotal]');
+
+                        imageEl.src = response.data.product.image;
+                        hrefEl.href = response.data.product.href;
+                        hrefEl.innerText = response.data.product.name;
+                        qtyEl.innerText = response.data.product.qty;
+                        qtyEl.setAttribute('data-cart-item-qty', response.data.product.qty);
+                        incEl.setAttribute('data-cart-item-qty', response.data.product.max_qty);
+                        priceEl.innerText = response.data.product.price;
+                        subtotalEl.innerText = response.data.product.subtotal;
+
                         func.addClass(clone, '-added');
                         cartitemsContainer.append(clone);
                         new CartItem(clone);
                     }
 
-                    obj.totalEl.innerText = response.data.total;
-
-                    if (parseInt(response.data.cart_qty) > 0) {
-                        obj.cartCount.setAttribute('aria-hidden', false);
-                        obj.cartCount.innerText = response.data.cart_qty;
-                    } else {
-                        obj.cartCount.setAttribute('aria-hidden', true);
-                        obj.cartCount.innerText = '';
+                    if (obj.totalEl) {
+                        obj.totalEl.innerText = response.data.total;
                     }
+
+                    if (obj.cartCount) {
+                        if (parseInt(response.data.cart_qty) > 0) {
+                            obj.cartCount.setAttribute('aria-hidden', false);
+                            obj.cartCount.innerText = response.data.cart_qty;
+                        } else {
+                            obj.cartCount.setAttribute('aria-hidden', true);
+                            obj.cartCount.innerText = '';
+                        }
+                    }
+                })
+                .catch(function(error) { // error
+                    if (error.response) {
+                        switch (error.response.status) {
+                            case 401:
+                                alert(messages.error.unauthorized);
+                                break;
+                            case 419:
+                                alert(messages.error.csrf);
+                                break;
+                            case 422:
+                                alert(messages.error.validation);
+                                obj.showErrors(error.response.data.errors);
+                                break;
+                            case 404:
+                                alert(messages.error.notfound);
+                                break;
+                            default:
+                                alert(messages.error.exception);
+                        }
+                    } else if (error.request) {
+                        // console.log(error.request);
+                    } else {
+                        // console.log('Error', error.message);
+                    }
+                })
+                .then(function() {
+                    obj.releaseProcessing();
+                });
+        });
+    }
+
+    /**
+     *
+     */
+    initDelete(item) {
+        let obj = this;
+
+        obj.delEl.addEventListener('click', function(e) {
+            e.preventDefault();
+
+            if (obj.processing) {
+                return;
+            }
+
+            obj.setProcessing();
+
+            let formData = new FormData;
+            formData.append('product_id', obj.productId);
+
+            obj.dispatcher.post(AppUrl.url(config.actions.bookmark.delete), formData)
+                .then(function(response) { // success
+                    obj.clearErrors();
+
+                    func.addClass(item, '-deleted');
                 })
                 .catch(function(error) { // error
                     if (error.response) {

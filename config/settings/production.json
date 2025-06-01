@@ -8,9 +8,12 @@
             "stash": "cart/stash",
             "delete": "cart/delete"
         },
-        "move_to_cart": "bookmarks/cart",
         "addcart": "addcart",
-        "bookmark": "account/wishlist/add",
+        "bookmark": {
+            "add": "account/wishlist/add",
+            "move": "account/bookmarks/cart",
+            "delete": "account/bookmarks/delete"
+        },
         "checkoutUpdate": ""
     },
     "paygent":

@@ -1,5 +1,14 @@
 .ap-browse-result {
-    @include breakpoint(medium) {
-        // padding:
+    @include breakpoint(large) {
+        flex-grow: 1;
+        min-height: 800px;
+    }
+
+    &__message {
+        display: block;
+        margin: 0;
+        padding: 1rem;
+        background-color: $white;
+        border: 1px solid $ap-border-color;
     }
 }

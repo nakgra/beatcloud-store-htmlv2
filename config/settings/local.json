@@ -10,6 +10,10 @@
         },
         "move_to_cart": "move_to_cart",
         "addcart": "addcart",
-        "bookmark": "bookmark"
+        "bookmark": {
+            "add": "bookmark_add",
+            "move": "bookmark_cart",
+            "delete": "bookmark_delete"
+        }
     }
 }

@@ -1,0 +1,42 @@
+---
+meta-title: ""
+wrapperclass: "-browse"
+---
+<div class="ap-browse">
+    <header class="ap-browse__header">
+        <div class="ap-browse-title">
+            <h1 class="ap-browse-title__main">"Keyword"の検索結果</h1>
+        </div>
+    </header>
+    <div class="ap-browse__main">
+        <div class="ap-browse-result">
+            <div class="ap-grid -full">
+                {{#repeat 3}}
+                {{#each popular}}
+                <a class="ap-grid-item -haslead" href="{{../root}}{{path}}">
+                    <div class="ap-grid-item__pic"><img src="{{../root}}assets/upload{{img}}" alt=""></div>
+                    {{#if lead}}<p class="ap-grid-item__lead">{{ lead }}</p>{{/if}}
+                    <h3 class="ap-grid-item__title -small">
+                        <span class="__divide">{{ brand }}</span>{{ name }}
+                    </h3>
+                    <p class="ap-grid-item__footnote -alert">&yen;{{ price }}{{#if original_price}} <del>&yen;{{ original_price }}</del>{{/if}}</p>
+                </a>
+                {{/each}}
+                {{/repeat}}
+            </div>
+            <nav class="ap-pagination -centered">
+                <ul class="pagination">
+                    <li class="pagination-previous disabled"><span>前へ</span></li>
+                    <li class="current"><span>1</span></li>
+                    <li><a href="#" aria-label="Page 2">2</a></li>
+                    <li><a href="#" aria-label="Page 3">3</a></li>
+                    <li><a href="#" aria-label="Page 4">4</a></li>
+                    <li class="ellipsis" aria-hidden="true"></li>
+                    <li><a href="#" aria-label="Page 12">12</a></li>
+                    <li><a href="#" aria-label="Page 13">13</a></li>
+                    <li class="pagination-next"><a href="#" aria-label="Next page">次へ</span></a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</div>

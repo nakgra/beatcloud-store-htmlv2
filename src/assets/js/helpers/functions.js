@@ -379,6 +379,9 @@ export function disabled(control, disabled = true) {
     }
 }
 
+/**
+ *
+ **/
 export function isInt(value) {
     if (isNaN(value)) {
         return false;
@@ -386,6 +389,13 @@ export function isInt(value) {
 
     let x = parseFloat(value);
     return (x | 0) === x;
+}
+
+/**
+ *
+ **/
+export function toBoolean(value) {
+    return value.toLowerCase() === "true";
 }
 
 /**

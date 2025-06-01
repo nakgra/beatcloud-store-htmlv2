@@ -11,6 +11,9 @@
         margin-top: 3rem;
     }
 
+    &.-centered {
+        text-align: center;
+    }
 
     .pagination {
         @include breakpoint(small only) {}
