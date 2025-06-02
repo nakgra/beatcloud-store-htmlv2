@@ -26,4 +26,20 @@
             }
         }
     }
+
+    >span {
+        display: block;
+        padding: .5rem 0;
+        line-height: 1.4;
+        border-top: 1px solid #FFD2F5;
+
+        &:first-child {
+            padding-top: 0;
+            border-top: 0;
+        }
+
+        &:last-child {
+            padding-bottom: 0;
+        }
+    }
 }

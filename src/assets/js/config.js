@@ -1,2 +1,2 @@
-const config = JSON.parse('{"apibaseurl":"http://localhost:3000/","actions":{"cart":{"increase":"cart_increase","decrease":"cart_decrease","stash":"cart_stash","delete":"cart_delete"},"move_to_cart":"move_to_cart","addcart":"addcart","bookmark":{"add":"bookmark_add","move":"bookmark_cart","delete":"bookmark_delete"}}}');
+const config = JSON.parse('{"apibaseurl":"https://beatcloud.jp/","actions":{"cart":{"increase":"cart/increase","decrease":"cart/decrease","stash":"cart/stash","delete":"cart/delete"},"addcart":"addcart","bookmark":{"add":"account/wishlist/add","move":"account/bookmarks/cart","delete":"account/bookmarks/delete"},"checkoutUpdate":""},"paygent":{"getToken":"https://token.paygent.co.jp/js/PaygentToken.js"}}');
 export default config;
