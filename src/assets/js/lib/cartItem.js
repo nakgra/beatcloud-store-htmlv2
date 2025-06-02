@@ -23,10 +23,7 @@ class CartItem extends Base {
      *
      */
     constructor(element, targetAttrName = null) {
-        super(element, targetAttrName)
-
-        let obj = this;
-        obj.init();
+        super(element, targetAttrName);
     }
 
     /**
@@ -38,6 +35,8 @@ class CartItem extends Base {
         obj.productId = obj.element.getAttribute(obj.getMyAttrName());
         obj.totalEl = document.querySelector('[data-cart-total]');
         obj.cartCount = document.querySelector('[data-cartcount]');
+        obj.container = document.querySelector('[data-cart-item-container]');
+
         obj.priceEl = obj.element.querySelector('[' + obj.getMyAttrName('-price') + ']');
         obj.qtyEl = obj.element.querySelector('[' + obj.getMyAttrName('-qty') + ']');
         obj.decEl = obj.element.querySelector('[' + obj.getMyAttrName('-dec') + ']');
@@ -71,6 +70,7 @@ class CartItem extends Base {
 
             if (e.animationName == 'fadeout') {
                 this.remove();
+                obj.refreshCheckout();
             }
         })
     }
@@ -101,6 +101,20 @@ class CartItem extends Base {
                 obj.incEl.disabled = true;
             }
         }
+    }
+
+    /**
+     *
+     **/
+    refreshCheckout() {
+        let obj = this;
+
+        if (!obj.container) {
+            return;
+        }
+
+        let event = new Event('itemChanged');
+        obj.container.dispatchEvent(event);
     }
 
     /**

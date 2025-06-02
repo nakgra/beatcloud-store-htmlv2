@@ -1,6 +1,6 @@
 .-error {
     position: relative;
-    color: $alert-color !important;
+    // color: $alert-color !important;
 
     label,
     legend {
@@ -27,7 +27,7 @@
 }
 
 .ap-edit-error {
-    position: absolute;
+    position: absolute!important;
     top: calc(100% - 4px);
     left: 0;
     z-index: 45;

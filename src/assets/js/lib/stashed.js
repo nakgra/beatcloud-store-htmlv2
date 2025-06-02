@@ -10,9 +10,9 @@ import CartItem from './cartItem.js';
 class Stashed extends Base {
     static targetAttrName = 'data-cart-stashed';
 
-    // #element //Êú¨‰Ωì
-    // #myAttrName //Â±ûÊÄßÂêç
-    // #message // „É°„ÉÉ„Çª„Éº„Ç∏
+    // #element //±æÃÂ
+    // #myAttrName // Ù–‘√˚
+    // #message // •·•√•ª©`•∏
     // #dispatcher // ajax
     // #processing
 
@@ -23,10 +23,7 @@ class Stashed extends Base {
      *
      */
     constructor(element, targetAttrName = null) {
-        super(element, targetAttrName)
-
-        let obj = this;
-        obj.init();
+        super(element, targetAttrName);
     }
 
     /**
@@ -40,6 +37,7 @@ class Stashed extends Base {
 
         obj.totalEl = document.querySelector('[data-cart-total]');
         obj.cartCount = document.querySelector('[data-cartcount]');
+
         obj.moveEl = obj.element.querySelector('[' + obj.getMyAttrName('-move') + ']');
         obj.delEl = obj.element.querySelector('[' + obj.getMyAttrName('-del') + ']');
 
@@ -90,31 +88,54 @@ class Stashed extends Base {
 
                     func.addClass(item, '-deleted');
 
-                    let cartitemsContainer = document.querySelector('[data-cart-item-container]');
+                    let cartitemsContainer = document.querySelector('[data-cart-item-container="' + response.data.product.type + '"]');
                     if (cartitemsContainer) {
-                        let clone = obj.cartItemTemplate.content.firstElementChild.cloneNode(true);
-                        clone.setAttribute('data-cart-item', response.data.product.id);
+                        let target = cartitemsContainer.querySelector('[data-cart-item="' + response.data.product.id + '"]');
+                        if (target) {
+                            let qtyEl, incEl, priceEl, subtotalEl;
+                            qtyEl = target.querySelector('[data-cart-item-qty]');
+                            incEl = target.querySelector('[data-cart-item-inc]');
+                            priceEl = target.querySelector('[data-cart-item-price]');
+                            subtotalEl = target.querySelector('[data-cart-item-subtotal]');
 
-                        let imageEl, hrefEl, qtyEl, incEl, priceEl, subtotalEl;
-                        imageEl = clone.querySelector('[data-cart-item-image]');
-                        hrefEl = clone.querySelector('[data-cart-item-href]');
-                        qtyEl = clone.querySelector('[data-cart-item-qty]');
-                        incEl = clone.querySelector('[data-cart-item-inc]');
-                        priceEl = clone.querySelector('[data-cart-item-price]');
-                        subtotalEl = clone.querySelector('[data-cart-item-subtotal]');
+                            qtyEl.innerText = response.data.product.qty;
+                            qtyEl.setAttribute('data-cart-item-qty', response.data.product.qty);
+                            incEl.setAttribute('data-cart-item-qty', response.data.product.max_qty);
+                            priceEl.innerText = response.data.product.price;
+                            subtotalEl.innerText = response.data.product.subtotal;
+                        } else {
+                            let clone = obj.cartItemTemplate.content.firstElementChild.cloneNode(true);
+                            clone.setAttribute('data-cart-item', response.data.product.id);
 
-                        imageEl.src = response.data.product.image;
-                        hrefEl.href = response.data.product.href;
-                        hrefEl.innerText = response.data.product.name;
-                        qtyEl.innerText = response.data.product.qty;
-                        qtyEl.setAttribute('data-cart-item-qty', response.data.product.qty);
-                        incEl.setAttribute('data-cart-item-qty', response.data.product.max_qty);
-                        priceEl.innerText = response.data.product.price;
-                        subtotalEl.innerText = response.data.product.subtotal;
+                            let imageEl, hrefEl, qtyEl, incEl, priceEl, subtotalEl;
+                            imageEl = clone.querySelector('[data-cart-item-image]');
+                            hrefEl = clone.querySelector('[data-cart-item-href]');
+                            qtyEl = clone.querySelector('[data-cart-item-qty]');
+                            incEl = clone.querySelector('[data-cart-item-inc]');
+                            priceEl = clone.querySelector('[data-cart-item-price]');
+                            subtotalEl = clone.querySelector('[data-cart-item-subtotal]');
 
-                        func.addClass(clone, '-added');
-                        cartitemsContainer.append(clone);
-                        new CartItem(clone);
+                            imageEl.src = response.data.product.image;
+                            hrefEl.href = response.data.product.href;
+                            hrefEl.innerText = response.data.product.name;
+                            qtyEl.innerText = response.data.product.qty;
+                            qtyEl.setAttribute('data-cart-item-qty', response.data.product.qty);
+                            incEl.setAttribute('data-cart-item-qty', response.data.product.max_qty);
+                            priceEl.innerText = response.data.product.price;
+                            subtotalEl.innerText = response.data.product.subtotal;
+
+                            func.addClass(clone, '-added');
+                            cartitemsContainer.append(clone);
+                            new CartItem(clone);
+                        }
+
+                        cartitemsContainer.dispatchEvent(new Event('itemChanged'));
+                    }
+
+                    let navItem = document.querySelector('[data-cart-type="' + response.data.product.type + '"]');
+                    if (navItem) {
+                        let countEl = navItem.querySelector('[data-cart-type-count]');
+                        countEl.innerText = response.data.cart_type_qty;
                     }
 
                     if (obj.totalEl) {
@@ -168,6 +189,10 @@ class Stashed extends Base {
     initDelete(item) {
         let obj = this;
 
+        if (!obj.delEl) {
+            return;
+        }
+
         obj.delEl.addEventListener('click', function(e) {
             e.preventDefault();
 
@@ -178,9 +203,9 @@ class Stashed extends Base {
             obj.setProcessing();
 
             let formData = new FormData;
-            formData.append('product_id', obj.productId);
+            // formData.append('product_id', obj.productId);
 
-            obj.dispatcher.post(AppUrl.url(config.actions.bookmark.delete), formData)
+            obj.dispatcher.delete(AppUrl.url(config.actions.bookmark.delete, {id: obj.productId}), formData)
                 .then(function(response) { // success
                     obj.clearErrors();
 

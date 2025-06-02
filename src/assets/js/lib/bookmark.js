@@ -13,12 +13,10 @@ class Bookmark {
     #labelEl; // ラベル
     #dispatcher; // ajax
 
-
     #productId;
     #sendButton;
     #viewcartButton;
 
-    #action;
     #processing;
 
     constructor(element, targetAttrName = null) {
@@ -28,7 +26,6 @@ class Bookmark {
         obj.myAttrName = targetAttrName ? targetAttrName : obj.constructor.targetAttrName;
         obj.dispatcher = dispatcher();
 
-        obj.action = config.actions['bookmark'];
         obj.productId = obj.element.getAttribute(obj.getMyAttrName());
         obj.labelEl = obj.element.querySelector('[' + obj.getMyAttrName('-label') + ']');
 
@@ -48,9 +45,9 @@ class Bookmark {
             let bookmarked = obj.element.hasAttribute(obj.getMyAttrName('-done'));
             let formData = new FormData;
             formData.append('product_id', obj.productId);
-            formData.append('flg', !bookmarked);
+            formData.append('flg', bookmarked ? 0 : 1);
 
-            obj.dispatcher.post(AppUrl.url(obj.action), formData)
+            obj.dispatcher.post(AppUrl.url(config.actions.bookmark.add), formData)
                 .then(function(response) { // success
                     obj.clearErrors();
 
@@ -58,10 +55,8 @@ class Bookmark {
                         obj.element.setAttribute(obj.getMyAttrName('-done'), '');
                         obj.labelEl.innerText = messages.bookmark.done;
                     } else {
-                        console.log(obj.labelEl, messages.bookmark.default);
                         obj.element.removeAttribute(obj.getMyAttrName('-done'));
                         obj.labelEl.innerText = messages.bookmark.default;
-                        console.log(obj.labelEl, messages.bookmark.default);
                     }
 
                 })

@@ -13,7 +13,7 @@
         "bookmark": {
             "add": "bookmark_add",
             "move": "bookmark_cart",
-            "delete": "bookmark_delete"
+            "delete": "bookmark_delete/:id"
         }
     }
 }

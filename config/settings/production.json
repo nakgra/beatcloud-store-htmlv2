@@ -10,9 +10,9 @@
         },
         "addcart": "addcart",
         "bookmark": {
-            "add": "account/wishlist/add",
+            "add": "account/bookmarks",
             "move": "account/bookmarks/cart",
-            "delete": "account/bookmarks/delete"
+            "delete": "account/bookmarks/:id"
         },
         "checkoutUpdate": ""
     },

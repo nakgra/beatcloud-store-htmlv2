@@ -25,8 +25,10 @@
     {
         "total": "11,111",
         "cart_qty": "2",
+        "cart_type_qty": "6",
         "product":
         {
+            "type": "lic",
             "id": "30",
             "name": "UNIVERSAL AUDIO(ソフトウェア) UAD Studio Classics Bundle 2",
             "image": "http://localhost:8020/assets/upload/product/001.jpg",
