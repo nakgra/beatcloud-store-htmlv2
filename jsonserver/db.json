@@ -79,6 +79,7 @@
     {
         "total": "9,000",
         "cart_qty": "5",
+        "cart_type_qty": "6",
         "product":
         {
             "id": "30",
@@ -92,6 +93,7 @@
     "cart_delete":
     {
         "total": "8,000",
-        "cart_qty": "2"
+        "cart_qty": "2",
+        "cart_type_qty": "6"
     }
 }

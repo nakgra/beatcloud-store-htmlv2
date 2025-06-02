@@ -6,7 +6,7 @@
             "increase": "cart_increase",
             "decrease": "cart_decrease",
             "stash": "cart_stash",
-            "delete": "cart_delete"
+            "delete": "cart_delete/:type"
         },
         "move_to_cart": "move_to_cart",
         "addcart": "addcart",

@@ -135,7 +135,13 @@ class Stashed extends Base {
                     let navItem = document.querySelector('[data-cart-type="' + response.data.product.type + '"]');
                     if (navItem) {
                         let countEl = navItem.querySelector('[data-cart-type-count]');
-                        countEl.innerText = response.data.cart_type_qty;
+                        if (response.data.cart_type_qty == '0') {
+                            countEl.innerText = '';
+                            func.removeClass(countEl, '-exists');
+                        } else {
+                            countEl.innerText = response.data.cart_type_qty;
+                            func.addClass(countEl, '-exists');
+                        }
                     }
 
                     if (obj.totalEl) {

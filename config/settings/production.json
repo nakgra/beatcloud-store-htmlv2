@@ -6,7 +6,7 @@
             "increase": "cart/increase",
             "decrease": "cart/decrease",
             "stash": "cart/stash",
-            "delete": "cart/delete"
+            "delete": "cart/:type/delete"
         },
         "addcart": "addcart",
         "bookmark": {
