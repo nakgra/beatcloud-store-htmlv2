@@ -5,4 +5,14 @@
     background-color: #E5F1FF;
     // color: $alert-color;
     font-size: .875rem;
+
+    &.-alert {
+        background-color: #F7EBF0;
+        border: 1px solid #EFEAED;
+        color: $alert-color;
+    }
+
+    >ul {
+        margin-bottom: 0;
+    }
 }
