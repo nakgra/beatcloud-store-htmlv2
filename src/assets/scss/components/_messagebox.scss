@@ -1,20 +1,27 @@
 .ap-messagebox {
-    @include xy-grid-container($width: 800px);
+    @include xy-grid-container($width: $ap-product-body-width);
 
-    @include breakpoint(small only) {
-        margin-bottom: 2rem;
-    }
+    @include breakpoint(small only) {}
 
-    @include breakpoint(medium) {
-        margin-bottom: 2.5rem;
-    }
+    @include breakpoint(medium only) {}
 
-    @include breakpoint(large) {
-        display: flex;
-        flex-wrap: wrap;
-    }
+    @include breakpoint(large) {}
 
-    @include breakpoint(xlarge) {
-        margin-bottom: 3rem;
+    &__title {
+        margin: 0;
+        font-weight: 500;
+
+        @include breakpoint(small only) {
+            margin-bottom: 1rem;
+            font-size: 1.125rem;
+        }
+
+        @include breakpoint(medium) {
+            margin-bottom: 1.5rem;
+            // margin-right: auto;
+            font-size: 1.25rem;
+        }
+
+        @include breakpoint(large) {}
     }
 }
