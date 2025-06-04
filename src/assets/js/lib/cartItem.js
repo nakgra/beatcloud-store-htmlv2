@@ -248,6 +248,10 @@ class CartItem extends Base {
     initStash(item) {
         let obj = this;
 
+        if (!obj.stashEl) {
+            return;
+        }
+
         obj.stashEl.addEventListener('click', function(e) {
             e.preventDefault();
 
