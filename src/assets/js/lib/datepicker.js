@@ -23,9 +23,15 @@ class Datepicker {
     /**
      *
      **/
-    constructor(element, targetAttrName = null) {
+    constructor(element, options, targetAttrName = null) {
         this.element = element;
         this.myAttrName = targetAttrName ? targetAttrName : this.constructor.targetAttrName;
+
+        this.options = {
+            onchange: function(date) {}
+        };
+        this.options = options = Object.assign(this.options, options);
+
         this.init();
     }
 
