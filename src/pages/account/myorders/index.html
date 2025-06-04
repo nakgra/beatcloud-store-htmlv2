@@ -41,10 +41,14 @@ wrapperclass: ""
                 <h2 class="ap-block__title">注文履歴</h2>
                 <div class="ap-block__content">
                     <form action="" class="ap-associate-header" method="GET">
-                        <label class="ap-edit-item -horizontal -align-bottom">
-                            <span class="ap-edit-item__label">年月</span>
+                        <label class="ap-edit-item -horizontal -reverse">
+                            <span class="ap-edit-item__label">年</span>
                             <span class="ap-edit-item__input">
-                                <input type="text" class="ap-input-yearmonth" name="month" value="2025/05" placeholder="" data-datepicker data-start-view="year" data-min-view="year" data-date-format="yyyy/mm">
+                                <select name="" class="ap-input-year">
+                                    <option value="">2025</option>
+                                    <option value="">2024</option>
+                                    <option value="">2023</option>
+                                </select>
                             </span>
                         </label>
                     </form>
@@ -53,6 +57,7 @@ wrapperclass: ""
                             <tr>
                                 <th class="__id">注文番号</th>
                                 <th class="__date">注文日</th>
+                                <th class="__products">商品</th>
                                 <th class="__status"></th>
                                 <th class="__total">金額</th>
                             </tr>
@@ -61,6 +66,12 @@ wrapperclass: ""
                             <tr>
                                 <td class="__id"><a href="{{root}}account/myorders/show.html">81362</a></td>
                                 <td class="__date">2024/04/17</td>
+                                <td class="__products">
+                                    <ul>
+                                        <li>UAD Test</li>
+                                        <li>UAD Apollo 8</li>
+                                    </ul>
+                                </td>
                                 <td class="__status">
                                 </td>
                                 <td class="__total">¥10</td>
@@ -68,6 +79,9 @@ wrapperclass: ""
                             <tr>
                                 <td class="__id"><a href="{{root}}account/myorders/show.html">81361</a></td>
                                 <td class="__date">2024/04/17</td>
+                                <td class="__products">
+
+                                </td>
                                 <td class="__status">
                                 </td>
                                 <td class="__total">¥10</td>
@@ -75,6 +89,9 @@ wrapperclass: ""
                             <tr>
                                 <td class="__id"><a href="{{root}}account/myorders/show.html">81360</a></td>
                                 <td class="__date">2024/04/17</td>
+                                <td class="__products">
+
+                                </td>
                                 <td class="__status">
                                 </td>
                                 <td class="__total">¥10</td>
@@ -82,6 +99,9 @@ wrapperclass: ""
                             <tr>
                                 <td class="__id"><a href="{{root}}account/myorders/show.html">81063</a></td>
                                 <td class="__date">2024/04/10</td>
+                                <td class="__products">
+
+                                </td>
                                 <td class="__status">
                                 </td>
                                 <td class="__total">¥10</td>
@@ -89,6 +109,9 @@ wrapperclass: ""
                             <tr>
                                 <td class="__id"><a href="{{root}}account/myorders/show.html">73207</a></td>
                                 <td class="__date">2023/10/04</td>
+                                <td class="__products">
+
+                                </td>
                                 <td class="__status">
                                 </td>
                                 <td class="__total">¥0</td>
@@ -96,6 +119,9 @@ wrapperclass: ""
                             <tr>
                                 <td class="__id"><a href="{{root}}account/myorders/show.html">62109</a></td>
                                 <td class="__date">2022/10/20</td>
+                                <td class="__products">
+
+                                </td>
                                 <td class="__status">
                                 </td>
                                 <td class="__total">¥140</td>
@@ -103,6 +129,9 @@ wrapperclass: ""
                             <tr>
                                 <td class="__id"><a href="{{root}}account/myorders/show.html">62097</a></td>
                                 <td class="__date">2022/10/19</td>
+                                <td class="__products">
+
+                                </td>
                                 <td class="__status">
                                 </td>
                                 <td class="__total">¥140</td>
@@ -110,6 +139,9 @@ wrapperclass: ""
                             <tr>
                                 <td class="__id"><a href="{{root}}account/myorders/show.html">62014</a></td>
                                 <td class="__date">2022/10/13</td>
+                                <td class="__products">
+
+                                </td>
                                 <td class="__status">
                                 </td>
                                 <td class="__total">¥100</td>
@@ -117,6 +149,9 @@ wrapperclass: ""
                             <tr>
                                 <td class="__id"><a href="{{root}}account/myorders/show.html">57086</a></td>
                                 <td class="__date">2022/02/01</td>
+                                <td class="__products">
+
+                                </td>
                                 <td class="__status">
                                 </td>
                                 <td class="__total">¥100</td>
@@ -124,6 +159,9 @@ wrapperclass: ""
                             <tr>
                                 <td class="__id"><a href="{{root}}account/myorders/show.html">57058</a></td>
                                 <td class="__date">2022/01/31</td>
+                                <td class="__products">
+
+                                </td>
                                 <td class="__status">
                                 </td>
                                 <td class="__total">¥100</td>
@@ -131,6 +169,9 @@ wrapperclass: ""
                             <tr>
                                 <td class="__id"><a href="{{root}}account/myorders/show.html">55331</a></td>
                                 <td class="__date">2021/12/16</td>
+                                <td class="__products">
+
+                                </td>
                                 <td class="__status">
                                 </td>
                                 <td class="__total">¥100</td>
@@ -138,6 +179,9 @@ wrapperclass: ""
                             <tr>
                                 <td class="__id"><a href="{{root}}account/myorders/show.html">54314</a></td>
                                 <td class="__date">2021/12/03</td>
+                                <td class="__products">
+
+                                </td>
                                 <td class="__status">
                                 </td>
                                 <td class="__total">¥100</td>
@@ -145,6 +189,9 @@ wrapperclass: ""
                             <tr>
                                 <td class="__id"><a href="{{root}}account/myorders/show.html">48275</a></td>
                                 <td class="__date">2021/07/20</td>
+                                <td class="__products">
+
+                                </td>
                                 <td class="__status">
                                 </td>
                                 <td class="__total">¥100</td>
@@ -152,6 +199,9 @@ wrapperclass: ""
                             <tr>
                                 <td class="__id"><a href="{{root}}account/myorders/show.html">20558</a></td>
                                 <td class="__date">2019/01/22</td>
+                                <td class="__products">
+
+                                </td>
                                 <td class="__status">
                                 </td>
                                 <td class="__total">¥300</td>
@@ -159,6 +209,9 @@ wrapperclass: ""
                             <tr>
                                 <td class="__id"><a href="{{root}}account/myorders/show.html">13249</a></td>
                                 <td class="__date">2016/10/27</td>
+                                <td class="__products">
+
+                                </td>
                                 <td class="__status">
                                 </td>
                                 <td class="__total">¥300</td>
@@ -166,6 +219,9 @@ wrapperclass: ""
                             <tr>
                                 <td class="__id"><a href="{{root}}account/myorders/show.html">12740</a></td>
                                 <td class="__date">2016/05/31</td>
+                                <td class="__products">
+
+                                </td>
                                 <td class="__status">
                                 </td>
                                 <td class="__total">¥300</td>
@@ -173,6 +229,9 @@ wrapperclass: ""
                             <tr>
                                 <td class="__id"><a href="{{root}}account/myorders/show.html">10817</a></td>
                                 <td class="__date">2015/05/27</td>
+                                <td class="__products">
+
+                                </td>
                                 <td class="__status">
                                 </td>
                                 <td class="__total">¥300</td>
@@ -180,6 +239,9 @@ wrapperclass: ""
                             <tr>
                                 <td class="__id"><a href="{{root}}account/myorders/show.html">5202</a></td>
                                 <td class="__date">2015/05/21</td>
+                                <td class="__products">
+
+                                </td>
                                 <td class="__status">
                                 </td>
                                 <td class="__total">¥11,880</td>
@@ -187,6 +249,9 @@ wrapperclass: ""
                             <tr>
                                 <td class="__id"><a href="{{root}}account/myorders/show.html">5201</a></td>
                                 <td class="__date">2015/05/21</td>
+                                <td class="__products">
+
+                                </td>
                                 <td class="__status">
                                 </td>
                                 <td class="__total">¥11,880</td>

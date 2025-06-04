@@ -1,0 +1,28 @@
+table {
+    th,
+    td {
+        &.ap-associate-salesrow {
+
+            &__date {
+                width: 7.5rem;
+            }
+
+            &__product {}
+
+            &__price {
+                width: 6.5rem;
+                text-align: right;
+            }
+
+            &__rate {
+                width: 4rem;
+                text-align: right;
+            }
+
+            &__fee {
+                width: 6rem;
+                text-align: right;
+            }
+        }
+    }
+}
