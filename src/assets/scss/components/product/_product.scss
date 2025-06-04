@@ -8,10 +8,22 @@
 
     &__lead {
         margin: 0;
-        font-size: 1.25rem;
 
         @include breakpoint(small only) {
+            font-size: 1rem;
+        }
+
+        @include breakpoint(medium) {
             font-size: 1.125rem;
+        }
+
+        @include breakpoint(xlarge) {
+            font-size: 1.1875rem;
+        }
+
+        >*:last-child {
+            margin-bottom: 0;
+            padding-bottom: 0;
         }
     }
 

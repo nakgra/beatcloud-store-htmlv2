@@ -1,0 +1,21 @@
+.ap-product-detail {
+    @include breakpoint(small only) {
+        margin: 2.5rem 0 0 0;
+    }
+
+    @include breakpoint(medium only) {
+        margin: 3rem 0 0 0;
+    }
+
+    @include breakpoint(large) {
+        margin: 3.5rem 0 0 0;
+    }
+
+    @include breakpoint(xlarge) {
+        margin: 4rem 0 0 0;
+    }
+
+    &:first-child {
+        margin-top: 0;
+    }
+}
