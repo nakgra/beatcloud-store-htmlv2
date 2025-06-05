@@ -93,8 +93,10 @@
             font-weight: 500;
         }
 
-        // color: $dark-gray;
-        // background-color: $ap-border-color;
+        @include breakpoint(small only) {
+            flex-direction: column;
+            row-gap: .5rem;
+        }
     }
 
     &__code {
