@@ -1,19 +1,23 @@
 .ap-product-attr {
-    @include xy-grid-container($width: $ap-product-header-width);
+    @include xy-grid-container;
+    background-color: rgba(180, 180, 180, .1);
 
     @include breakpoint(small only) {
-        margin-top: 2rem;
-        // padding: 3rem 0;
+        margin: 0 0 3rem 0;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
     }
 
     @include breakpoint(medium only) {
-        margin-top: 2.5rem;
-        // padding: 4rem 0;
+        margin: 0 0 4rem 0;
+        padding-top: .5rem;
+        padding-bottom: .5rem;
     }
 
     @include breakpoint(large) {
-        margin-top: 3rem;
-        // padding: 6rem 0;
+        margin: 0 0 6rem 0;
+        padding-top: .75rem;
+        padding-bottom: .75rem;
     }
 
     >ul {
@@ -23,9 +27,7 @@
         line-height: 1.4;
         font-size: 0.9375rem;
 
-        @include breakpoint(small only) {
-
-        }
+        @include breakpoint(small only) {}
 
         @include breakpoint(medium) {
             display: flex;
@@ -36,17 +38,27 @@
 
         >li {
             @include breakpoint(small only) {
-                margin: 0 0 .5rem 0;
+                margin: 0 0 .75rem 0;
+            }
+
+            @include breakpoint(medium) {
+                margin: .5rem 0;
             }
 
             >a {
                 display: block;
-                padding: .125rem .25rem;
-                color: $dark-gray;
-                // background-color: rgba(180, 180, 180, .1);
+                padding: .5rem .5rem;
+                line-height: 1.2;
+                color: $body-font-color;
+                // background-color: rgba(180, 180, 180, .3);
+                background: transparent url(../img/bg.jpg) repeat 0 0 / 75px;
+                @include border-radius;
+
                 &:hover {
-                    color: $anchor-color;
-                    text-decoration: underline;
+                    color: $white;//$anchor-color;
+                    // text-decoration: underline;
+                    background: none;
+                    background-color: $anchor-color;//rgba(180, 180, 180, .5);
                 }
             }
         }

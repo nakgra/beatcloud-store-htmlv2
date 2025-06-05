@@ -2,18 +2,18 @@
     background: transparent url(../img/bg-2.jpg) repeat 0 0 / 75px;
 
     @include breakpoint(small only) {
-        margin: 3rem 0 0 0;
-        padding: 3rem 0;
+        margin: 4rem 0 0 0;
+        padding: 0 0 3rem 0;
     }
 
     @include breakpoint(medium only) {
         margin: 4rem 0 0 0;
-        padding: 4rem 0;
+        padding: 0 0 4rem 0;
     }
 
     @include breakpoint(large) {
         margin: 6rem 0 0 0;
-        padding: 6rem 0;
+        padding: 0 0 6rem 0;
     }
 
     @include breakpoint(xlarge) {

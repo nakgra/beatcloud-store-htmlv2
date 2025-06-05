@@ -119,7 +119,7 @@
             </ul>
             <div class="ap-product-actions">
                 <div class="ap-product-actions-cart">
-                    <span class="ap-product-actions-cart__button -disabled"><span>カートに入れる</span></span>
+                    <span class="ap-product-actions-cart__button -disabled"><span>在庫切れ</span></span>
                 </div>
                 <!--
                 <div class="ap-product-actions-cart -error" data-addcart="999">
@@ -128,24 +128,36 @@
                     <span id="data-bookmark_product_id_22" data-errmsg="" class="ap-edit-error">この商品は保存できません。</span>
                 </div>
                   -->
-                <span class="ap-product-actions-bookmark -error" data-bookmark="999">
+                <span class="ap-product-actions-bookmark" data-bookmark="999">
                     <span class="ap-product-actions-bookmark__content" data-bookmark-label>あとで買う</span>
-                    <span id="data-bookmark_product_id_22" data-errmsg="" class="ap-edit-error">この商品は保存できません。</span>
+                    <!-- <span id="data-bookmark_product_id_22" data-errmsg="" class="ap-edit-error">この商品は保存できません。</span> -->
                 </span>
-                <a class="ap-product-actions__bargain" href=""><span>同じセールの商品12点を見る</span></a>
+                <a class="ap-product-actions__contact" href=""><span>問い合わせる</span></a>
+                <!-- <a class="ap-product-actions__bargain" href=""><span>同じセールの商品12点を見る</span></a> -->
             </div>
-            <a href="">在庫状況、入荷予定についてはお問い合わせください。</a>
         </div>
     </div>
-    <div class="ap-product-attr">
-        <ul>
-            <li><a href="{{root}}products/index.html">大カテゴリ/小カテゴリ</a></li>
-            <li><a href="{{root}}products/index.html">オーディオインターフェイス</a></li>
-            <li><a href="{{root}}products/index.html">MIDIコントローラー・キーボード</a></li>
-            <li><a href="{{root}}products/index.html">シンセサイザー・ドラムマシン</a></li>
-        </ul>
+    <div class="ap-product-bargain">
+        <div class="ap-product-bargain__frame">
+            <b class="ap-product-bargain__badge"><span>80%~<small>OFF</small></span></b>
+            <div class="ap-product-bargain__text">
+                <h2 class="ap-product-bargain__heading">この商品のセール情報を見る</h2>
+                <h3 class="ap-product-bargain__title"><a href="../bargains/show.html">【日本限定企画】Softube Tube-Tech&amp;Summit Audioプラグインセール</a></h3>
+                <ul class="ap-product-bargain__props">
+                    <li>対象商品: 99</li>
+                    <li class="-alert">2025/04/30まで</li>
+                </ul>
+            </div>
+            <a class="ap-product-bargain__pic" href="../bargains/show.html"><img src="../assets/upload/bargains/001.jpg" alt=""></a>
+        </div>
     </div>
     <div class="ap-product-body">
+        <div class="ap-product-attr">
+            <ul>
+                <li><a href="{{root}}products/index.html">大カテゴリ/小カテゴリ</a></li>
+                <li><a href="{{root}}products/index.html">オーディオインターフェイス</a></li>
+            </ul>
+        </div>
         <div class="ap-product-body__frame">
             <div class="ap-product-body__nav">
                 <div class="ap-product-jumpmenu">
@@ -159,7 +171,6 @@
                 </div>
             </div>
             <div class="ap-product-body__main">
-
                 <section class="ap-product-detail">
                     <a class="ap-anchor" id="bundle"></a>
                     <h1 class="ap-product-detail-heading">バンドルに含まれる25商品</h1>
@@ -195,7 +206,6 @@
                         </ul>
                     </div>
                 </section>
-
                 <section class="ap-product-detail">
                     <a class="ap-anchor" id="001"></a>
                     <h1 class="ap-product-detail-heading">見出し2 Heading 2</h1>
@@ -209,7 +219,6 @@
                         <p>Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Donec id elit non mi porta gravida at eget metus. Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et.</p>
                     </div>
                 </section>
-
                 <section class="ap-product-detail">
                     <a class="ap-anchor" id="002"></a>
                     <h1 class="ap-product-detail-heading">有名エンジニアのお気に入りPSP Audiowareプラグイン</h1>
@@ -340,12 +349,40 @@
                     <span class="ap-product-price__point">獲得予定ポイント:377</span>
                 </div>
                 <span class="ap-product-price__original">通常販売価格 <del>370,960円</del></span>
-                <!-- <span class="ap-product-price__code">JAN: 4530027145669</span> -->
+                <span class="ap-product-price__code">JAN: 4530027145669</span>
             </div>
+            <p class="ap-product-price__associate">アソシエイト会員様 紹介料率 <b>15%</b> <a href="#associate" class="ap-button -small" data-jump>リンクの取得</a></p>
+            <ul class="ap-product-fees">
+                <li class="ap-product-fees-item">この商品は他の商品と一緒にご購入いただけません。</li>
+                <li class="ap-product-fees-item">
+                    <strong class="ap-product-fees-item__title" data-open="shippingfees">地域によって送料がかかります</strong>
+                </li>
+                <li class="ap-product-fees-item">
+                    <strong class="ap-product-fees-item__title" data-open="extrafees">その他にかかる料金</strong>
+                </li>
+            </ul>
             <div class="ap-product-actions">
-                <a href="{{root}}cart/index.html" class="ap-product-actions__cart"><span>カートに入れる</span></a>
-                <span class="ap-product-actions__wishlist"><span>あとで買う</span></span>
-                <a class="ap-product-actions__bargain" href=""><span>同じセールの商品12点を見る</span></a>
+                <div class="ap-product-actions-cart -error" data-addcart="999">
+                    <span class="ap-product-actions-cart__button" data-addcart-send aria-hidden="false" data-altname="product_id"><span>カートに入れる</span></span>
+                    <a href="{{root}}cart/index.html" class="ap-product-actions-cart__button -view" data-addcart-view aria-hidden="true"><span>カートを見る</span></a>
+                    <!-- <span id="data-bookmark_product_id_22" data-errmsg="" class="ap-edit-error">この商品は保存できません。</span> -->
+                </div>
+                <span class="ap-product-actions-bookmark -error" data-bookmark="999">
+                    <span class="ap-product-actions-bookmark__content" data-bookmark-label>あとで買う</span>
+                    <!-- <span id="data-bookmark_product_id_22" data-errmsg="" class="ap-edit-error">この商品は保存できません。</span> -->
+                </span>
+                <!-- <a class="ap-product-actions__contact" href=""><span>問い合わせる</span></a> -->
+            </div>
+            <!-- <a href="">在庫状況、入荷予定についてはお問い合わせください。</a> -->
+
+            <div class="ap-product-bargain -teaser">
+                <b class="ap-product-bargain__badge"><span>80%~<small>OFF</small></span></b>
+                <h2 class="ap-product-bargain__heading">この商品のセール情報を見る</h2>
+                <h3 class="ap-product-bargain__title"><a href="../bargains/show.html">【日本限定企画】Softube Tube-Tech&amp;Summit Audioプラグインセール</a></h3>
+                <ul class="ap-product-bargain__props">
+                    <li>対象商品: 99</li>
+                    <li class="-alert">2025/04/30まで</li>
+                </ul>
             </div>
         </div>
     </footer>

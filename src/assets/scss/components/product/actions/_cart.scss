@@ -14,7 +14,8 @@
         $button-padding: $tmp-padding !global;
 
         @include breakpoint(small only) {
-            margin-bottom: 1rem;
+            display: block;
+            margin-bottom: 2rem;
             padding: 1.0625rem 1.25rem 1rem 1.25rem;
             font-size: 1.0625rem !important;
         }
