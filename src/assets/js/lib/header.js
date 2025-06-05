@@ -1,4 +1,5 @@
 import * as func from '../helpers/functions';
+import $ from 'jquery';
 
 class Header {
     static targetAttrName = 'data-header';
@@ -20,11 +21,9 @@ class Header {
     init() {
         let obj = this;
 
-        let headerContainer = document.querySelector('[' + obj.getMyAttrName('-holder') + ']');
-        // 高さ取得
-        let headerheight = obj.element.offsetHeight;
+        obj.headerContainer = document.querySelector('[' + obj.getMyAttrName('-holder') + ']');
         // 取得した高さを代入
-        headerContainer.style.height = headerheight + 'px';
+        obj.headerContainer.style.height = obj.element.offsetHeight + 'px';
 
         let position, offsetToShow;
         position = func.getElementPostion(obj.element);
@@ -41,6 +40,12 @@ class Header {
             } else {
                 func.removeClass(obj.element, '-active');
             }
+        });
+
+        //ウィンドウのリサイズ
+        $(window).on('changed.zf.mediaquery', function(event, newSize, oldSize) {
+            // 取得した高さを代入
+            obj.headerContainer.style.height = obj.element.offsetHeight + 'px';
         });
     }
 
