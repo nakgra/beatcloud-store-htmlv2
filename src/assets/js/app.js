@@ -38,6 +38,7 @@ import PageTop from './lib/pageTop';
 import Search from './lib/Search';
 import Stashed from './lib/stashed';
 import Textarea from './lib/textarea';
+import MyMenu from './lib/myMenu';
 
 
 (function(window, document) {
@@ -56,6 +57,7 @@ import Textarea from './lib/textarea';
     Fold.setup();
     Header.setup();
     Jumplink.setup();
+    MyMenu.setup();
     Nav.setup();
     PageTop.setup();
     Search.setup();

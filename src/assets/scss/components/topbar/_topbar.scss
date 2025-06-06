@@ -1,5 +1,7 @@
 .ap-topbar {
     $parent: &;
+    position: relative;
+    z-index: 999;
 
     margin: 0;
     padding: 0;
@@ -7,7 +9,7 @@
     &__content {
         position: relative;
         background: rgba(255, 255, 255, 1.0);
-        border-bottom: 1px solid #f1f1f1;//$ap-border-color;
+        border-bottom: 1px solid #f1f1f1; //$ap-border-color;
         border-top: 3px solid $warning-color;
 
         &.-active {
@@ -15,7 +17,7 @@
             top: 0;
             left: 0;
             right: 0;
-            z-index: 999;
+            // z-index: 999;
             // background: rgba(255, 255, 255, .9);
 
             transition: background 1s ease-in;
@@ -47,7 +49,7 @@
         }
 
         &.-nomenu {
-            justify-content: flex-start!important;
+            justify-content: flex-start !important;
         }
     }
 

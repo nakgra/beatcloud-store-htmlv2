@@ -18,7 +18,19 @@
                         <li><a class="-bookmarks" href="{{root}}account/bookmarks.html"><span>あとで買うリスト</span></a></li>
                         <li><a class="-cart" href="{{root}}cart/index.html"><span>カート</span> <small data-cartcount>3</small></a></li>
                     </ul>
-                    <a class="ap-topbar-submenu__account" href="{{root}}auth/index.html">サインイン</a>
+                    <!-- <a class="ap-topbar-submenu__account" href="{{root}}auth/index.html">サインイン</a> -->
+                    <div class="ap-topbar-mymenu">
+                        <span class="ap-topbar-mymenu__button" data-mymenu-button>アカウント</span>
+                        <ul class="ap-topbar-mymenu__items" data-mymenu>
+                            <li><a href="{{root}}account/index.html">マイページ</a></li>
+                            <li><a href="{{root}}account/myproducts/index.html">マイプロダクト</a></li>
+                            <li><a href="{{root}}account/myorders/index.html">注文履歴</a></li>
+                            <li><a href="{{root}}account/edit.html">会員情報</a></li>
+                            <li>
+                                <form action="" class="ap-topbar-logout"><input type="submit" name="" value="ログアウト"></form>
+                            </li>
+                        </ul>
+                    </div>
                 </nav>
             </div>
         </div>
