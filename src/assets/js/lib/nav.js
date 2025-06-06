@@ -75,6 +75,7 @@ class Nav {
         } else {
             obj.menu.setAttribute('data-opened', '');
             obj.trigger.setAttribute('data-opened', '');
+            func.addClass(document.documentElement, '-overlay');
         }
     }
 
@@ -86,6 +87,7 @@ class Nav {
 
         obj.trigger.removeAttribute('data-opened');
         obj.menu.removeAttribute('data-opened');
+        func.removeClass(document.documentElement, '-overlay');
     }
 
     /**
