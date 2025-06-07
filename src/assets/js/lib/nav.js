@@ -1,5 +1,6 @@
 import * as func from '../helpers/functions';
 import $ from 'jquery';
+import { Foundation } from 'foundation-sites/js/foundation.core';
 
 class Nav {
     static targetAttrName = 'data-nav';
@@ -62,6 +63,31 @@ class Nav {
         obj.menu.addEventListener('closeRequested', function(e) {
             obj.close();
         });
+
+        // ドロップダウン
+        obj.children  = obj.menu.querySelectorAll('[' + obj.getMyAttrName('-menu-sub') + ']');
+        Array.prototype.forEach.call(obj.children, function(child) {
+            let name, button;
+            name = child.getAttribute(obj.getMyAttrName('-menu-sub'));
+            button  = obj.menu.querySelector('[' + obj.getMyAttrName('-menu-sub-button') + '="' + name + '"]');
+            if (button) {
+                button.addEventListener('click', function(e) {
+                    e.preventDefault();
+
+                    if (Foundation.MediaQuery.atLeast('large')) {
+                        return;
+                    }
+
+                    if (button.hasAttribute('data-opened')) {
+                        button.removeAttribute('data-opened');
+                        child.removeAttribute('data-opened');
+                    } else {
+                        button.setAttribute('data-opened', true);
+                        child.setAttribute('data-opened', true);
+                    }
+                });
+            }
+        });
     }
 
     /**
@@ -87,6 +113,12 @@ class Nav {
 
         obj.trigger.removeAttribute('data-opened');
         obj.menu.removeAttribute('data-opened');
+
+        let chilren = obj.menu.querySelectorAll('[data-opened]');
+        Array.prototype.forEach.call(chilren, function(child) {
+            child.removeAttribute('data-opened');
+        });
+
         func.removeClass(document.documentElement, '-overlay');
     }
 

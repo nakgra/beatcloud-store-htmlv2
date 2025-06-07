@@ -1,4 +1,29 @@
 .ap-topbar-menu {
+    >ul {
+        >li {
+
+            >span,
+            >a {
+                color: $body-font-color;
+
+                &:hover {
+                    color: $primary-color;
+                }
+            }
+
+            &.-hasnav {
+                &:hover {
+                    >span {
+                        color: $primary-color;
+
+                        &:after {
+                            border-color: $primary-color;
+                        }
+                    }
+                }
+            }
+        }
+    }
 
     // position: relative;
 
@@ -9,7 +34,8 @@
             padding: 0;
             list-style-type: none;
             background-color: $white;
-            box-shadow: 0 3px 2px $light-gray;
+            // box-shadow: 0 3px 2px $light-gray;
+            filter: drop-shadow(rgba(0, 0, 0, 0.1) 0 2px 2px);
 
             &[data-opened] {
                 position: absolute;
@@ -24,6 +50,7 @@
             >li {
                 border-top: 1px solid $ap-border-color;
 
+                >span,
                 >a {
                     display: block;
                     margin: 0;
@@ -31,8 +58,26 @@
                     text-align: center;
                 }
 
-                &:last-child {
-                    // border-bottom: none;
+                >span {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+
+                    &:after {
+                        content: '';
+                        border: solid $dark-gray;
+                        border-width: 0 1px 1px 0;
+                        margin: -4px 0 0 .5rem;
+                        padding: .25rem;
+                        transform: rotate(45deg);
+                    }
+
+                    &[data-opened] {
+                        &:after {
+                            margin-top: 4px;
+                            transform: rotate(-135deg);
+                        }
+                    }
                 }
             }
         }
@@ -52,6 +97,8 @@
 
         >ul {
             >li {
+
+                >span,
                 >a {
                     padding: .875rem .75rem;
                 }
@@ -73,6 +120,8 @@
 
         >ul {
             >li {
+
+                >span,
                 >a {
                     padding: 1rem .75rem;
                 }
@@ -94,8 +143,10 @@
             // font-feature-settings: "palt";
 
             >li {
+                position: relative;
                 border-left: 1px solid #eeeeee;
 
+                >span,
                 >a {
                     display: block;
                     padding: 1.4rem 1.5rem 1.25rem 1.5rem;
@@ -109,6 +160,37 @@
                         transition: padding-top .2s ease-out, padding-bottom .2s ease-out;
                     }
                 }
+
+                &.-hasnav {
+                    >span {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+
+                        &:after {
+                            content: '';
+                            border: solid $dark-gray;
+                            border-width: 0 1px 1px 0;
+                            margin: -3px 0 0 .25rem;
+                            padding: 3px;
+                            transform: rotate(45deg);
+                        }
+                    }
+
+                    &:hover {
+                        >span {
+                            color: $primary-color;
+
+                            &:after {
+                                border-color: $primary-color;
+                            }
+                        }
+
+                        >.ap-topbar-menu-children {
+                            display: block;
+                        }
+                    }
+                }
             }
         }
     }
@@ -118,6 +200,7 @@
             >li {
                 font-size: 1rem;
 
+                >span,
                 >a {
                     padding: 1.45rem 1.75rem 1.35rem 1.75rem;
                     font-weight: 500;
