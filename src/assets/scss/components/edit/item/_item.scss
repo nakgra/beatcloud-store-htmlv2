@@ -11,7 +11,9 @@
     @include breakpoint(medium) {}
 
     @include breakpoint(xlarge) {
-        // margin-bottom: $form-spacing * 1.5;
+        margin-bottom: $form-spacing * 1.125;
+        line-height: 1.5;
+        font-size: 1rem;
     }
 
     input,
