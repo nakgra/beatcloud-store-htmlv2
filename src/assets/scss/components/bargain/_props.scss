@@ -1,0 +1,67 @@
+.ap-bargain-props {
+    font-size: 1rem;
+
+    >div {
+        display: flex;
+        column-gap: .5rem;
+        margin: 0;
+        padding: 0;
+        line-height: 1.4;
+
+        &.-alert {
+            color: $alert-color;
+        }
+
+        >dt,
+        >dd {
+            margin: 0;
+            font-weight: normal;
+        }
+
+        >dd {}
+    }
+
+    @include breakpoint(small only) {
+        margin: 2rem 0 0 0;
+
+        >div {
+            margin: .5rem 0 0 0;
+            justify-content: center;
+            text-align: center;
+
+            >dt,
+            >dd {
+                margin: 0;
+                font-weight: normal;
+            }
+
+            >dd {}
+        }
+    }
+
+    @include breakpoint(medium) {
+        display: flex;
+        column-gap: 1.25rem;
+        margin: 2rem 0 0 0;
+        padding: 0;
+    }
+
+    @include breakpoint(medium only) {
+        justify-content: center;
+        font-size: 1.0625rem;
+    }
+
+    @include breakpoint(large) {
+        margin-top: auto;
+        font-size: .9375rem;
+
+        >div {
+            padding: .5rem .75rem;
+            line-height: 1.4;
+            background: transparent url(../img/bg-2.jpg) repeat 0 0 / 75px;
+            @include border-radius;
+        }
+    }
+
+    @include breakpoint(xlarge) {}
+}
