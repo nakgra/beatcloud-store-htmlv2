@@ -18,17 +18,20 @@
         padding: 0;
         line-height: 1.4;
 
-        list-style-type: none;
+        tr {
+            th, td {
+                padding: .5rem;
+                text-align: left;
+                font-weight: normal;
+                border-bottom: 1px solid $black;
 
-        >li {
-            display: flex;
-            margin: 0 0 .5rem 0;
-            padding: 0 0 .5rem 0;
-            border-bottom: 1px solid $black;
+                &:first-child {
+                    padding-left: 0;
+                }
 
-            >span {
-                flex: 0 0 10rem;
-                width: 10rem;
+                &:last-child {
+                    padding-right: 0;
+                }
             }
         }
     }
