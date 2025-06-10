@@ -1,0 +1,11 @@
+.ap-delivery-header {
+    display: flex;
+
+    &__props {
+        width: 60%;
+    }
+
+    &__shipper {
+        width: 40%;
+    }
+}

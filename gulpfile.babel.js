@@ -95,6 +95,29 @@ function styleGuide(done) {
 // Compile Sass into CSS
 // In production, the CSS is compressed
 function sassBuild() {
+    const postCssPluginsPdf = [
+        // Autoprefixer
+        autoprefixer({
+            browsers: ['> 1%', 'last 3 versions']
+        }),
+        // UnCSS - Uncomment to remove unused styles in production
+        // PRODUCTION && uncss(UNCSS_OPTIONS),
+    ].filter(Boolean);
+
+    gulp.src([
+            'src/assets/scss/pdf.scss',
+        ])
+        .pipe($.sourcemaps.init())
+        .pipe(sass.sync({
+                includePaths: PATHS.sass,
+                quietDeps: true
+            })
+            .on('error', sass.logError))
+        .pipe(postcss(postCssPluginsPdf))
+        .pipe($.if(PRODUCTION, $.cleanCss({ compatibility: 'ie11' })))
+        .pipe($.if(!PRODUCTION, $.sourcemaps.write()))
+        .pipe(gulp.dest(PATHS.dist + '/assets/css'))
+        .pipe(browser.reload({ stream: true }));
 
     const postCssPlugins = [
         // Autoprefixer

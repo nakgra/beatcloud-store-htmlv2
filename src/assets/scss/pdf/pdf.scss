@@ -1,0 +1,12 @@
+.ap-pdf {
+    margin: 0 auto;
+    padding: 0;
+    width: auto;
+    // height: 1070px;
+
+    &__page {
+        margin: 0;
+        padding: 1rem;
+        page-break-after: always;
+    }
+}
