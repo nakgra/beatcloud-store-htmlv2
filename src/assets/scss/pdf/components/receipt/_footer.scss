@@ -1,0 +1,35 @@
+.ap-receipt-footer {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+
+    margin: 0;
+    padding: 0;
+
+    &__publisher {
+        width: 50%;
+    }
+
+    &__breakdown {
+        margin: 0 auto 0 0;
+        padding: 0;
+
+        table {
+            th, td {
+                padding: .5rem;
+                text-align: left;
+                font-weight: normal;
+                border-bottom: 1px solid $black;
+
+                &:first-child {
+                    padding-left: 0;
+                    min-width: 8rem;
+                }
+
+                &:last-child {
+                    text-align: right;
+                }
+            }
+        }
+    }
+}

@@ -1,33 +1,41 @@
 @font-face {
-  font-family: "Noto Sans JP";
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url("../fonts/NotoSansJP-Regular.woff") format("woff");
+    font-family: 'Kinto Sans';
+    src:
+        url('../fonts/KintoSans-Regular.woff2') format('woff2'),
+        url('../fonts/KintoSans-Regular.woff') format('woff'),
+        url('../fonts/KintoSans-Regular.otf') format('opentype');
+    font-weight: 400;
+    font-style: normal;
 }
 
 @font-face {
-  font-family: "Noto Sans JP";
-  font-style: normal;
-  font-weight: 500;
-  font-display: swap;
-  src: url("../fonts/NotoSansJP-Medium.woff") format("woff");
+    font-family: 'Kinto Sans';
+    src:
+        url('../fonts/KintoSans-Medium.woff2') format('woff2'),
+        url('../fonts/KintoSans-Medium.woff') format('woff'),
+        url('../fonts/KintoSans-Medium.otf') format('opentype');
+    font-weight: 500;
+    font-style: normal;
 }
 
 @font-face {
-  font-family: "Noto Sans JP";
-  font-style: normal;
-  font-weight: 700;
-  font-display: swap;
-  src: url("../fonts/NotoSansJP-Bold.woff") format("woff");
+    font-family: 'Kinto Sans';
+    src:
+        url('../fonts/KintoSans-Bold.woff2') format('woff2'),
+        url('../fonts/KintoSans-Bold.woff') format('woff'),
+        url('../fonts/KintoSans-Bold.otf') format('opentype');
+    font-weight: 700;
+    font-style: normal;
 }
 
 @font-face {
-  font-family: "Noto Sans JP";
-  font-style: normal;
-  font-weight: 900;
-  font-display: swap;
-  src: url("../fonts/NotoSansJP-Black.woff") format("woff");
+    font-family: 'Kinto Sans';
+    src:
+        url('../fonts/KintoSans-Black.woff2') format('woff2'),
+        url('../fonts/KintoSans-Black.woff') format('woff'),
+        url('../fonts/KintoSans-Black.otf') format('opentype');
+    font-weight: 900;
+    font-style: normal;
 }
 
 html, body {

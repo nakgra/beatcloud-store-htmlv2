@@ -66,4 +66,5 @@ gulpを実行するのとは別のターミナルからサーバーを起動し�
 
 ## PDF変換
 
-    wkhtmltopdf --enable-local-file-access --disable-smart-shrinking --margin-top 2mm --margin-bottom 2mm --margin-left 3mm --margin-right 3mm ./dist/pdf/deliveryslip.html ./pdf/deliveryslip.pdf
+    wkhtmltopdf --enable-local-file-access --disable-smart-shrinking --margin-top 2mm --margin-bottom 2mm --margin-left 3mm --margin-right 3mm ./dist/pdf/receipt.html ./pdf/receipt.pdf
+

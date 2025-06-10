@@ -1,0 +1,13 @@
+.ap-receipt-publisher {
+    margin: 0 2rem 0 0;
+
+    &__name {
+        margin: 0 0 .5rem 0;
+        font-size: 1.25rem;
+        font-weight: normal;
+    }
+
+    &__address {
+        line-height: 1.6;
+    }
+}
