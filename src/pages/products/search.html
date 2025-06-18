@@ -2,12 +2,16 @@
 meta-title: ""
 wrapperclass: "-browse"
 ---
-<div class="ap-browse">
-    <header class="ap-browse__header">
-        <div class="ap-browse-title">
-            <h1 class="ap-browse-title__main">"Keyword"の検索結果</h1>
+<article class="ap-browse">
+    <header class="ap-browse__header -search">
+        <div class="ap-search__frame">
+            <form class="ap-search__form" action="{{root}}products/search.html" method="GET">
+                <input type="search" name="q" placeholder="検索キーワード" data-search-input>
+                <input type="submit" value="検索">
+            </form>
         </div>
     </header>
+    <p class="ap-browse-message">商品がみつかりませんでした。</p>
     <div class="ap-browse__main">
         <div class="ap-browse-result">
             <div class="ap-grid -full">
@@ -39,4 +43,4 @@ wrapperclass: "-browse"
             </nav>
         </div>
     </div>
-</div>
+</article>
