@@ -15,13 +15,17 @@
     &__header {
 
         @include breakpoint(small only) {
-            margin-bottom: 2rem;
+            margin-bottom: 3rem;
         }
 
         @include breakpoint(medium) {
             display: flex;
             align-items: flex-end;
-            margin-bottom: 2rem;
+            margin-bottom: 3rem;
+
+            &.-search {
+                display: block;
+            }
         }
 
         @include breakpoint(large) {

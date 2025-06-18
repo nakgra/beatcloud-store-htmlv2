@@ -23,6 +23,8 @@
     @include breakpoint(large) {
         flex: 0 0 auto;
         width: 25%;
+        background: transparent url(../img/bg-2.jpg) repeat 0 0 / 75px;
+        // border-right: 1px solid $ap-border-color-nega;
     }
 
     @include breakpoint(xlarge) {
@@ -44,13 +46,14 @@
         }
 
         @include breakpoint(large) {
-            position: absolute;
-            top: 0;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            padding-right: .75rem;
-            padding-bottom: 2rem;
+            // position: absolute;
+            // top: 1.5rem;
+            // bottom: 1.5rem;
+            // left: 0;
+            // right: 0;
+            // padding-right: .75rem;
+            // padding-bottom: 2rem;
+            padding: 0 1.5rem;
         }
 
         &::-webkit-scrollbar {

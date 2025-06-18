@@ -4,19 +4,20 @@ wrapperclass: "-browse"
 ---
 <form class="ap-browse" action="" method="GET" data-browse>
     <header class="ap-browse__header">
-        <hgroup class="ap-browse-title">
+        <div class="ap-browse-title">
             <ul class="ap-browse-title__breadcrumbs">
                 <li><a href="{{root}}products/index.html">商品を探す</a></li>
             </ul>
             <h1 class="ap-browse-title__main">大カテゴリ001</h1>
-        </hgroup>
+        </div>
         <div class="ap-browse-controls" data-browse-nav>
             <span class="ap-browse-controls__filter" data-browse-filter-button>絞り込み条件</span>
-            <div class="ap-browse-order" data-browse-orderby>
-                <span class="ap-browse-order__title" data-browse-orderby-button>並び替え:新着</span>
-                <ul class="ap-browse-order__items" data-browse-orderby-menu>
+            <span class="ap-browse-controls__clear" data-browse-filter-clear>条件をクリア</span>
+            <div class="ap-browse-orderby" data-browse-orderby>
+                <span class="ap-browse-orderby__title" data-browse-orderby-button>並び替え</span>
+                <ul class="ap-browse-orderby__items" data-browse-orderby-menu>
                     {{#each orderby}}
-                    <li>
+                    <li class="-radio -active">
                         <label class="ap-edit-radio-set">
                             <div class="ap-edit-radio">
                                 <input type="radio" name="cat_l" value="{{value}}">
@@ -34,8 +35,17 @@ wrapperclass: "-browse"
         <div class="ap-browse-sidebar" data-browse-filter>
             <div class="ap-browse-sidebar__frame" data-browse-filter-container>
                 <div class="ap-browse-filter">
-                    <h2 class="ap-browse-filter__title">カテゴリ</h2>
-                    <ul class="ap-browse-filter__item">
+                    <h2 class="ap-browse-filter__title">大カテゴリ001大カテゴリ001大カテゴリ001大カテゴリ001</h2>
+                    <ul class="ap-browse-filter__item -marker">
+                        <li class="-reset">
+                            <label class="ap-edit-radio-set">
+                                <div class="ap-edit-radio">
+                                    <input type="radio" name="cat_l" value="{{@index}}">
+                                    <span class="ap-edit-radio__mark"></span>
+                                </div>
+                                大カテゴリを選び直す
+                            </label>
+                        </li>
                         {{#repeat 5}}
                         <li>
                             <label class="ap-edit-radio-set">
@@ -43,7 +53,7 @@ wrapperclass: "-browse"
                                     <input type="radio" name="cat_l" value="{{@index}}">
                                     <span class="ap-edit-radio__mark"></span>
                                 </div>
-                                大カテゴリ {{@index}}
+                                小カテゴリ {{@index}}
                             </label>
                         </li>
                         {{/repeat}}
@@ -52,7 +62,7 @@ wrapperclass: "-browse"
                 <div class="ap-browse-filter">
                     <h2 class="ap-browse-filter__title">ブランド</h2>
                     <ul class="ap-browse-filter__item">
-                        {{#repeat 20}}
+                        {{#repeat 5}}
                         <li>
                             <label class="ap-edit-checkboxset">
                                 <span class="ap-edit-checkbox">
@@ -64,7 +74,20 @@ wrapperclass: "-browse"
                             </label>
                         </li>
                         {{/repeat}}
+                        {{#repeat 10}}
+                        <li data-fold-item>
+                            <label class="ap-edit-checkboxset">
+                                <span class="ap-edit-checkbox">
+                                    <input type="hidden" name="brand_{{@index}}" value="0">
+                                    <input type="checkbox" name="" value="1">
+                                    <span class="ap-edit-checkbox__mark"></span>
+                                </span>
+                                ブランドブランドブランド {{@index}}
+                            </label>
+                        </li>
+                        {{/repeat}}
                     </ul>
+                    <span class="ap-browse-filter__fold" data-fold>一部だけ表示</span>
                 </div>
                 <div class="ap-browse-filter">
                     <h2 class="ap-browse-filter__title">価格</h2>
@@ -89,21 +112,34 @@ wrapperclass: "-browse"
             </div>
         </div>
         <div class="ap-browse-result">
-            <div class="ap-grid">
-                {{#repeat 3}}
+            <!-- <p class="ap-browse-result__message">該当する商品がありませんでした</p> -->
+            <div class="ap-grid -flex">
+                {{#repeat 1}}
                 {{#each popular}}
-                <div class="ap-grid-item">
-                    <a href="{{../root}}{{path}}">
-                        <div class="ap-grid-item__pic"><img src="{{../root}}assets/upload{{img}}" alt=""></div>
-                        <h3 class="ap-grid-item__title -small">
-                            <span class="__divide">{{ brand }}</span>{{ name }}
-                        </h3>
-                        <p class="ap-grid-item__footnote -alert">&yen;{{ price }} <del>&yen;{{ original_price }}</del></p>
-                    </a>
-                </div>
+                <a class="ap-grid-item -haslead" href="{{../root}}{{path}}">
+                    <div class="ap-grid-item__pic"><img src="{{../root}}assets/upload{{img}}" alt=""></div>
+                    {{#if lead}}<p class="ap-grid-item__lead">{{ lead }}</p>{{/if}}
+                    <h3 class="ap-grid-item__title -small">
+                        <span class="__divide">{{ brand }}</span>{{ name }}
+                    </h3>
+                    <p class="ap-grid-item__footnote -alert">&yen;{{ price }}{{#if original_price}} <del>&yen;{{ original_price }}</del>{{/if}}</p>
+                </a>
                 {{/each}}
                 {{/repeat}}
             </div>
+            <nav class="ap-pagination">
+                <ul class="pagination">
+                    <li class="pagination-previous disabled"><span>前へ</span></li>
+                    <li class="current"><span>1</span></li>
+                    <li><a href="#" aria-label="Page 2">2</a></li>
+                    <li><a href="#" aria-label="Page 3">3</a></li>
+                    <li><a href="#" aria-label="Page 4">4</a></li>
+                    <li class="ellipsis" aria-hidden="true"></li>
+                    <li><a href="#" aria-label="Page 12">12</a></li>
+                    <li><a href="#" aria-label="Page 13">13</a></li>
+                    <li class="pagination-next"><a href="#" aria-label="Next page">次へ</span></a></li>
+                </ul>
+            </nav>
         </div>
     </div>
 </form>
