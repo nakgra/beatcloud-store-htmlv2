@@ -6,6 +6,7 @@ class Search {
 
     #element;
     #menu;
+    #input;
     #trigger;
     #closebutton;
     #myAttrName;
@@ -27,6 +28,11 @@ class Search {
 
         obj.trigger  = document.querySelector('[' + obj.getMyAttrName('-button') + ']');
         if (!obj.trigger) {
+            return;
+        }
+
+        obj.input  = document.querySelector('[' + obj.getMyAttrName('-input') + ']');
+        if (!obj.input) {
             return;
         }
 
@@ -95,6 +101,8 @@ class Search {
 
         obj.element.setAttribute('data-opened', '');
         func.addClass(document.documentElement, '-overlay');
+
+        obj.input.focus();
     }
 
     /**
