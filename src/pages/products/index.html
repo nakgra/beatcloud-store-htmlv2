@@ -102,14 +102,15 @@ wrapperclass: "-browse"
         <div class="ap-browse-result">
             <!-- <p class="ap-browse-result__message">該当する商品がありませんでした</p> -->
             <div class="ap-grid -flex">
-                {{#repeat 3}}
+                {{#repeat 1}}
                 {{#each popular}}
                 <a class="ap-grid-item -haslead" href="{{../root}}{{path}}">
                     <div class="ap-grid-item__pic"><img src="{{../root}}assets/upload{{img}}" alt=""></div>
                     {{#if lead}}<p class="ap-grid-item__lead">{{ lead }}</p>{{/if}}
-                    <h3 class="ap-grid-item__title -small">
-                        <span class="__divide">{{ brand }}</span>{{ name }}
-                    </h3>
+                    <h3 class="ap-grid-item__title -small"><span class="__divide">{{ brand }}</span>{{ name }}</h3>
+                    <b class="ap-grid-item__badge -thin">
+                        <span>70%<small>OFF</small></span>
+                    </b>
                     <p class="ap-grid-item__footnote -alert">&yen;{{ price }}{{#if original_price}} <del>&yen;{{ original_price }}</del>{{/if}}</p>
                 </a>
                 {{/each}}
