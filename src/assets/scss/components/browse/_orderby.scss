@@ -3,7 +3,7 @@
     position: relative;
 
     @include breakpoint(small only) {
-        margin: 0 0 0 auto;
+        margin: 0 auto;
     }
 
     @include breakpoint(medium only) {
@@ -45,7 +45,7 @@
                 color: $body-font-color;
 
                 &:hover {
-                    background-color: $white;//gba(120, 120, 120, 0.5);
+                    background-color: $white; //gba(120, 120, 120, 0.5);
                 }
             }
 
@@ -64,7 +64,9 @@
             }
         }
 
-        @include breakpoint(large) {
+        @include breakpoint(small only) {}
+
+        @include breakpoint(small) {
             display: flex;
             align-items: center;
             justify-content: center;
@@ -94,9 +96,10 @@
                 }
 
                 &.-active {
+
                     &.-radio,
                     >a {
-                        background-color: $white!important;
+                        background-color: $white !important;
                     }
                 }
             }
