@@ -37,10 +37,16 @@
     }
 
     &__copy {
-        margin: 0;
-        padding: .5rem;
-        background: transparent url(../img/bg-2.jpg) repeat 0 0 / 75px;
-        font-size: 1.125rem;
+        margin: 0 0 1.25rem 0;
+        padding: .5rem .75rem .5rem 42px;
+        font-size: 1rem;
+
+        background: rgba(180, 180, 180, 0.15) url(../img/tag.svg) no-repeat 12px center / 22px;
+        // border-bottom: 5px solid rgba(180, 180, 180, 0.2);//rgba(238, 98, 77, 0.1);
+
+        @include breakpoint(xlarge) {
+            font-size: 1.125rem;
+        }
 
         @include breakpoint(small only) {}
 

@@ -84,11 +84,12 @@
     &__associate {
         display: flex;
         align-items: center;
+        column-gap: .75rem;
         margin: 0;
         padding: 0;
 
         >b {
-            margin: 0 .75rem 0 .25rem;
+            margin: 0 0 0 .25rem;
             color: $alert-color;
             font-weight: 500;
         }
