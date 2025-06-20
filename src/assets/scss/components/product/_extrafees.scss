@@ -1,6 +1,7 @@
 .ap-product-extrafees {
     margin: 0;
     padding: 1.5rem;
+    font-size: .9375rem;
 
     > ul {
         margin: 0 0 1.5rem 0;
@@ -12,15 +13,16 @@
         }
 
         >li {
-            padding: 1rem 0;
+            margin: 0 0 1rem 0;
+            padding: 0 0 1rem 0;
             border-bottom: 1px solid $ap-border-color;
 
             &:first-child {
-                padding-top: 0;
+                // padding-top: 0;
             }
 
             &:last-child {
-                padding-bottom: 0;
+                // margin-bottom: 0;
             }
         }
     }

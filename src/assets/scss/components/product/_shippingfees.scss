@@ -1,6 +1,7 @@
 .ap-product-shippingfees {
     margin: 0;
     padding: 1.5rem;
+    font-size: .9375rem;
 
     > ul {
         display: flex;
@@ -21,6 +22,7 @@
             padding: .5rem 0;
             width: calc((100% - 2rem) / 2);
             text-align: right;
+            border-bottom: 1px solid $ap-border-color;
 
             >span {
                 // flex: 0 0 auto;
