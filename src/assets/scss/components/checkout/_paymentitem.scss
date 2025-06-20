@@ -15,4 +15,10 @@
     >.ap-edit-radio-set {
         font-size: 1rem;
     }
+
+    &__fee {
+        margin: 0 0 0 1rem;
+        font-weight: normal;
+        color: $alert-color;
+    }
 }
