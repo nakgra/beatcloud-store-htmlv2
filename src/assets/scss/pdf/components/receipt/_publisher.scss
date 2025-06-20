@@ -1,4 +1,5 @@
 .ap-receipt-publisher {
+    position: relative;
     margin: 0 2rem 0 0;
 
     &__name {
@@ -9,5 +10,14 @@
 
     &__address {
         line-height: 1.6;
+    }
+
+    &__stamp {
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+
+        width: 84px;
+        height: 84px;
     }
 }
