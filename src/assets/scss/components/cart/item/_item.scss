@@ -1,4 +1,16 @@
 .ap-cart-item {
+
+    @include breakpoint(small only) {
+        // display: flex;
+        // column-gap: 1.5rem;
+        padding: 1.5rem 0;
+        border-top: 1px solid $ap-border-color;
+
+        &:first-child {
+            border-top: 0;
+        }
+    }
+
     @include breakpoint(medium) {
         display: flex;
         column-gap: 1.5rem;
@@ -88,12 +100,16 @@
     }
 
     &__actions {
-        display: flex;
-        align-items: center;
-        column-gap: 1.5rem;
-
         margin: 1.25rem 0 0 0;
         font-size: 0.875rem;
+
+        @include breakpoint(small only) {}
+
+        @include breakpoint(medium) {
+            display: flex;
+            align-items: center;
+            column-gap: 1.5rem;
+        }
     }
 
     &__delete {
@@ -182,7 +198,7 @@
         }
 
         &[aria-hidden="true"] {
-            display: none!important;
+            display: none !important;
         }
     }
 

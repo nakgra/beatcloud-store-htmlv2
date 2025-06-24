@@ -27,7 +27,7 @@ wrapperclass: ""
                     <a href="{{root}}checkout/index.html" class="ap-button -action -expanded" data-cart-checkout>ご注文手続きへ</a>
                 </div>
             </div>
-            <div class="ap-block">
+            <div class="ap-block -nosmall">
                 <h2 class="ap-block__title">終了間近のセール</h2>
                 <div class="ap-block__content">
                     <div class="ap-grid -single">
@@ -65,10 +65,12 @@ wrapperclass: ""
                                     <button class="ap-cart-item-qtycontrol__dec" data-cart-item-dec><span>減らす</span></button>
                                     <span data-cart-item-qty="1">1</span>
                                     <button class="ap-cart-item-qtycontrol__inc" data-cart-item-inc="3"><span>増やす</span></button>
+                                    <div class="ap-cart-item__price">&times; &yen;<span data-cart-item-price>9,999</span></div>
                                 </div>
-                                <div class="ap-cart-item__price">&times; &yen;<span data-cart-item-price>9,999</span></div>
-                                <button class="ap-cart-item__stash" data-cart-item-stash>あとで買う</button>
-                                <button class="ap-cart-item__delete" data-cart-item-del>削除</button>
+                                <div class="ap-cart-item-qtycontrol">
+                                    <button class="ap-cart-item__stash" data-cart-item-stash>あとで買う</button>
+                                    <button class="ap-cart-item__delete" data-cart-item-del>削除</button>
+                                </div>
                             </div>
                         </div>
                         <div class="ap-cart-item__pricecol">

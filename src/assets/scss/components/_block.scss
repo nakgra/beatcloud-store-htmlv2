@@ -2,6 +2,14 @@
     background-color: $white;
     @include bordered();
 
+    @include breakpoint(small only) {
+        margin-bottom: 1.5rem;
+
+        &.-nosmall {
+            display: none;
+        }
+    }
+
     @include breakpoint(medium) {
         margin-bottom: 2rem;
     }
