@@ -12,14 +12,11 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    min-height: 100svh;
 
     background: transparent url(../img/bg.jpg) repeat 0 0 / 75px;
 
     .-overlay & {
-        // position: fixed;
-
-        // width: 100%;
         overflow-y: hidden;
-        // padding-right: .5rem;
     }
 }

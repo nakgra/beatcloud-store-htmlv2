@@ -1,0 +1,19 @@
+.ap-error-top {
+    @include xy-grid-container;
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+
+    &__name {
+        width: 170px;
+
+        >a,
+        img {
+            display: block;
+        }
+    }
+}
