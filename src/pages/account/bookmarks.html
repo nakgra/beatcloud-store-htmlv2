@@ -49,8 +49,10 @@ wrapperclass: ""
                             <div class="ap-cart-item__title"><a href="{{../root}}{{path}}">{{ brand }} {{ name }}</a></div>
                             <div class="ap-cart-item__actions">
                                 <div class="ap-cart-item__price">&yen;<span>{{ price }}</span> <del>&yen;<span>{{ original_price }}</span></del></div>
-                                <button class="ap-cart-item__addcart" data-cart-stashed-move>カートに移動</button>
-                                <button class="ap-cart-item__delete" data-cart-stashed-del>削除</button>
+                                <div class="ap-cart-item-altcontrol">
+                                    <button class="ap-cart-item__addcart" data-cart-stashed-move>カートに移動</button>
+                                    <button class="ap-cart-item__delete" data-cart-stashed-del>削除</button>
+                                </div>
                             </div>
                         </div>
                     </div>

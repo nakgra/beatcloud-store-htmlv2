@@ -53,7 +53,9 @@ wrapperclass: ""
                             <div class="ap-cart-item__title"><a href="{{../root}}{{path}}">{{ brand }} {{ name }}</a></div>
                             <div class="ap-cart-item__actions">
                                 <div class="ap-cart-item__uprice">&yen;{{ price }} <del>&yen;{{ original_price }}</del></div>
-                                <div class="ap-cart-item__addcart">カートに追加</div>
+                                <div class="ap-cart-item-altcontrol">
+                                    <div class="ap-cart-item__addcart">カートに追加</div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -62,7 +64,7 @@ wrapperclass: ""
             </div>
         </div>
         <div class="ap-ordersheet__proceed">
-            <div class="ap-block">
+            <div class="ap-block -nosmall">
                 <h2 class="ap-block__title">終了間近のセール</h2>
                 <div class="ap-block__content">
                     <div class="ap-grid -single">

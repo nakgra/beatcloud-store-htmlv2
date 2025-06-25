@@ -1,20 +1,14 @@
 .ap-checkout-item {
-    @include breakpoint(small only) {}
+    @include breakpoint(small only) {
+        padding: 1.25rem 0;
+        border-top: 1px solid $ap-border-color;
+    }
 
     @include breakpoint(medium) {
         display: flex;
         column-gap: 1.5rem;
         padding: 1.5rem 0;
         border-top: 1px solid $ap-border-color;
-
-        &:first-child {
-            border-top: 0;
-            padding-top: 0;
-        }
-
-        &:last-child {
-            padding-bottom: 0;
-        }
     }
 
     @include breakpoint(large) {
@@ -22,15 +16,31 @@
         padding: 1.5rem 0;
     }
 
+    &:first-child {
+        border-top: 0;
+        padding-top: 0;
+    }
+
+    &:last-child {
+        padding-bottom: 0;
+    }
+
     &__title {
         margin: 0 0 auto 0;
     }
 
     &__subtotal {
-        flex: 0 0 auto;
-        margin: 0 0 0 auto;
         font-size: 1.125rem;
         font-weight: 500;
+
+        @include breakpoint(small only) {
+            margin: 1rem 0 0 0;
+        }
+
+        @include breakpoint(medium) {
+            flex: 0 0 auto;
+            margin: 0 0 0 auto;
+        }
     }
 
     &__description {

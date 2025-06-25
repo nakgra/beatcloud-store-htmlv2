@@ -1,8 +1,14 @@
 .ap-cart-item {
 
+    button {
+        color: $body-font-color;
+    }
+
     @include breakpoint(small only) {
-        // display: flex;
-        // column-gap: 1.5rem;
+        display: flex;
+        column-gap: 1.5rem;
+        flex-wrap: wrap;
+
         padding: 1.5rem 0;
         border-top: 1px solid $ap-border-color;
 
@@ -47,12 +53,12 @@
         display: block;
 
         @include breakpoint(small only) {
-            display: none;
-            // width: 140px;
+            // display: none;
+            width: 130px;
         }
 
         @include breakpoint(medium) {
-            width: 150px;
+            width: 140px;
         }
 
         @include breakpoint(large) {
@@ -64,11 +70,11 @@
         margin: 0 0 auto 0;
 
         >a {
-            color: $body-font-color;
+            // color: $body-font-color;
 
-            &:hover {
-                color: $anchor-color;
-            }
+            // &:hover {
+            //     color: $anchor-color;
+            // }
         }
     }
 
@@ -105,7 +111,7 @@
 
         @include breakpoint(small only) {}
 
-        @include breakpoint(medium) {
+        @include breakpoint(large) {
             display: flex;
             align-items: center;
             column-gap: 1.5rem;
@@ -204,6 +210,10 @@
 
     &__imagecol {
         flex: 0 0 auto;
+
+        @include breakpoint(small only) {
+            display: none;
+        }
     }
 
     &__detailcol {
@@ -214,6 +224,11 @@
     &__pricecol {
         flex: 0 0 auto;
         margin: 0 0 0 auto;
-        // width: 10rem;
+
+        @include breakpoint(small only) {
+            flex: 1 0 auto;
+            margin: 1.5rem 0 0 0;
+            width: 100%;
+        }
     }
 }
