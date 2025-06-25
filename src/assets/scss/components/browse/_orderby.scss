@@ -159,6 +159,8 @@
                 display: block;
 
                 >li {
+                    background-color: transparent;
+
                     >label {
                         font-size: 1rem;
                     }
@@ -187,6 +189,12 @@
                             color: $anchor-color-hover;
                             text-decoration: underline;
                         }
+                    }
+
+                    .ap-edit-radio {
+                        visibility: visible;
+                        margin-right: .5rem!important;
+                        width: 19px;
                     }
                 }
             }
