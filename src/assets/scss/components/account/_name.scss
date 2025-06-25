@@ -2,10 +2,12 @@
     @include breakpoint(small only) {
         margin: 0;
         font-size: 1.25rem;
+        text-align: center;
     }
 
     @include breakpoint(medium only) {
         margin: 0;
+        text-align: center;
         font-size: 1.5rem;
     }
 

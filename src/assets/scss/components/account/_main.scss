@@ -3,12 +3,21 @@
 
     @include breakpoint(large) {
         display: flex;
+        flex-direction: row-reverse;
+    }
+
+    >*:last-child {
+        margin-bottom: 0!important;
     }
 
     &__content {
-        // background: $white;
+        @include breakpoint(small only) {
+            margin-bottom: 1.5rem;
+        }
 
-        @include breakpoint(medium) {}
+        @include breakpoint(medium only) {
+            margin-bottom: 2rem;
+        }
 
         @include breakpoint(large) {
             padding: 0 0 0 2rem;
@@ -21,7 +30,13 @@
     }
 
     &__nav {
-        @include breakpoint(medium) {}
+        @include breakpoint(small only) {
+            margin-bottom: 1.5rem;
+        }
+
+        @include breakpoint(medium only) {
+            margin-bottom: 2rem;
+        }
 
         @include breakpoint(large) {
             width: 28%;
