@@ -14,7 +14,7 @@ wrapperclass: "-browse"
                 <span class="ap-browse-orderby__title" data-browse-orderby-button>並び替え</span>
                 <ul class="ap-browse-orderby__items" data-browse-orderby-menu>
                     {{#each orderby}}
-                    <li class="-radio -active">
+                    <li class="-radio">
                         <label class="ap-edit-radio-set">
                             <div class="ap-edit-radio">
                                 <input type="radio" name="cat_l" value="{{value}}">
@@ -111,7 +111,10 @@ wrapperclass: "-browse"
                     <b class="ap-grid-item__badge -thin">
                         <span>70%<small>OFF</small></span>
                     </b>
-                    <p class="ap-grid-item__footnote -alert">&yen;{{ price }}{{#if original_price}} <del>&yen;{{ original_price }}</del>{{/if}}</p>
+                    <p class="ap-grid-item__footnote -alert">
+                        <span class="-price">&yen;{{ price }}{{#if original_price}} <del>&yen;{{ original_price }}</del>{{/if}}</span>
+                        <b class="-outofstock">在庫切れ</b>
+                    </p>
                 </a>
                 {{/each}}
                 {{/repeat}}

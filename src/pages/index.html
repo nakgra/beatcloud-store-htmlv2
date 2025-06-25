@@ -37,8 +37,7 @@ wrapperclass: "-home"
             <h3 class="ap-grid-item__title -medium">{{ title }}</h3>
             <b class="ap-grid-item__badge"><span>{{ discount }}<small>OFF</small></span></b>
             <div class="ap-grid-item__footnote">
-                対象商品: 99<br>
-                <span class="-alert">{{ end }}</span>
+                <span class="-items">対象商品: 99</span> <span class="-alert">{{ end }}</span>
             </div>
         </a>
         {{/each}}
@@ -65,7 +64,7 @@ wrapperclass: "-home"
             <h3 class="ap-grid-item__title -small">
                 <span class="__divide">{{ brand }}</span>{{ name }}
             </h3>
-            <p class="ap-grid-item__footnote -alert">&yen;{{ price }} <del>&yen;{{ original_price }}</del></p>
+            <p class="ap-grid-item__footnote -alert"><span class="-price">&yen;{{ price }} <del>&yen;{{ original_price }}</del></span></p>
         </a>
         {{/each}}
     </div>
