@@ -105,3 +105,24 @@
         padding-bottom: 0;
     }
 }
+
+.video-container {
+    position: relative;
+    height: 0;
+    margin-top: 1rem;
+    margin-bottom: $responsive-embed-margin-bottom;
+    padding-bottom: ratio-to-percentage(16 by 9);
+    overflow: hidden;
+
+    iframe,
+    object,
+    embed,
+    video {
+        position: absolute;
+        top: 0;
+        #{$global-left}: 0;
+        width: 100% !important;
+        height: 100% !important;
+        border: 0;
+    }
+}
