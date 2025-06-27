@@ -1,59 +1,12 @@
-.ap-product-bargain {
-    @include xy-grid-container($width: $ap-product-body-width);
+.ap-product-deal {
+    position: relative;
+    padding: 1.5rem;
+    overflow: hidden;
+    background: transparent url(../img/bg-2.jpg) repeat 0 0 / 75px;
 
-
-    @include breakpoint(small only) {
-        margin-top: 3rem;
-    }
-
-    @include breakpoint(medium only) {
-        margin-top: 4.5rem;
-    }
-
-    @include breakpoint(large) {
-        margin-top: 5rem;
-    }
-
-    &.-teaser {
-        position: relative;
+    @include breakpoint(medium) {
         display: flex;
-        flex-direction: column;
-        row-gap: .5rem;
-
-        margin: 0;
-        padding: 1.5rem;
-        max-width: auto;
-        background: transparent url(../img/bg-2.jpg) repeat 0 0 / 75px;
-        overflow: hidden;
-
-        @include breakpoint(small only) {
-            // margin-top: 1.875rem;
-        }
-
-        @include breakpoint(medium only) {
-            // margin-top: 2rem;
-        }
-
-        @include breakpoint(large) {
-            margin-top: 2rem;
-        }
-    }
-
-    &__frame {
-        position: relative;
-        padding: 1.5rem;
-        overflow: hidden;
-        background: transparent url(../img/bg-2.jpg) repeat 0 0 / 75px;
-
-        // background-color: $white;
-        // @include bordered;
-        // overflow: hidden;
-        // color: $body-font-color;
-
-        @include breakpoint(medium) {
-            display: flex;
-            column-gap: 1.5rem;
-        }
+        column-gap: 1.5rem;
     }
 
     &__pic {

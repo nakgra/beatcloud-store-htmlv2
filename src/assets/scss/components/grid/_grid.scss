@@ -1,49 +1,74 @@
 .ap-grid {
-    // @include xy-grid-container;
+    $parent: &;
+
+    display: flex;
+    flex-wrap: wrap;
 
     & {
         @include breakpoint(small only) {
-            display: grid;
             gap: .75rem;
-            grid-template-columns: repeat(2, minmax(0, 1fr));
+
+            // 2列
+            #{$parent}-item {
+                width: calc((100% - .75rem) / 2);
+            }
         }
 
         @include breakpoint(medium) {
-            display: grid;
             gap: 1.25rem;
-            grid-template-columns: repeat(3, minmax(0, 1fr));
+
+            // 3列
+            #{$parent}-item {
+                width: calc((100% - 2.5rem) / 3);
+            }
         }
 
         @include breakpoint(large) {
             gap: 1.5rem;
-            grid-template-columns: repeat(3, minmax(0, 1fr));
+
+            // 3列
+            #{$parent}-item {
+                width: calc((100% - 3rem) / 3);
+            }
 
             &.-single {
-                grid-template-columns: repeat(1, minmax(0, 1fr));
+                // grid-template-columns: repeat(1, minmax(0, 1fr));
             }
         }
 
         @include breakpoint(xlarge) {
-
-            // gap: 1.5rem;
             &.-flex {
-                grid-template-columns: repeat(3, minmax(0, 1fr));
+
+                // 3列
+                #{$parent}-item {
+                    width: calc((100% - 3rem) / 3);
+                }
             }
 
             &.-full {
-                grid-template-columns: repeat(4, minmax(0, 1fr));
+
+                // 4列
+                #{$parent}-item {
+                    width: calc((100% - 4.5rem) / 4);
+                }
             }
         }
 
         @include breakpoint(xxlarge) {
-
-            // gap: 1.5rem;
             &.-flex {
-                grid-template-columns: repeat(4, minmax(0, 1fr));
+
+                // 4列
+                #{$parent}-item {
+                    width: calc((100% - 4.5rem) / 4);
+                }
             }
 
             &.-full {
-                grid-template-columns: repeat(5, minmax(0, 1fr));
+
+                // 5列
+                #{$parent}-item {
+                    width: calc((100% - 6rem) / 5);
+                }
             }
         }
     }

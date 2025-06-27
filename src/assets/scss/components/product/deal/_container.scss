@@ -1,0 +1,24 @@
+.ap-product-deal-container {
+    @include xy-grid-container($width: $ap-product-header-width);
+
+
+    @include breakpoint(small only) {
+        margin-top: 3rem;
+    }
+
+    @include breakpoint(medium only) {
+        margin-top: 4.5rem;
+    }
+
+    @include breakpoint(large) {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1.5rem;
+        margin-top: 5rem;
+
+        >.ap-product-deal {
+            width: calc((100% - 1.5rem) / 2);
+        }
+    }
+}

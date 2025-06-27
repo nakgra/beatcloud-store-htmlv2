@@ -147,18 +147,30 @@
             </div>
         </div>
     </div>
-    <div class="ap-product-bargain">
-        <div class="ap-product-bargain__frame">
-            <b class="ap-product-bargain__badge"><span>80%~<small>OFF</small></span></b>
-            <div class="ap-product-bargain__text">
-                <h2 class="ap-product-bargain__heading">この商品のセール情報を見る</h2>
-                <h3 class="ap-product-bargain__title"><a href="../bargains/show.html">【日本限定企画】Softube Tube-Tech&amp;Summit Audioプラグインセール</a></h3>
-                <ul class="ap-product-bargain__props">
+    <div class="ap-product-deal-container">
+        <div class="ap-product-deal">
+            <b class="ap-product-deal__badge"><span>80%~<small>OFF</small></span></b>
+            <div class="ap-product-deal__text">
+                <h2 class="ap-product-deal__heading">この商品のセール情報を見る</h2>
+                <h3 class="ap-product-deal__title"><a href="../bargains/show.html">【日本限定企画】Softube Tube-Tech&amp;Summit Audioプラグインセール</a></h3>
+                <ul class="ap-product-deal__props">
                     <li>対象商品: 99</li>
                     <li class="-alert">2025/04/30まで</li>
                 </ul>
             </div>
-            <a class="ap-product-bargain__pic" href="../bargains/show.html"><img src="../assets/upload/bargains/001.jpg" alt=""></a>
+            <a class="ap-product-deal__pic" href="../bargains/show.html"><img src="../assets/upload/bargains/001.jpg" alt=""></a>
+        </div>
+        <div class="ap-product-deal">
+            <b class="ap-product-deal__badge"><span>80%~<small>OFF</small></span></b>
+            <div class="ap-product-deal__text">
+                <h2 class="ap-product-deal__heading">この商品を含むお得なバンドル</h2>
+                <h3 class="ap-product-deal__title"><a href="../bargains/show.html">【日本限定企画】Softube Tube-Tech&amp;Summit Audioプラグインセール</a></h3>
+                <ul class="ap-product-deal__props">
+                    <li>対象商品: 99</li>
+                    <li class="-alert">2025/04/30まで</li>
+                </ul>
+            </div>
+            <a class="ap-product-deal__pic" href="../bargains/show.html"><img src="../assets/upload/bargains/001.jpg" alt=""></a>
         </div>
     </div>
     <div class="ap-product-body">
@@ -358,6 +370,10 @@
                 <img class="ap-product__image" src="{{root}}assets/upload/product/001.jpg" alt="">
             </div>
             <div class="ap-product-header__main">
+                <div class="ap-product__lead">
+                    <p>PSPを代表するPSP VintageWarmer2や、beatcloudで最も人気なPSP TripleMeter等、厳選された人気商品ばかりを集めた25製品が96%オフの超特価！</p>
+                    <p>テスト</p>
+                </div>
                 <div class="ap-product-price">
                     <div class="ap-product-price__board">
                         <span class="ap-product-price__current"><span class="ap-product-price__discount"><b>90%</b>OFF</span><b>37,750</b>円 税込</span>
@@ -419,7 +435,7 @@
                 </div>
             </hgroup>
         </div>
-        <div class="ap-grid">
+        <div class="ap-grid -full">
             {{#each popular}}
             <a href="{{../root}}{{path}}" class="ap-grid-item -haslead">
                 <div class="ap-grid-item__pic"><img src="{{../root}}assets/upload{{img}}" alt=""></div>
@@ -440,7 +456,7 @@
                 </div>
             </hgroup>
         </div>
-        <div class="ap-grid -flex">
+        <div class="ap-grid -full">
             {{#each popular}}
             <a href="{{../root}}{{path}}" class="ap-grid-item -haslead">
                 <div class="ap-grid-item__pic"><img src="{{../root}}assets/upload{{img}}" alt=""></div>
