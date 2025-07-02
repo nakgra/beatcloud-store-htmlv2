@@ -13,9 +13,13 @@
     @include breakpoint(large) {
         display: flex;
         flex-wrap: wrap;
-        justify-content: center;
+        // justify-content: center;
         gap: 1.5rem;
         margin-top: 5rem;
+
+        &.-centered {
+            justify-content: center;
+        }
 
         >.ap-product-deal {
             width: calc((100% - 1.5rem) / 2);
