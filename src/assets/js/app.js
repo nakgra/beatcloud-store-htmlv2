@@ -18,8 +18,8 @@ $(document).foundation();
 
 
 import * as func from './helpers/functions';
-import AddCart from './lib/addCart';
-import Bookmark from './lib/bookmark';
+import AddCartButtonsManager from './lib/addCartButtonsManager';
+import BookmarkButtonsManager from './lib/bookmarkButtonsManager';
 import Browse from './lib/browse';
 import Carousel from './lib/carousel';
 import Cart from './lib/cart';
@@ -42,8 +42,8 @@ import MyMenu from './lib/myMenu';
 
 
 (function(window, document) {
-    AddCart.setup();
-    Bookmark.setup();
+    new AddCartButtonsManager();
+    new BookmarkButtonsManager();
     Browse.setup();
     Carousel.setup();
     Cart.setup();

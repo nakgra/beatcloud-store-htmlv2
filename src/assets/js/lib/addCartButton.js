@@ -5,35 +5,46 @@ import config from '../config.js';
 import components from '../components.js';
 import messages from '../messages.js';
 
-class Bookmark {
-    static targetAttrName = 'data-bookmark';
+class AddCartButton {
+    static targetAttrName = 'data-addcart';
 
     #element //本体
     #myAttrName //属性名
-    #labelEl; // ラベル
+    #message; // メッセージ
     #dispatcher; // ajax
 
     #productId;
     #sendButton;
     #viewcartButton;
 
+    #action;
     #processing;
 
-    constructor(element, targetAttrName = null) {
+    constructor(element, targetAttrName = null, options = {}) {
         let obj = this;
 
         obj.element = element;
         obj.myAttrName = targetAttrName ? targetAttrName : obj.constructor.targetAttrName;
         obj.dispatcher = dispatcher();
 
-        obj.productId = obj.element.getAttribute(obj.getMyAttrName());
-        obj.labelEl = obj.element.querySelector('[' + obj.getMyAttrName('-label') + ']');
+        obj.options = {
+            onadded: function(button) {},
+            onremoved: function(button) {},
+        };
+        obj.options = options = Object.assign(obj.options, options);
 
-        if (!obj.productId || !obj.labelEl) {
-            return;
+        obj.action = config.actions['addcart'];
+        obj.productId = obj.element.getAttribute(obj.getMyAttrName());
+
+        // obj.qtyInput = obj.element.querySelector('[data-qty]');
+        obj.sendButton = obj.element.querySelector('[' + obj.getMyAttrName('-send') + ']');
+        obj.viewcartButton = obj.element.querySelector('[' + obj.getMyAttrName('-view') + ']');
+
+        if (!obj.productId || !obj.sendButton || !obj.viewcartButton) {
+            return null;
         }
 
-        obj.element.addEventListener('click', function(e) {
+        obj.sendButton.addEventListener('click', function(e) {
             e.preventDefault();
 
             if (obj.processing) {
@@ -42,23 +53,35 @@ class Bookmark {
 
             obj.setProcessing();
 
-            let bookmarked = obj.element.hasAttribute(obj.getMyAttrName('-done'));
             let formData = new FormData;
             formData.append('product_id', obj.productId);
-            formData.append('flg', bookmarked ? 0 : 1);
+            // formData.append('qty', obj.qtyInput.value);
 
-            obj.dispatcher.post(AppUrl.url(config.actions.bookmark.add), formData)
+            obj.dispatcher.post(AppUrl.url(obj.action), formData)
                 .then(function(response) { // success
                     obj.clearErrors();
 
-                    if (response.data.result) {
-                        obj.element.setAttribute(obj.getMyAttrName('-done'), '');
-                        obj.labelEl.innerText = messages.bookmark.done;
+                    // obj.qtyInput.value = response.data.qty;
+                    if (response.data.qty > 0) {
+                        obj.setItemInCart()
+
+                        // dispatch
+                        obj.options.onadded(obj);
                     } else {
-                        obj.element.removeAttribute(obj.getMyAttrName('-done'));
-                        obj.labelEl.innerText = messages.bookmark.default;
+                        obj.setItemNotInCart();
+
+                        // dispatch
+                        obj.options.onremoved(obj);
                     }
 
+                    let cartCount = document.querySelector('[data-cartcount]');
+                    if (parseInt(response.data.totalqty) > 0) {
+                        cartCount.setAttribute('aria-hidden', false);
+                        cartCount.innerText = response.data.totalqty;
+                    } else {
+                        cartCount.setAttribute('aria-hidden', true);
+                        cartCount.innerText = '';
+                    }
                 })
                 .catch(function(error) { // error
                     if (error.response) {
@@ -91,33 +114,75 @@ class Bookmark {
         })
     }
 
+    /**
+     *
+     **/
+    getId() {
+        return this.productId;
+    }
+
+    /**
+     *
+     **/
     isProcessing() {
         return this.processing;
     }
 
+    /**
+     *
+     **/
     setProcessing() {
         let obj = this;
 
-        if (obj.element.disabled !== 'undefined') {
-            obj.element.disabled = true;
+        if (obj.sendButton.disabled !== 'undefined') {
+            obj.sendButton.disabled = true;
         }
-        obj.element.setAttribute('aria-disabled', true);
+        obj.sendButton.setAttribute('aria-disabled', true);
         obj.processing = true;
     }
 
+    /**
+     *
+     **/
     releaseProcessing() {
         let obj = this;
-        if (obj.element.disabled !== 'undefined') {
-            obj.element.disabled = false;
+        if (obj.sendButton.disabled !== 'undefined') {
+            obj.sendButton.disabled = false;
         }
-        obj.element.setAttribute('aria-disabled', false);
+        obj.sendButton.setAttribute('aria-disabled', false);
         obj.processing = false;
     }
 
+    /**
+     *
+     **/
+    setItemInCart() {
+        let obj = this;
+
+        obj.sendButton.setAttribute('aria-hidden', true);
+        obj.viewcartButton.setAttribute('aria-hidden', false);
+    }
+
+    /**
+     *
+     **/
+    setItemNotInCart() {
+        let obj = this;
+
+        obj.sendButton.setAttribute('aria-hidden', false);
+        obj.viewcartButton.setAttribute('aria-hidden', true);
+    }
+
+    /**
+     *
+     **/
     getMyAttrName(additional = '') {
         return this.myAttrName + additional;
     }
 
+    /**
+     *
+     **/
     showErrors(errors) {
         let obj = this,
             control, errContainer, errMessageEl;
@@ -156,6 +221,9 @@ class Bookmark {
         }
     }
 
+    /**
+     *
+     **/
     clearErrors() {
         let obj = this, elements;
 
@@ -175,15 +243,18 @@ class Bookmark {
         }
     }
 
+    /**
+     *
+     **/
     static setup() {
         let attrName, elements;
 
-        attrName = Bookmark.targetAttrName;
+        attrName = AddCartButton.targetAttrName;
         elements = document.querySelectorAll('[' + attrName + ']');
         for (var i = 0; i < elements.length; i++) {
-            new Bookmark(elements[i]);
+            new AddCartButton(elements[i]);
         }
     }
 }
 
-export default Bookmark;
+export default AddCartButton;
